@@ -147,6 +147,21 @@ explicitly before answering.
 
 Do not perform mathematically invalid aggregation.
 
+### Verified Census variable rules
+
+Use these verified definitions exactly when they apply:
+
+- In `census_2019_age_sex`, `B01001e1` is total population. For the
+  percentage of residents age 25 to 34, use
+  `(B01001e11 + B01001e12 + B01001e35 + B01001e36) / B01001e1 * 100`.
+  Exclude rows where `B01001e1` is null or zero before ranking a percentage,
+  and order ranking queries with `NULLS LAST`.
+- In `census_2019_education`, for the `B15002` sex-specific table,
+  "bachelor's degree or higher" means bachelor’s, master’s, professional, and
+  doctorate degrees: men are `B15002e15 + e16 + e17 + e18` divided by
+  `B15002e2`; women are `B15002e32 + e33 + e34 + e35` divided by `B15002e19`.
+  Multiply the resulting ratio by 100 for a percentage.
+
 In particular:
 - do not average medians to produce a higher-level median;
 - do not sum percentages;

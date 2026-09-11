@@ -161,7 +161,13 @@ def load_dataset(path: Path) -> list[dict[str, Any]]:
 
 def case_input(item: Mapping[str, Any]) -> str:
     columns = ", ".join(item["contract"]["expected_columns"])
-    return f"{item['question']}\n\nFor this evaluation, finish with one run_sql table containing exactly these columns, in this order: {columns}."
+    contract = item["contract"]
+    output_rule = f"Finish with one run_sql table containing exactly these columns, in this order: {columns}."
+    if contract.get("tie_policy") == "first_by_census_block_group":
+        output_rule += " If multiple rows tie, return exactly one: the lexicographically first CENSUS_BLOCK_GROUP."
+    if contract.get("top_k"):
+        output_rule += f" Return exactly the top {int(contract['top_k'])} rows."
+    return f"{item['question']}\n\nFor this evaluation: {output_rule}"
 
 
 def tags(item: Mapping[str, Any]) -> tuple[str, ...]:
