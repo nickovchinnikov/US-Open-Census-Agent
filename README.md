@@ -25,3 +25,9 @@ Then generate Wren MDL models from the selected Snowflake tables before querying
 
 `models/` contains the generated and validated Wren MDL semantic layer. It is committed intentionally to make the agent's data model reviewable and reproducible.
 
+## Web chat UI
+
+The ready-to-run CopilotKit + AG-UI frontend lives in [`frontend/`](frontend/).
+Start the Agno backend with `uv run python src/app.py`, then follow the short
+setup in [`frontend/README.md`](frontend/README.md) to open the UI at
+`http://localhost:3000`.
