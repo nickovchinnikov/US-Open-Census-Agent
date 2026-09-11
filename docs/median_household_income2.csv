@@ -1,0 +1,5 @@
+TABLE_ID,TABLE_NUMBER,TABLE_TITLE,SEMANTIC_PATH
+B01001e10,B01001,Sex By Age,Estimate > SEX BY AGE > Total population > Total > Male > 22 to 24 years
+B01001e34,B01001,Sex By Age,Estimate > SEX BY AGE > Total population > Total > Female > 22 to 24 years
+B01001m10,B01001,Sex By Age,MarginOfError > SEX BY AGE > Total population > Total > Male > 22 to 24 years
+B01001m34,B01001,Sex By Age,MarginOfError > SEX BY AGE > Total population > Total > Female > 22 to 24 years
