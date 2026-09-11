@@ -11,7 +11,7 @@ From the repository root, use two terminals:
 
 ```bash
 # Terminal 1 — Agno + AG-UI backend
-uv run python src/app.py
+uv run python -m src.app
 ```
 
 ```bash
