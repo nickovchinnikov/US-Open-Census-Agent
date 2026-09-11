@@ -9,8 +9,9 @@ import {
 } from "@copilotkit/react-core/v2";
 
 const SUGGESTIONS = [
-  "What is the median household income in California?",
-  "Compare poverty rates across Indiana counties.",
+  "How many males aged 22 to 24 lived in Wabash County, Indiana in 2019?",
+  "What is the average (mean) household income in Indiana?",
+  "Which Indiana counties had the highest unemployment rate in 2019?",
 ];
 
 function InternalToolActivity() {
