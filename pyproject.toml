@@ -1,0 +1,9 @@
+[project]
+name = "us-open-census-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "wrenai[main,snowflake]>=0.14.0",
+]
