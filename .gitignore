@@ -1,4 +1,5 @@
 .venv
 .env
 .agent
+.wren
 __pycache__

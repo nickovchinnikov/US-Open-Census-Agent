@@ -49,26 +49,17 @@ question cannot be answered reliably from the available dataset.
 
 ## Wren MCP tool selection
 
-Wren exposes both MDL SQL tools and optional cube tools. They are not
-interchangeable.
+This deployment exposes the Wren MDL SQL tools only. Cube tools are not
+available, so ordinary queries must use verified MDL models and `run_sql`.
 
 For every new data question:
-1. Call `list_models` first and use `describe_model` for the relevant model
-   before selecting a column or writing SQL.
+1. Call `list_models` first. Then call `get_context` with the user's question
+   to retrieve the relevant verified schema fragments before selecting a column
+   or writing SQL.
 2. Use `run_sql` with verified MDL model names and verified column names for
    ordinary queries. Never use a physical Snowflake table name in `run_sql`.
-3. Treat cubes as optional. Call `list_cubes` before calling `query_cube`.
-   Use `query_cube` only when that call returned the exact cube name and the
-   requested measures, dimensions, and time dimensions.
-
-If `list_cubes` returns an empty list, or there is no matching cube, do NOT
-call `query_cube`. Do not guess cube names, measures, dimensions, or filters.
-Use the verified MDL models with `run_sql` instead, or explain the limitation.
-
-If a cube call reports that a cube is missing or that the manifest has no
-cubes, this is a schema/tool-selection failure, not evidence that the Census
-metric is absent. Do not retry with invented cube names. Re-inspect the models
-and determine whether the metric exists there.
+3. Do not invent or request cube names, measures, dimensions, or filters. Use
+   the verified MDL models with `run_sql`, or explain the limitation.
 
 When the metric exists only at a lower geography than requested, distinguish
 "the metric exists" from "the requested aggregation is available." For

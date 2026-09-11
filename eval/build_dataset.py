@@ -96,7 +96,7 @@ def build_record(path: Path, raw_dir: Path) -> dict[str, Any]:
     return {
         "id": path.stem,
         "question": example["nl"].strip(),
-        "sql":: example["sql"].strip(),
+        "sql": example["sql"].strip(),
         "metadata": metadata,
     }
 

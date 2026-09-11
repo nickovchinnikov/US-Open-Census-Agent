@@ -27,6 +27,10 @@ RUN npm ci --prefix frontend
 
 COPY . ./
 RUN uv sync --frozen --no-dev
+# The MCP server uses semantic schema retrieval. Build its derived local
+# LanceDB index into the image so a fresh container never falls back to a
+# full-schema response on the first question.
+RUN uv run wren memory index
 RUN npm run build --prefix frontend
 RUN chmod +x docker/entrypoint.sh
 

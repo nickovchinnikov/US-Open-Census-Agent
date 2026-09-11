@@ -3,6 +3,7 @@
 .venv
 .env
 .agent
+.wren
 __pycache__
 *.py[cod]
 **/node_modules
