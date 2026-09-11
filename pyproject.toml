@@ -5,5 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "wrenai[main,snowflake]>=0.14.0",
+    "agno[agui,mcp,os]>=3.0.9",
+    "openai>=3.13.0",
+    "wrenai[main,mcp,snowflake]>=0.14.0",
 ]
