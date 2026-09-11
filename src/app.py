@@ -1,6 +1,7 @@
 import os
 
 from agno.agent import Agent
+from agno.db.sqlite import SqliteDb
 from agno.exceptions import InputCheckError
 from agno.guardrails import PIIDetectionGuardrail, PromptInjectionGuardrail
 from agno.guardrails.base import BaseGuardrail
@@ -61,10 +62,19 @@ wren = MCPTools(
     exclude_tools=["query_cube", "list_cubes", "describe_cube"],
 )
 
+db = SqliteDb(
+    db_file="census-agent.db",
+    session_table="census_agent_sessions",
+)
+
 agent = Agent(
+    id="census-agent",
     name="Census Agent",
     model=OpenAIResponses(id="gpt-5.4-mini"),
     tools=[wren],
+    db=db,
+    add_history_to_context=True,
+    num_history_runs=3,
     pre_hooks=[
         PromptInjectionGuardrail(),
         PIIDetectionGuardrail(
