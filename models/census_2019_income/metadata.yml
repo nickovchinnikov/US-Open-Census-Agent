@@ -1,0 +1,3754 @@
+name: census_2019_income
+table_reference:
+  catalog: US_OPEN_CENSUS_DATA_NEIGHBORHOOD_INSIGHTS_FREE_DATASET
+  schema: PUBLIC
+  table: 2019_CBG_B19
+columns:
+- name: CENSUS_BLOCK_GROUP
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Twelve-digit Census Block Group identifier; one observation row is at this geographic grain.
+- name: B19001e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total. Universe: Households.'
+- name: B19001m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total. Universe: Households.'
+- name: B19001e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > Less than $10 000. Universe: Households.'
+- name: B19001m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > Less than $10 000. Universe: Households.'
+- name: B19001e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $10 000 to $14 999. Universe: Households.'
+- name: B19001m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $10 000 to $14 999. Universe: Households.'
+- name: B19001e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $15 000 to $19 999. Universe: Households.'
+- name: B19001m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $15 000 to $19 999. Universe: Households.'
+- name: B19001e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $20 000 to $24 999. Universe: Households.'
+- name: B19001m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $20 000 to $24 999. Universe: Households.'
+- name: B19001e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $25 000 to $29 999. Universe: Households.'
+- name: B19001m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $25 000 to $29 999. Universe: Households.'
+- name: B19001e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $30 000 to $34 999. Universe: Households.'
+- name: B19001m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $30 000 to $34 999. Universe: Households.'
+- name: B19001e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $35 000 to $39 999. Universe: Households.'
+- name: B19001m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $35 000 to $39 999. Universe: Households.'
+- name: B19001e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $40 000 to $44 999. Universe: Households.'
+- name: B19001m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $40 000 to $44 999. Universe: Households.'
+- name: B19001e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $45 000 to $49 999. Universe: Households.'
+- name: B19001m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $45 000 to $49 999. Universe: Households.'
+- name: B19001e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $50 000 to $59 999. Universe: Households.'
+- name: B19001m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $50 000 to $59 999. Universe: Households.'
+- name: B19001e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $60 000 to $74 999. Universe: Households.'
+- name: B19001m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $60 000 to $74 999. Universe: Households.'
+- name: B19001e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $75 000 to $99 999. Universe: Households.'
+- name: B19001m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $75 000 to $99 999. Universe: Households.'
+- name: B19001e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $100 000 to $124 999. Universe: Households.'
+- name: B19001m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $100 000 to $124 999. Universe: Households.'
+- name: B19001e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $125 000 to $149 999. Universe: Households.'
+- name: B19001m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $125 000 to $149 999. Universe: Households.'
+- name: B19001e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $150 000 to $199 999. Universe: Households.'
+- name: B19001m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $150 000 to $199 999. Universe: Households.'
+- name: B19001e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Households
+      > Total > $200 000 or more. Universe: Households.'
+- name: B19001m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Total > $200 000 or more. Universe: Households.'
+- name: B19013e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Median household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households.'
+- name: B19013m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Median household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe:
+      Households.'
+- name: B19025e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households.'
+- name: B19025m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe:
+      Households.'
+- name: B19025Ae1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (WHITE ALONE HOUSEHOLDER) > Households with a householder who is White alone > Aggregate household income in the past
+      12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is White alone.'
+- name: B19025Am1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (WHITE ALONE HOUSEHOLDER) > Households with a householder who is White alone > Aggregate household income in
+      the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is White alone.'
+- name: B19025Be1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (BLACK OR AFRICAN AMERICAN ALONE HOUSEHOLDER) > Households with a householder who is Black or African American alone
+      > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a
+      householder who is Black or African American alone.'
+- name: B19025Bm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (BLACK OR AFRICAN AMERICAN ALONE HOUSEHOLDER) > Households with a householder who is Black or African American
+      alone > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households
+      with a householder who is Black or African American alone.'
+- name: B19025Ce1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (AMERICAN INDIAN AND ALASKA NATIVE ALONE HOUSEHOLDER) > Households with a householder who is American Indian and Alaska
+      Native alone > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households
+      with a householder who is American Indian and Alaska Native alone.'
+- name: B19025Cm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (AMERICAN INDIAN AND ALASKA NATIVE ALONE HOUSEHOLDER) > Households with a householder who is American Indian
+      and Alaska Native alone > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe:
+      Households with a householder who is American Indian and Alaska Native alone.'
+- name: B19025De1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (ASIAN ALONE HOUSEHOLDER) > Households with a householder who is Asian alone > Aggregate household income in the past
+      12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is Asian alone.'
+- name: B19025Dm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (ASIAN ALONE HOUSEHOLDER) > Households with a householder who is Asian alone > Aggregate household income in
+      the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is Asian alone.'
+- name: B19025Ee1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B19025Ee1` from `2019_CBG_B19`.
+- name: B19025Em1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B19025Em1` from `2019_CBG_B19`.
+- name: B19025Fe1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (SOME OTHER RACE ALONE HOUSEHOLDER) > Households with a householder who is Some other race alone > Aggregate household
+      income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is Some
+      other race alone.'
+- name: B19025Fm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (SOME OTHER RACE ALONE HOUSEHOLDER) > Households with a householder who is Some other race alone > Aggregate
+      household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder
+      who is Some other race alone.'
+- name: B19025Ge1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (TWO OR MORE RACES HOUSEHOLDER) > Households with a householder who is Two or more races > Aggregate household income
+      in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is Two or more
+      races.'
+- name: B19025Gm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (TWO OR MORE RACES HOUSEHOLDER) > Households with a householder who is Two or more races > Aggregate household
+      income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is Two
+      or more races.'
+- name: B19025He1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (WHITE ALONE, NOT HISPANIC OR LATINO HOUSEHOLDER) > Households with a householder who is White alone, not Hispanic or
+      Latino > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households
+      with a householder who is White alone, not Hispanic or Latino.'
+- name: B19025Hm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (WHITE ALONE, NOT HISPANIC OR LATINO HOUSEHOLDER) > Households with a householder who is White alone, not Hispanic
+      or Latino > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households
+      with a householder who is White alone, not Hispanic or Latino.'
+- name: B19025Ie1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (HISPANIC OR LATINO HOUSEHOLDER) > Households with a householder who is Hispanic or Latino > Aggregate household income
+      in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is Hispanic
+      or Latino.'
+- name: B19025Im1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) (HISPANIC OR LATINO HOUSEHOLDER) > Households with a householder who is Hispanic or Latino > Aggregate household
+      income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households with a householder who is Hispanic
+      or Latino.'
+- name: B19037e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total. Universe: Households.'
+- name: B19037m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total. Universe: Households.'
+- name: B19037e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years. Universe: Households.'
+- name: B19037m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years. Universe: Households.'
+- name: B19037e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > Less than $10 000. Universe: Households.'
+- name: B19037m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > Less than $10 000. Universe: Households.'
+- name: B19037e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $10 000 to $14 999. Universe: Households.'
+- name: B19037m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $10 000 to $14 999. Universe: Households.'
+- name: B19037e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $15 000 to $19 999. Universe: Households.'
+- name: B19037m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $15 000 to $19 999. Universe: Households.'
+- name: B19037e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $20 000 to $24 999. Universe: Households.'
+- name: B19037m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $20 000 to $24 999. Universe: Households.'
+- name: B19037e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $25 000 to $29 999. Universe: Households.'
+- name: B19037m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $25 000 to $29 999. Universe: Households.'
+- name: B19037e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $30 000 to $34 999. Universe: Households.'
+- name: B19037m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $30 000 to $34 999. Universe: Households.'
+- name: B19037e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $35 000 to $39 999. Universe: Households.'
+- name: B19037m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $35 000 to $39 999. Universe: Households.'
+- name: B19037e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $40 000 to $44 999. Universe: Households.'
+- name: B19037m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $40 000 to $44 999. Universe: Households.'
+- name: B19037e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $45 000 to $49 999. Universe: Households.'
+- name: B19037m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $45 000 to $49 999. Universe: Households.'
+- name: B19037e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $50 000 to $59 999. Universe: Households.'
+- name: B19037m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $50 000 to $59 999. Universe: Households.'
+- name: B19037e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $60 000 to $74 999. Universe: Households.'
+- name: B19037m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $60 000 to $74 999. Universe: Households.'
+- name: B19037e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $75 000 to $99 999. Universe: Households.'
+- name: B19037m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $75 000 to $99 999. Universe: Households.'
+- name: B19037e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $100 000 to $124 999. Universe: Households.'
+- name: B19037m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $100 000 to $124 999. Universe: Households.'
+- name: B19037e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $125 000 to $149 999. Universe: Households.'
+- name: B19037m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $125 000 to $149 999. Universe: Households.'
+- name: B19037e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $150 000 to $199 999. Universe: Households.'
+- name: B19037m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $150 000 to $199 999. Universe: Households.'
+- name: B19037e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $200 000 or more. Universe: Households.'
+- name: B19037m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder under 25 years > $200 000 or more. Universe: Households.'
+- name: B19037e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years. Universe: Households.'
+- name: B19037m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years. Universe: Households.'
+- name: B19037e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > Less than $10 000. Universe: Households.'
+- name: B19037m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > Less than $10 000. Universe: Households.'
+- name: B19037e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $10 000 to $14 999. Universe: Households.'
+- name: B19037m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $10 000 to $14 999. Universe: Households.'
+- name: B19037e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $15 000 to $19 999. Universe: Households.'
+- name: B19037m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $15 000 to $19 999. Universe: Households.'
+- name: B19037e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $20 000 to $24 999. Universe: Households.'
+- name: B19037m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $20 000 to $24 999. Universe: Households.'
+- name: B19037e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $25 000 to $29 999. Universe: Households.'
+- name: B19037m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $25 000 to $29 999. Universe: Households.'
+- name: B19037e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $30 000 to $34 999. Universe: Households.'
+- name: B19037m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $30 000 to $34 999. Universe: Households.'
+- name: B19037e26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $35 000 to $39 999. Universe: Households.'
+- name: B19037m26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $35 000 to $39 999. Universe: Households.'
+- name: B19037e27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $40 000 to $44 999. Universe: Households.'
+- name: B19037m27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $40 000 to $44 999. Universe: Households.'
+- name: B19037e28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $45 000 to $49 999. Universe: Households.'
+- name: B19037m28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $45 000 to $49 999. Universe: Households.'
+- name: B19037e29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $50 000 to $59 999. Universe: Households.'
+- name: B19037m29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $50 000 to $59 999. Universe: Households.'
+- name: B19037e30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $60 000 to $74 999. Universe: Households.'
+- name: B19037m30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $60 000 to $74 999. Universe: Households.'
+- name: B19037e31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $75 000 to $99 999. Universe: Households.'
+- name: B19037m31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $75 000 to $99 999. Universe: Households.'
+- name: B19037e32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $100 000 to $124 999. Universe: Households.'
+- name: B19037m32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $100 000 to $124 999. Universe: Households.'
+- name: B19037e33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $125 000 to $149 999. Universe: Households.'
+- name: B19037m33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $125 000 to $149 999. Universe: Households.'
+- name: B19037e34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $150 000 to $199 999. Universe: Households.'
+- name: B19037m34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $150 000 to $199 999. Universe: Households.'
+- name: B19037e35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $200 000 or more. Universe: Households.'
+- name: B19037m35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 25 to 44 years > $200 000 or more. Universe: Households.'
+- name: B19037e36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years. Universe: Households.'
+- name: B19037m36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years. Universe: Households.'
+- name: B19037e37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > Less than $10 000. Universe: Households.'
+- name: B19037m37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > Less than $10 000. Universe: Households.'
+- name: B19037e38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $10 000 to $14 999. Universe: Households.'
+- name: B19037m38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $10 000 to $14 999. Universe: Households.'
+- name: B19037e39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $15 000 to $19 999. Universe: Households.'
+- name: B19037m39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $15 000 to $19 999. Universe: Households.'
+- name: B19037e40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $20 000 to $24 999. Universe: Households.'
+- name: B19037m40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $20 000 to $24 999. Universe: Households.'
+- name: B19037e41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $25 000 to $29 999. Universe: Households.'
+- name: B19037m41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $25 000 to $29 999. Universe: Households.'
+- name: B19037e42
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $30 000 to $34 999. Universe: Households.'
+- name: B19037m42
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $30 000 to $34 999. Universe: Households.'
+- name: B19037e43
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $35 000 to $39 999. Universe: Households.'
+- name: B19037m43
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $35 000 to $39 999. Universe: Households.'
+- name: B19037e44
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $40 000 to $44 999. Universe: Households.'
+- name: B19037m44
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $40 000 to $44 999. Universe: Households.'
+- name: B19037e45
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $45 000 to $49 999. Universe: Households.'
+- name: B19037m45
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $45 000 to $49 999. Universe: Households.'
+- name: B19037e46
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $50 000 to $59 999. Universe: Households.'
+- name: B19037m46
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $50 000 to $59 999. Universe: Households.'
+- name: B19037e47
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $60 000 to $74 999. Universe: Households.'
+- name: B19037m47
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $60 000 to $74 999. Universe: Households.'
+- name: B19037e48
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $75 000 to $99 999. Universe: Households.'
+- name: B19037m48
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $75 000 to $99 999. Universe: Households.'
+- name: B19037e49
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $100 000 to $124 999. Universe: Households.'
+- name: B19037m49
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $100 000 to $124 999. Universe: Households.'
+- name: B19037e50
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $125 000 to $149 999. Universe: Households.'
+- name: B19037m50
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $125 000 to $149 999. Universe: Households.'
+- name: B19037e51
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $150 000 to $199 999. Universe: Households.'
+- name: B19037m51
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $150 000 to $199 999. Universe: Households.'
+- name: B19037e52
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $200 000 or more. Universe: Households.'
+- name: B19037m52
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 45 to 64 years > $200 000 or more. Universe: Households.'
+- name: B19037e53
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over. Universe: Households.'
+- name: B19037m53
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over. Universe: Households.'
+- name: B19037e54
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > Less than $10 000. Universe: Households.'
+- name: B19037m54
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > Less than $10 000. Universe: Households.'
+- name: B19037e55
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $10 000 to $14 999. Universe: Households.'
+- name: B19037m55
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $10 000 to $14 999. Universe: Households.'
+- name: B19037e56
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $15 000 to $19 999. Universe: Households.'
+- name: B19037m56
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $15 000 to $19 999. Universe: Households.'
+- name: B19037e57
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $20 000 to $24 999. Universe: Households.'
+- name: B19037m57
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $20 000 to $24 999. Universe: Households.'
+- name: B19037e58
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $25 000 to $29 999. Universe: Households.'
+- name: B19037m58
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $25 000 to $29 999. Universe: Households.'
+- name: B19037e59
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $30 000 to $34 999. Universe: Households.'
+- name: B19037m59
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $30 000 to $34 999. Universe: Households.'
+- name: B19037e60
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $35 000 to $39 999. Universe: Households.'
+- name: B19037m60
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $35 000 to $39 999. Universe: Households.'
+- name: B19037e61
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $40 000 to $44 999. Universe: Households.'
+- name: B19037m61
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $40 000 to $44 999. Universe: Households.'
+- name: B19037e62
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $45 000 to $49 999. Universe: Households.'
+- name: B19037m62
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $45 000 to $49 999. Universe: Households.'
+- name: B19037e63
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $50 000 to $59 999. Universe: Households.'
+- name: B19037m63
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $50 000 to $59 999. Universe: Households.'
+- name: B19037e64
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $60 000 to $74 999. Universe: Households.'
+- name: B19037m64
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $60 000 to $74 999. Universe: Households.'
+- name: B19037e65
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $75 000 to $99 999. Universe: Households.'
+- name: B19037m65
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $75 000 to $99 999. Universe: Households.'
+- name: B19037e66
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $100 000 to $124 999. Universe: Households.'
+- name: B19037m66
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $100 000 to $124 999. Universe: Households.'
+- name: B19037e67
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $125 000 to $149 999. Universe: Households.'
+- name: B19037m67
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $125 000 to $149 999. Universe: Households.'
+- name: B19037e68
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $150 000 to $199 999. Universe: Households.'
+- name: B19037m68
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $150 000 to $199 999. Universe: Households.'
+- name: B19037e69
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $200 000 or more. Universe: Households.'
+- name: B19037m69
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Households > Total > Householder 65 years and over > $200 000 or more. Universe: Households.'
+- name: B19049e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Total. Universe: Households.'
+- name: B19049m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Total. Universe: Households.'
+- name: B19049e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Total > Householder under 25 years. Universe: Households.'
+- name: B19049m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Total > Householder under 25 years. Universe: Households.'
+- name: B19049e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Total > Householder 25 to 44 years. Universe: Households.'
+- name: B19049m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Total > Householder 25 to 44 years. Universe: Households.'
+- name: B19049e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Total > Householder 45 to 64 years. Universe: Households.'
+- name: B19049m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Total > Householder 45 to 64 years. Universe: Households.'
+- name: B19049e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Total > Householder 65 years and over. Universe: Households.'
+- name: B19049m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Median household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Total > Householder 65 years and over. Universe: Households.'
+- name: B19050e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: Households.'
+- name: B19050m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19050e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Householder under 25 years. Universe: Households.'
+- name: B19050m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Householder under 25 years. Universe: Households.'
+- name: B19050e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Householder 25 to 44 years. Universe: Households.'
+- name: B19050m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Householder 25 to 44 years. Universe: Households.'
+- name: B19050e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Householder 45 to 64 years. Universe: Households.'
+- name: B19050m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Householder 45 to 64 years. Universe: Households.'
+- name: B19050e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted dollars)
+      > Householder 65 years and over. Universe: Households.'
+- name: B19050m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) BY AGE OF HOUSEHOLDER > Households > Aggregate household income in the past 12 months (in 2019 inflation-adjusted
+      dollars) > Householder 65 years and over. Universe: Households.'
+- name: B19051e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EARNINGS IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total. Universe: Households.'
+- name: B19051m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EARNINGS IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total. Universe:
+      Households.'
+- name: B19051e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EARNINGS IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > With earnings.
+      Universe: Households.'
+- name: B19051m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EARNINGS IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > With
+      earnings. Universe: Households.'
+- name: B19051e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EARNINGS IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > No earnings. Universe:
+      Households.'
+- name: B19051m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EARNINGS IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > No earnings.
+      Universe: Households.'
+- name: B19052e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > WAGE OR SALARY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total. Universe:
+      Households.'
+- name: B19052m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > WAGE OR SALARY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households >
+      Total. Universe: Households.'
+- name: B19052e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > WAGE OR SALARY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > With
+      wage or salary income. Universe: Households.'
+- name: B19052m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > WAGE OR SALARY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households >
+      Total > With wage or salary income. Universe: Households.'
+- name: B19052e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > WAGE OR SALARY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > No
+      wage or salary income. Universe: Households.'
+- name: B19052m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > WAGE OR SALARY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households >
+      Total > No wage or salary income. Universe: Households.'
+- name: B19053e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total. Universe:
+      Households.'
+- name: B19053m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total. Universe: Households.'
+- name: B19053e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total >
+      With self-employment income. Universe: Households.'
+- name: B19053m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > With self-employment income. Universe: Households.'
+- name: B19053e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total >
+      No self-employment income. Universe: Households.'
+- name: B19053m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > No self-employment income. Universe: Households.'
+- name: B19054e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total. Universe: Households.'
+- name: B19054m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS
+      > Households > Total. Universe: Households.'
+- name: B19054e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > With interest dividends or net rental income. Universe: Households.'
+- name: B19054m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS
+      > Households > Total > With interest dividends or net rental income. Universe: Households.'
+- name: B19054e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > No interest dividends or net rental income. Universe: Households.'
+- name: B19054m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS
+      > Households > Total > No interest dividends or net rental income. Universe: Households.'
+- name: B19055e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total. Universe:
+      Households.'
+- name: B19055m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total. Universe: Households.'
+- name: B19055e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total >
+      With Social Security income. Universe: Households.'
+- name: B19055m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > With Social Security income. Universe: Households.'
+- name: B19055e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total >
+      No Social Security income. Universe: Households.'
+- name: B19055m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > No Social Security income. Universe: Households.'
+- name: B19056e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total. Universe: Households.'
+- name: B19056m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS FOR HOUSEHOLDS >
+      Households > Total. Universe: Households.'
+- name: B19056e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > With Supplemental Security Income (SSI). Universe: Households.'
+- name: B19056m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS FOR HOUSEHOLDS >
+      Households > Total > With Supplemental Security Income (SSI). Universe: Households.'
+- name: B19056e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > No Supplemental Security Income (SSI). Universe: Households.'
+- name: B19056m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS FOR HOUSEHOLDS >
+      Households > Total > No Supplemental Security Income (SSI). Universe: Households.'
+- name: B19057e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total.
+      Universe: Households.'
+- name: B19057m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total. Universe: Households.'
+- name: B19057e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total
+      > With public assistance income. Universe: Households.'
+- name: B19057m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > With public assistance income. Universe: Households.'
+- name: B19057e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total
+      > No public assistance income. Universe: Households.'
+- name: B19057m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households
+      > Total > No public assistance income. Universe: Households.'
+- name: B19058e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PUBLIC ASSISTANCE INCOME OR FOOD STAMPS/SNAP IN THE PAST 12 MONTHS FOR HOUSEHOLDS >
+      Households > Total. Universe: Households.'
+- name: B19058m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PUBLIC ASSISTANCE INCOME OR FOOD STAMPS/SNAP IN THE PAST 12 MONTHS FOR HOUSEHOLDS
+      > Households > Total. Universe: Households.'
+- name: B19058e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PUBLIC ASSISTANCE INCOME OR FOOD STAMPS/SNAP IN THE PAST 12 MONTHS FOR HOUSEHOLDS >
+      Households > Total > With cash public assistance or Food Stamps/SNAP. Universe: Households.'
+- name: B19058m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PUBLIC ASSISTANCE INCOME OR FOOD STAMPS/SNAP IN THE PAST 12 MONTHS FOR HOUSEHOLDS
+      > Households > Total > With cash public assistance or Food Stamps/SNAP. Universe: Households.'
+- name: B19058e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PUBLIC ASSISTANCE INCOME OR FOOD STAMPS/SNAP IN THE PAST 12 MONTHS FOR HOUSEHOLDS >
+      Households > Total > No cash public assistance or Food Stamps/SNAP. Universe: Households.'
+- name: B19058m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PUBLIC ASSISTANCE INCOME OR FOOD STAMPS/SNAP IN THE PAST 12 MONTHS FOR HOUSEHOLDS
+      > Households > Total > No cash public assistance or Food Stamps/SNAP. Universe: Households.'
+- name: B19059e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > RETIREMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total. Universe:
+      Households.'
+- name: B19059m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > RETIREMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total.
+      Universe: Households.'
+- name: B19059e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > RETIREMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > With
+      retirement income. Universe: Households.'
+- name: B19059m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > RETIREMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total
+      > With retirement income. Universe: Households.'
+- name: B19059e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > RETIREMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > No retirement
+      income. Universe: Households.'
+- name: B19059m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > RETIREMENT INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total
+      > No retirement income. Universe: Households.'
+- name: B19060e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > OTHER TYPES OF INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total. Universe:
+      Households.'
+- name: B19060m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > OTHER TYPES OF INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households >
+      Total. Universe: Households.'
+- name: B19060e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > OTHER TYPES OF INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > With
+      other types of income. Universe: Households.'
+- name: B19060m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > OTHER TYPES OF INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households >
+      Total > With other types of income. Universe: Households.'
+- name: B19060e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > OTHER TYPES OF INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households > Total > No
+      other types of income. Universe: Households.'
+- name: B19060m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > OTHER TYPES OF INCOME IN THE PAST 12 MONTHS FOR HOUSEHOLDS > Households >
+      Total > No other types of income. Universe: Households.'
+- name: B19061e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE EARNINGS IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR HOUSEHOLDS
+      > Households > Aggregate earnings in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households.'
+- name: B19061m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE EARNINGS IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR HOUSEHOLDS > Households > Aggregate earnings in the past 12 months (in 2019 inflation-adjusted dollars). Universe:
+      Households.'
+- name: B19062e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE WAGE OR SALARY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR HOUSEHOLDS > Households > Aggregate wage or salary income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: Households.'
+- name: B19062m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE WAGE OR SALARY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate wage or salary income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19063e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate self-employment income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19063m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE SELF-EMPLOYMENT INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate self-employment income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19064e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS (IN 2019
+      INFLATION-ADJUSTED DOLLARS) FOR HOUSEHOLDS > Households > Aggregate interest dividends or net rental income in the past
+      12 months (in 2019 inflation-adjusted dollars). Universe: Households.'
+- name: B19064m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INTEREST, DIVIDENDS, OR NET RENTAL INCOME IN THE PAST 12 MONTHS
+      (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR HOUSEHOLDS > Households > Aggregate interest dividends or net rental income
+      in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Households.'
+- name: B19065e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate Social Security income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19065m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE SOCIAL SECURITY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate Social Security income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19066e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate Supplemental Security Income (SSI) in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19066m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE SUPPLEMENTAL SECURITY INCOME (SSI) IN THE PAST 12 MONTHS (IN 2019
+      INFLATION-ADJUSTED DOLLARS) FOR HOUSEHOLDS > Households > Aggregate Supplemental Security Income (SSI) in the past 12
+      months (in 2019 inflation-adjusted dollars). Universe: Households.'
+- name: B19067e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate public assistance income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19067m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate public assistance income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19069e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE RETIREMENT INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR HOUSEHOLDS > Households > Aggregate retirement income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: Households.'
+- name: B19069m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE RETIREMENT INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate retirement income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19070e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE OTHER TYPES OF INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR HOUSEHOLDS > Households > Aggregate other types of income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: Households.'
+- name: B19070m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE OTHER TYPES OF INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) FOR HOUSEHOLDS > Households > Aggregate other types of income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Households.'
+- name: B19101e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total. Universe: Families.'
+- name: B19101m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total. Universe: Families.'
+- name: B19101e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > Less than $10 000. Universe: Families.'
+- name: B19101m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > Less than $10 000. Universe: Families.'
+- name: B19101e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $10 000 to $14 999. Universe: Families.'
+- name: B19101m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $10 000 to $14 999. Universe: Families.'
+- name: B19101e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $15 000 to $19 999. Universe: Families.'
+- name: B19101m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $15 000 to $19 999. Universe: Families.'
+- name: B19101e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $20 000 to $24 999. Universe: Families.'
+- name: B19101m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $20 000 to $24 999. Universe: Families.'
+- name: B19101e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $25 000 to $29 999. Universe: Families.'
+- name: B19101m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $25 000 to $29 999. Universe: Families.'
+- name: B19101e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $30 000 to $34 999. Universe: Families.'
+- name: B19101m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $30 000 to $34 999. Universe: Families.'
+- name: B19101e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $35 000 to $39 999. Universe: Families.'
+- name: B19101m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $35 000 to $39 999. Universe: Families.'
+- name: B19101e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $40 000 to $44 999. Universe: Families.'
+- name: B19101m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $40 000 to $44 999. Universe: Families.'
+- name: B19101e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $45 000 to $49 999. Universe: Families.'
+- name: B19101m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $45 000 to $49 999. Universe: Families.'
+- name: B19101e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $50 000 to $59 999. Universe: Families.'
+- name: B19101m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $50 000 to $59 999. Universe: Families.'
+- name: B19101e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $60 000 to $74 999. Universe: Families.'
+- name: B19101m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $60 000 to $74 999. Universe: Families.'
+- name: B19101e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $75 000 to $99 999. Universe: Families.'
+- name: B19101m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $75 000 to $99 999. Universe: Families.'
+- name: B19101e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $100 000 to $124 999. Universe: Families.'
+- name: B19101m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $100 000 to $124 999. Universe: Families.'
+- name: B19101e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $125 000 to $149 999. Universe: Families.'
+- name: B19101m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $125 000 to $149 999. Universe: Families.'
+- name: B19101e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $150 000 to $199 999. Universe: Families.'
+- name: B19101m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $150 000 to $199 999. Universe: Families.'
+- name: B19101e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Total > $200 000 or more. Universe: Families.'
+- name: B19101m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Total > $200 000 or more. Universe: Families.'
+- name: B19113e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Families
+      > Median family income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Families.'
+- name: B19113m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Median family income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Families.'
+- name: B19123e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total. Universe: Families.'
+- name: B19123m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total. Universe: Families.'
+- name: B19123e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > With cash public assistance income or households receiving Food
+      Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > With cash public assistance income or households receiving
+      Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > No cash public assistance income or household Food Stamps/SNAP benefits
+      in the past 12 months. Universe: Families.'
+- name: B19123m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > No cash public assistance income or household Food Stamps/SNAP
+      benefits in the past 12 months. Universe: Families.'
+- name: B19123e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 2-person families. Universe: Families.'
+- name: B19123m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 2-person families. Universe: Families.'
+- name: B19123e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 2-person families > With cash public assistance income or households
+      receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 2-person families > With cash public assistance income
+      or households receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 2-person families > No cash public assistance income or household
+      Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 2-person families > No cash public assistance income
+      or household Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 3-person families. Universe: Families.'
+- name: B19123m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 3-person families. Universe: Families.'
+- name: B19123e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 3-person families > With cash public assistance income or households
+      receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 3-person families > With cash public assistance income
+      or households receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 3-person families > No cash public assistance income or household
+      Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 3-person families > No cash public assistance income
+      or household Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 4-person families. Universe: Families.'
+- name: B19123m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 4-person families. Universe: Families.'
+- name: B19123e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 4-person families > With cash public assistance income or households
+      receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 4-person families > With cash public assistance income
+      or households receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 4-person families > No cash public assistance income or household
+      Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 4-person families > No cash public assistance income
+      or household Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 5-person families. Universe: Families.'
+- name: B19123m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 5-person families. Universe: Families.'
+- name: B19123e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 5-person families > With cash public assistance income or households
+      receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 5-person families > With cash public assistance income
+      or households receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 5-person families > No cash public assistance income or household
+      Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 5-person families > No cash public assistance income
+      or household Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 6-person families. Universe: Families.'
+- name: B19123m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 6-person families. Universe: Families.'
+- name: B19123e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 6-person families > With cash public assistance income or households
+      receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 6-person families > With cash public assistance income
+      or households receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 6-person families > No cash public assistance income or household
+      Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 6-person families > No cash public assistance income
+      or household Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 7-or-more-person families. Universe: Families.'
+- name: B19123m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 7-or-more-person families. Universe: Families.'
+- name: B19123e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 7-or-more-person families > With cash public assistance income or
+      households receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 7-or-more-person families > With cash public assistance
+      income or households receiving Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD STAMPS/SNAP
+      BENEFITS IN THE PAST 12 MONTHS > Families > Total > 7-or-more-person families > No cash public assistance income or
+      household Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19123m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > FAMILY SIZE BY CASH PUBLIC ASSISTANCE INCOME OR HOUSEHOLDS RECEIVING FOOD
+      STAMPS/SNAP BENEFITS IN THE PAST 12 MONTHS > Families > Total > 7-or-more-person families > No cash public assistance
+      income or household Food Stamps/SNAP benefits in the past 12 months. Universe: Families.'
+- name: B19127e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Families > Aggregate family income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Families.'
+- name: B19127m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Families > Aggregate family income in the past 12 months (in 2019 inflation-adjusted dollars). Universe:
+      Families.'
+- name: B19201e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total. Universe: Nonfamily households.'
+- name: B19201m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total. Universe: Nonfamily households.'
+- name: B19201e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > Less than $10 000. Universe: Nonfamily households.'
+- name: B19201m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > Less than $10 000. Universe: Nonfamily households.'
+- name: B19201e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $10 000 to $14 999. Universe: Nonfamily households.'
+- name: B19201m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $10 000 to $14 999. Universe: Nonfamily households.'
+- name: B19201e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $15 000 to $19 999. Universe: Nonfamily households.'
+- name: B19201m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $15 000 to $19 999. Universe: Nonfamily households.'
+- name: B19201e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $20 000 to $24 999. Universe: Nonfamily households.'
+- name: B19201m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $20 000 to $24 999. Universe: Nonfamily households.'
+- name: B19201e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $25 000 to $29 999. Universe: Nonfamily households.'
+- name: B19201m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $25 000 to $29 999. Universe: Nonfamily households.'
+- name: B19201e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $30 000 to $34 999. Universe: Nonfamily households.'
+- name: B19201m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $30 000 to $34 999. Universe: Nonfamily households.'
+- name: B19201e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $35 000 to $39 999. Universe: Nonfamily households.'
+- name: B19201m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $35 000 to $39 999. Universe: Nonfamily households.'
+- name: B19201e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $40 000 to $44 999. Universe: Nonfamily households.'
+- name: B19201m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $40 000 to $44 999. Universe: Nonfamily households.'
+- name: B19201e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $45 000 to $49 999. Universe: Nonfamily households.'
+- name: B19201m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $45 000 to $49 999. Universe: Nonfamily households.'
+- name: B19201e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $50 000 to $59 999. Universe: Nonfamily households.'
+- name: B19201m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $50 000 to $59 999. Universe: Nonfamily households.'
+- name: B19201e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $60 000 to $74 999. Universe: Nonfamily households.'
+- name: B19201m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $60 000 to $74 999. Universe: Nonfamily households.'
+- name: B19201e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $75 000 to $99 999. Universe: Nonfamily households.'
+- name: B19201m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $75 000 to $99 999. Universe: Nonfamily households.'
+- name: B19201e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $100 000 to $124 999. Universe: Nonfamily households.'
+- name: B19201m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $100 000 to $124 999. Universe: Nonfamily households.'
+- name: B19201e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $125 000 to $149 999. Universe: Nonfamily households.'
+- name: B19201m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $125 000 to $149 999. Universe: Nonfamily households.'
+- name: B19201e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $150 000 to $199 999. Universe: Nonfamily households.'
+- name: B19201m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $150 000 to $199 999. Universe: Nonfamily households.'
+- name: B19201e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Nonfamily households > Total > $200 000 or more. Universe: Nonfamily households.'
+- name: B19201m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Total > $200 000 or more. Universe: Nonfamily households.'
+- name: B19202e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Median nonfamily household income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Nonfamily households.'
+- name: B19202m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Median nonfamily household income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Nonfamily households.'
+- name: B19214e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Aggregate nonfamily household income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Nonfamily households.'
+- name: B19214m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE NONFAMILY HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED
+      DOLLARS) > Nonfamily households > Aggregate nonfamily household income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Nonfamily households.'
+- name: B19301e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Total
+      population > Per capita income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Total population.'
+- name: B19301m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Total population > Per capita income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Total population.'
+- name: B19301Ae1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (WHITE
+      ALONE) > People who are White alone > Per capita income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: People who are White alone.'
+- name: B19301Am1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (WHITE ALONE) > People who are White alone > Per capita income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: People who are White alone.'
+- name: B19301Be1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (BLACK
+      OR AFRICAN AMERICAN ALONE) > People who are Black or African American alone > Per capita income in the past 12 months
+      (in 2019 inflation-adjusted dollars). Universe: People who are Black or African American alone.'
+- name: B19301Bm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (BLACK OR AFRICAN AMERICAN ALONE) > People who are Black or African American alone > Per capita income in the past 12
+      months (in 2019 inflation-adjusted dollars). Universe: People who are Black or African American alone.'
+- name: B19301Ce1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (AMERICAN
+      INDIAN AND ALASKA NATIVE ALONE) > People who are American Indian and Alaska Native alone > Per capita income in the
+      past 12 months (in 2019 inflation-adjusted dollars). Universe: People who are American Indian and Alaska Native alone.'
+- name: B19301Cm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > People who are American Indian and Alaska Native alone > Per capita income
+      in the past 12 months (in 2019 inflation-adjusted dollars). Universe: People who are American Indian and Alaska Native
+      alone.'
+- name: B19301De1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (ASIAN
+      ALONE) > People who are Asian alone > Per capita income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: People who are Asian alone.'
+- name: B19301Dm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (ASIAN ALONE) > People who are Asian alone > Per capita income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: People who are Asian alone.'
+- name: B19301Ee1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B19301Ee1` from `2019_CBG_B19`.
+- name: B19301Em1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B19301Em1` from `2019_CBG_B19`.
+- name: B19301Fe1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (SOME
+      OTHER RACE ALONE) > People who are Some Other Race alone > Per capita income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: People who are Some Other Race alone.'
+- name: B19301Fm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (SOME OTHER RACE ALONE) > People who are Some Other Race alone > Per capita income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: People who are Some Other Race alone.'
+- name: B19301Ge1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (TWO OR
+      MORE RACES) > Two or more races population > Per capita income in the past 12 months (in 2019 inflation-adjusted dollars).
+      Universe: Two or more races population.'
+- name: B19301Gm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (TWO OR MORE RACES) > Two or more races population > Per capita income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: Two or more races population.'
+- name: B19301He1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (WHITE
+      ALONE, NOT HISPANIC OR LATINO) > White alone, not Hispanic or Latino population > Per capita income in the past 12 months
+      (in 2019 inflation-adjusted dollars). Universe: White alone, not Hispanic or Latino population.'
+- name: B19301Hm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not Hispanic or Latino population > Per capita income in the past
+      12 months (in 2019 inflation-adjusted dollars). Universe: White alone, not Hispanic or Latino population.'
+- name: B19301Ie1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (HISPANIC
+      OR LATINO) > People who are Hispanic or Latino > Per capita income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: People who are Hispanic or Latino.'
+- name: B19301Im1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      (HISPANIC OR LATINO) > People who are Hispanic or Latino > Per capita income in the past 12 months (in 2019 inflation-adjusted
+      dollars). Universe: People who are Hispanic or Latino.'
+- name: B19313e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) > Population
+      15 years and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Population
+      15 years and over.'
+- name: B19313m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      > Population 15 years and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe:
+      Population 15 years and over.'
+- name: B19313Ae1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (WHITE ALONE) > White alone population 15 years and over > Aggregate income in the past
+      12 months (in 2019 inflation-adjusted dollars). Universe: White alone population 15 years and over.'
+- name: B19313Am1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (WHITE ALONE) > White alone population 15 years and over > Aggregate income in
+      the past 12 months (in 2019 inflation-adjusted dollars). Universe: White alone population 15 years and over.'
+- name: B19313Be1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American alone population 15 years
+      and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Black or African American
+      alone population 15 years and over.'
+- name: B19313Bm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American alone population
+      15 years and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Black or
+      African American alone population 15 years and over.'
+- name: B19313Ce1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > American Indian and Alaska Native alone population
+      15 years and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: American
+      Indian and Alaska Native alone population 15 years and over.'
+- name: B19313Cm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > American Indian and Alaska Native alone
+      population 15 years and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe:
+      American Indian and Alaska Native alone population 15 years and over.'
+- name: B19313De1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (ASIAN ALONE) > Asian alone population 15 years and over > Aggregate income in the past
+      12 months (in 2019 inflation-adjusted dollars). Universe: Asian alone population 15 years and over.'
+- name: B19313Dm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (ASIAN ALONE) > Asian alone population 15 years and over > Aggregate income in
+      the past 12 months (in 2019 inflation-adjusted dollars). Universe: Asian alone population 15 years and over.'
+- name: B19313Ee1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B19313Ee1` from `2019_CBG_B19`.
+- name: B19313Em1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B19313Em1` from `2019_CBG_B19`.
+- name: B19313Fe1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (SOME OTHER RACE ALONE) > Some other race alone population 15 years and over > Aggregate
+      income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Some other race alone population 15 years
+      and over.'
+- name: B19313Fm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (SOME OTHER RACE ALONE) > Some other race alone population 15 years and over >
+      Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Some other race alone population
+      15 years and over.'
+- name: B19313Ge1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (TWO OR MORE RACES) > Two or more races population 15 years and over > Aggregate income
+      in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Two or more races population 15 years and over.'
+- name: B19313Gm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (TWO OR MORE RACES) > Two or more races population 15 years and over > Aggregate
+      income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Two or more races population 15 years and
+      over.'
+- name: B19313He1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not Hispanic or Latino population
+      15 years and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: White alone,
+      not Hispanic or Latino population 15 years and over.'
+- name: B19313Hm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not Hispanic or Latino population
+      15 years and over > Aggregate income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: White alone,
+      not Hispanic or Latino population 15 years and over.'
+- name: B19313Ie1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) FOR THE
+      POPULATION 15 YEARS AND OVER (HISPANIC OR LATINO) > Hispanic or Latino population 15 years and over > Aggregate income
+      in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Hispanic or Latino population 15 years and over.'
+- name: B19313Im1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)
+      FOR THE POPULATION 15 YEARS AND OVER (HISPANIC OR LATINO) > Hispanic or Latino population 15 years and over > Aggregate
+      income in the past 12 months (in 2019 inflation-adjusted dollars). Universe: Hispanic or Latino population 15 years
+      and over.'
+cached: false
+properties:
+  description: 2019 Census Block Group estimates and margins of error for household income.

@@ -1,0 +1,1237 @@
+name: census_2019_age_sex
+table_reference:
+  catalog: US_OPEN_CENSUS_DATA_NEIGHBORHOOD_INSIGHTS_FREE_DATASET
+  schema: PUBLIC
+  table: 2019_CBG_B01
+columns:
+- name: CENSUS_BLOCK_GROUP
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Twelve-digit Census Block Group identifier; one observation row is at this geographic grain.
+- name: B01001e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total. Universe: Total population.'
+- name: B01001m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total. Universe: Total population.'
+- name: B01001e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male. Universe: Total population.'
+- name: B01001m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male. Universe: Total population.'
+- name: B01001e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > Under 5 years. Universe: Total population.'
+- name: B01001m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > Under 5 years. Universe: Total
+      population.'
+- name: B01001e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 5 to 9 years. Universe: Total population.'
+- name: B01001m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 5 to 9 years. Universe: Total
+      population.'
+- name: B01001e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 10 to 14 years. Universe: Total population.'
+- name: B01001m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 10 to 14 years. Universe:
+      Total population.'
+- name: B01001e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 15 to 17 years. Universe: Total population.'
+- name: B01001m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 15 to 17 years. Universe:
+      Total population.'
+- name: B01001e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 18 and 19 years. Universe: Total population.'
+- name: B01001m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 18 and 19 years. Universe:
+      Total population.'
+- name: B01001e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 20 years. Universe: Total population.'
+- name: B01001m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 20 years. Universe: Total
+      population.'
+- name: B01001e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 21 years. Universe: Total population.'
+- name: B01001m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 21 years. Universe: Total
+      population.'
+- name: B01001e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 22 to 24 years. Universe: Total population.'
+- name: B01001m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 22 to 24 years. Universe:
+      Total population.'
+- name: B01001e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 25 to 29 years. Universe: Total population.'
+- name: B01001m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 25 to 29 years. Universe:
+      Total population.'
+- name: B01001e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 30 to 34 years. Universe: Total population.'
+- name: B01001m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 30 to 34 years. Universe:
+      Total population.'
+- name: B01001e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 35 to 39 years. Universe: Total population.'
+- name: B01001m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 35 to 39 years. Universe:
+      Total population.'
+- name: B01001e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 40 to 44 years. Universe: Total population.'
+- name: B01001m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 40 to 44 years. Universe:
+      Total population.'
+- name: B01001e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 45 to 49 years. Universe: Total population.'
+- name: B01001m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 45 to 49 years. Universe:
+      Total population.'
+- name: B01001e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 50 to 54 years. Universe: Total population.'
+- name: B01001m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 50 to 54 years. Universe:
+      Total population.'
+- name: B01001e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 55 to 59 years. Universe: Total population.'
+- name: B01001m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 55 to 59 years. Universe:
+      Total population.'
+- name: B01001e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 60 and 61 years. Universe: Total population.'
+- name: B01001m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 60 and 61 years. Universe:
+      Total population.'
+- name: B01001e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 62 to 64 years. Universe: Total population.'
+- name: B01001m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 62 to 64 years. Universe:
+      Total population.'
+- name: B01001e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 65 and 66 years. Universe: Total population.'
+- name: B01001m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 65 and 66 years. Universe:
+      Total population.'
+- name: B01001e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 67 to 69 years. Universe: Total population.'
+- name: B01001m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 67 to 69 years. Universe:
+      Total population.'
+- name: B01001e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 70 to 74 years. Universe: Total population.'
+- name: B01001m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 70 to 74 years. Universe:
+      Total population.'
+- name: B01001e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 75 to 79 years. Universe: Total population.'
+- name: B01001m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 75 to 79 years. Universe:
+      Total population.'
+- name: B01001e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 80 to 84 years. Universe: Total population.'
+- name: B01001m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 80 to 84 years. Universe:
+      Total population.'
+- name: B01001e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Male > 85 years and over. Universe: Total population.'
+- name: B01001m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Male > 85 years and over. Universe:
+      Total population.'
+- name: B01001e26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female. Universe: Total population.'
+- name: B01001m26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female. Universe: Total population.'
+- name: B01001e27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > Under 5 years. Universe: Total population.'
+- name: B01001m27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > Under 5 years. Universe:
+      Total population.'
+- name: B01001e28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 5 to 9 years. Universe: Total population.'
+- name: B01001m28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 5 to 9 years. Universe:
+      Total population.'
+- name: B01001e29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 10 to 14 years. Universe: Total population.'
+- name: B01001m29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 10 to 14 years. Universe:
+      Total population.'
+- name: B01001e30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 15 to 17 years. Universe: Total population.'
+- name: B01001m30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 15 to 17 years. Universe:
+      Total population.'
+- name: B01001e31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 18 and 19 years. Universe: Total population.'
+- name: B01001m31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 18 and 19 years. Universe:
+      Total population.'
+- name: B01001e32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 20 years. Universe: Total population.'
+- name: B01001m32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 20 years. Universe: Total
+      population.'
+- name: B01001e33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 21 years. Universe: Total population.'
+- name: B01001m33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 21 years. Universe: Total
+      population.'
+- name: B01001e34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 22 to 24 years. Universe: Total population.'
+- name: B01001m34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 22 to 24 years. Universe:
+      Total population.'
+- name: B01001e35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 25 to 29 years. Universe: Total population.'
+- name: B01001m35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 25 to 29 years. Universe:
+      Total population.'
+- name: B01001e36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 30 to 34 years. Universe: Total population.'
+- name: B01001m36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 30 to 34 years. Universe:
+      Total population.'
+- name: B01001e37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 35 to 39 years. Universe: Total population.'
+- name: B01001m37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 35 to 39 years. Universe:
+      Total population.'
+- name: B01001e38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 40 to 44 years. Universe: Total population.'
+- name: B01001m38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 40 to 44 years. Universe:
+      Total population.'
+- name: B01001e39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 45 to 49 years. Universe: Total population.'
+- name: B01001m39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 45 to 49 years. Universe:
+      Total population.'
+- name: B01001e40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 50 to 54 years. Universe: Total population.'
+- name: B01001m40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 50 to 54 years. Universe:
+      Total population.'
+- name: B01001e41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 55 to 59 years. Universe: Total population.'
+- name: B01001m41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 55 to 59 years. Universe:
+      Total population.'
+- name: B01001e42
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 60 and 61 years. Universe: Total population.'
+- name: B01001m42
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 60 and 61 years. Universe:
+      Total population.'
+- name: B01001e43
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 62 to 64 years. Universe: Total population.'
+- name: B01001m43
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 62 to 64 years. Universe:
+      Total population.'
+- name: B01001e44
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 65 and 66 years. Universe: Total population.'
+- name: B01001m44
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 65 and 66 years. Universe:
+      Total population.'
+- name: B01001e45
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 67 to 69 years. Universe: Total population.'
+- name: B01001m45
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 67 to 69 years. Universe:
+      Total population.'
+- name: B01001e46
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 70 to 74 years. Universe: Total population.'
+- name: B01001m46
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 70 to 74 years. Universe:
+      Total population.'
+- name: B01001e47
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 75 to 79 years. Universe: Total population.'
+- name: B01001m47
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 75 to 79 years. Universe:
+      Total population.'
+- name: B01001e48
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 80 to 84 years. Universe: Total population.'
+- name: B01001m48
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 80 to 84 years. Universe:
+      Total population.'
+- name: B01001e49
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE > Total population > Total > Female > 85 years and over. Universe: Total
+      population.'
+- name: B01001m49
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE > Total population > Total > Female > 85 years and over. Universe:
+      Total population.'
+- name: B01002e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX > Total population > Median age > Total. Universe: Total population.'
+- name: B01002m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX > Total population > Median age > Total. Universe: Total
+      population.'
+- name: B01002e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX > Total population > Median age > Male. Universe: Total population.'
+- name: B01002m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX > Total population > Median age > Male. Universe: Total
+      population.'
+- name: B01002e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX > Total population > Median age > Female. Universe: Total population.'
+- name: B01002m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX > Total population > Median age > Female. Universe: Total
+      population.'
+- name: B01002Ae1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (WHITE ALONE) > People who are White alone > Median age > Total.
+      Universe: People who are White alone.'
+- name: B01002Am1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (WHITE ALONE) > People who are White alone > Median age
+      > Total. Universe: People who are White alone.'
+- name: B01002Ae2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (WHITE ALONE) > People who are White alone > Median age > Male. Universe:
+      People who are White alone.'
+- name: B01002Am2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (WHITE ALONE) > People who are White alone > Median age
+      > Male. Universe: People who are White alone.'
+- name: B01002Ae3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (WHITE ALONE) > People who are White alone > Median age > Female.
+      Universe: People who are White alone.'
+- name: B01002Am3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (WHITE ALONE) > People who are White alone > Median age
+      > Female. Universe: People who are White alone.'
+- name: B01002Be1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American alone
+      > Median age > Total. Universe: Black or African American alone.'
+- name: B01002Bm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American
+      alone > Median age > Total. Universe: Black or African American alone.'
+- name: B01002Be2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American alone
+      > Median age > Male. Universe: Black or African American alone.'
+- name: B01002Bm2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American
+      alone > Median age > Male. Universe: Black or African American alone.'
+- name: B01002Be3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American alone
+      > Median age > Female. Universe: Black or African American alone.'
+- name: B01002Bm3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (BLACK OR AFRICAN AMERICAN ALONE) > Black or African American
+      alone > Median age > Female. Universe: Black or African American alone.'
+- name: B01002Ce1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > People who are American
+      Indian and Alaska Native alone > Median age > Total. Universe: People who are American Indian and Alaska Native alone.'
+- name: B01002Cm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > People who
+      are American Indian and Alaska Native alone > Median age > Total. Universe: People who are American Indian and Alaska
+      Native alone.'
+- name: B01002Ce2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > People who are American
+      Indian and Alaska Native alone > Median age > Male. Universe: People who are American Indian and Alaska Native alone.'
+- name: B01002Cm2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > People who
+      are American Indian and Alaska Native alone > Median age > Male. Universe: People who are American Indian and Alaska
+      Native alone.'
+- name: B01002Ce3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > People who are American
+      Indian and Alaska Native alone > Median age > Female. Universe: People who are American Indian and Alaska Native alone.'
+- name: B01002Cm3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (AMERICAN INDIAN AND ALASKA NATIVE ALONE) > People who
+      are American Indian and Alaska Native alone > Median age > Female. Universe: People who are American Indian and Alaska
+      Native alone.'
+- name: B01002De1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (ASIAN ALONE) > People who are Asian alone > Median age > Total.
+      Universe: People who are Asian alone.'
+- name: B01002Dm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (ASIAN ALONE) > People who are Asian alone > Median age
+      > Total. Universe: People who are Asian alone.'
+- name: B01002De2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (ASIAN ALONE) > People who are Asian alone > Median age > Male. Universe:
+      People who are Asian alone.'
+- name: B01002Dm2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (ASIAN ALONE) > People who are Asian alone > Median age
+      > Male. Universe: People who are Asian alone.'
+- name: B01002De3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (ASIAN ALONE) > People who are Asian alone > Median age > Female.
+      Universe: People who are Asian alone.'
+- name: B01002Dm3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (ASIAN ALONE) > People who are Asian alone > Median age
+      > Female. Universe: People who are Asian alone.'
+- name: B01002Ee1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B01002Ee1` from `2019_CBG_B01`.
+- name: B01002Em1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B01002Em1` from `2019_CBG_B01`.
+- name: B01002Ee2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B01002Ee2` from `2019_CBG_B01`.
+- name: B01002Em2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B01002Em2` from `2019_CBG_B01`.
+- name: B01002Ee3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B01002Ee3` from `2019_CBG_B01`.
+- name: B01002Em3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 2019 Census source field `B01002Em3` from `2019_CBG_B01`.
+- name: B01002Fe1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (SOME OTHER RACE ALONE) > People who are Some Other Race alone >
+      Median age > Total. Universe: People who are Some Other Race alone.'
+- name: B01002Fm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (SOME OTHER RACE ALONE) > People who are Some Other Race
+      alone > Median age > Total. Universe: People who are Some Other Race alone.'
+- name: B01002Fe2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (SOME OTHER RACE ALONE) > People who are Some Other Race alone >
+      Median age > Male. Universe: People who are Some Other Race alone.'
+- name: B01002Fm2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (SOME OTHER RACE ALONE) > People who are Some Other Race
+      alone > Median age > Male. Universe: People who are Some Other Race alone.'
+- name: B01002Fe3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (SOME OTHER RACE ALONE) > People who are Some Other Race alone >
+      Median age > Female. Universe: People who are Some Other Race alone.'
+- name: B01002Fm3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (SOME OTHER RACE ALONE) > People who are Some Other Race
+      alone > Median age > Female. Universe: People who are Some Other Race alone.'
+- name: B01002Ge1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (TWO OR MORE RACES) > People who are Two or More Races > Median age
+      > Total. Universe: People who are Two or More Races.'
+- name: B01002Gm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (TWO OR MORE RACES) > People who are Two or More Races
+      > Median age > Total. Universe: People who are Two or More Races.'
+- name: B01002Ge2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (TWO OR MORE RACES) > People who are Two or More Races > Median age
+      > Male. Universe: People who are Two or More Races.'
+- name: B01002Gm2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (TWO OR MORE RACES) > People who are Two or More Races
+      > Median age > Male. Universe: People who are Two or More Races.'
+- name: B01002Ge3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (TWO OR MORE RACES) > People who are Two or More Races > Median age
+      > Female. Universe: People who are Two or More Races.'
+- name: B01002Gm3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (TWO OR MORE RACES) > People who are Two or More Races
+      > Median age > Female. Universe: People who are Two or More Races.'
+- name: B01002He1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not Hispanic
+      or Latino population > Median age > Total. Universe: White alone, not Hispanic or Latino population.'
+- name: B01002Hm1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not
+      Hispanic or Latino population > Median age > Total. Universe: White alone, not Hispanic or Latino population.'
+- name: B01002He2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not Hispanic
+      or Latino population > Median age > Male. Universe: White alone, not Hispanic or Latino population.'
+- name: B01002Hm2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not
+      Hispanic or Latino population > Median age > Male. Universe: White alone, not Hispanic or Latino population.'
+- name: B01002He3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not Hispanic
+      or Latino population > Median age > Female. Universe: White alone, not Hispanic or Latino population.'
+- name: B01002Hm3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (WHITE ALONE, NOT HISPANIC OR LATINO) > White alone, not
+      Hispanic or Latino population > Median age > Female. Universe: White alone, not Hispanic or Latino population.'
+- name: B01002Ie1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (HISPANIC OR LATINO) > Hispanic or Latino population > Median age
+      > Total. Universe: Hispanic or Latino population.'
+- name: B01002Im1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (HISPANIC OR LATINO) > Hispanic or Latino population >
+      Median age > Total. Universe: Hispanic or Latino population.'
+- name: B01002Ie2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (HISPANIC OR LATINO) > Hispanic or Latino population > Median age
+      > Male. Universe: Hispanic or Latino population.'
+- name: B01002Im2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (HISPANIC OR LATINO) > Hispanic or Latino population >
+      Median age > Male. Universe: Hispanic or Latino population.'
+- name: B01002Ie3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > MEDIAN AGE BY SEX (HISPANIC OR LATINO) > Hispanic or Latino population > Median age
+      > Female. Universe: Hispanic or Latino population.'
+- name: B01002Im3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > MEDIAN AGE BY SEX (HISPANIC OR LATINO) > Hispanic or Latino population >
+      Median age > Female. Universe: Hispanic or Latino population.'
+- name: B01003e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL POPULATION > Total population > Total. Universe: Total population.'
+- name: B01003m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL POPULATION > Total population > Total. Universe: Total population.'
+cached: false
+properties:
+  description: 2019 Census Block Group estimates and margins of error for age and sex.

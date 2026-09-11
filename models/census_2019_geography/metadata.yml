@@ -1,0 +1,44 @@
+name: census_2019_geography
+table_reference:
+  catalog: US_OPEN_CENSUS_DATA_NEIGHBORHOOD_INSIGHTS_FREE_DATASET
+  schema: PUBLIC
+  table: 2019_METADATA_CBG_GEOGRAPHIC_DATA
+columns:
+- name: CENSUS_BLOCK_GROUP
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Twelve-digit Census Block Group identifier; one observation row is at this geographic grain.
+- name: AMOUNT_LAND
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Land area for the Census Block Group.
+- name: AMOUNT_WATER
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Water area for the Census Block Group.
+- name: LATITUDE
+  type: DOUBLE
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Latitude for the Census Block Group geographic reference point.
+- name: LONGITUDE
+  type: DOUBLE
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Longitude for the Census Block Group geographic reference point.
+cached: false
+properties:
+  description: 2019 geographic attributes for Census Block Groups, including land, water, latitude, and longitude.

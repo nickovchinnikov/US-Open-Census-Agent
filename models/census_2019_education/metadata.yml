@@ -1,0 +1,2009 @@
+name: census_2019_education
+table_reference:
+  catalog: US_OPEN_CENSUS_DATA_NEIGHBORHOOD_INSIGHTS_FREE_DATASET
+  schema: PUBLIC
+  table: 2019_CBG_B15
+columns:
+- name: CENSUS_BLOCK_GROUP
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Twelve-digit Census Block Group identifier; one observation row is at this geographic grain.
+- name: B15002e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total. Universe: Population 25 years and over.'
+- name: B15002m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total. Universe: Population 25 years and over.'
+- name: B15002e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male. Universe: Population 25 years and over.'
+- name: B15002m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male. Universe: Population 25 years and over.'
+- name: B15002e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > No schooling completed. Universe: Population 25 years and over.'
+- name: B15002m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > No schooling completed. Universe: Population 25 years and over.'
+- name: B15002e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Nursery to 4th grade. Universe: Population 25 years and over.'
+- name: B15002m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Nursery to 4th grade. Universe: Population 25 years and over.'
+- name: B15002e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > 5th and 6th grade. Universe: Population 25 years and over.'
+- name: B15002m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > 5th and 6th grade. Universe: Population 25 years and over.'
+- name: B15002e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > 7th and 8th grade. Universe: Population 25 years and over.'
+- name: B15002m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > 7th and 8th grade. Universe: Population 25 years and over.'
+- name: B15002e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > 9th grade. Universe: Population 25 years and over.'
+- name: B15002m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > 9th grade. Universe: Population 25 years and over.'
+- name: B15002e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > 10th grade. Universe: Population 25 years and over.'
+- name: B15002m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > 10th grade. Universe: Population 25 years and over.'
+- name: B15002e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > 11th grade. Universe: Population 25 years and over.'
+- name: B15002m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > 11th grade. Universe: Population 25 years and over.'
+- name: B15002e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > 12th grade no diploma. Universe: Population 25 years and over.'
+- name: B15002m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > 12th grade no diploma. Universe: Population 25 years and over.'
+- name: B15002e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > High school graduate (includes equivalency). Universe: Population 25 years and over.'
+- name: B15002m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > High school graduate (includes equivalency). Universe: Population 25 years and over.'
+- name: B15002e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Some college less than 1 year. Universe: Population 25 years and over.'
+- name: B15002m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Some college less than 1 year. Universe: Population 25 years and over.'
+- name: B15002e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Some college 1 or more years no degree. Universe: Population 25 years and over.'
+- name: B15002m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Some college 1 or more years no degree. Universe: Population 25 years and over.'
+- name: B15002e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Associate''s degree. Universe: Population 25 years and over.'
+- name: B15002m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Associate''s degree. Universe: Population 25 years and over.'
+- name: B15002e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Bachelor''s degree. Universe: Population 25 years and over.'
+- name: B15002m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Bachelor''s degree. Universe: Population 25 years and over.'
+- name: B15002e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Master''s degree. Universe: Population 25 years and over.'
+- name: B15002m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Master''s degree. Universe: Population 25 years and over.'
+- name: B15002e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Professional school degree. Universe: Population 25 years and over.'
+- name: B15002m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Professional school degree. Universe: Population 25 years and over.'
+- name: B15002e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Male > Doctorate degree. Universe: Population 25 years and over.'
+- name: B15002m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Male > Doctorate degree. Universe: Population 25 years and over.'
+- name: B15002e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female. Universe: Population 25 years and over.'
+- name: B15002m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female. Universe: Population 25 years and over.'
+- name: B15002e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > No schooling completed. Universe: Population 25 years and over.'
+- name: B15002m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > No schooling completed. Universe: Population 25 years and over.'
+- name: B15002e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Nursery to 4th grade. Universe: Population 25 years and over.'
+- name: B15002m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Nursery to 4th grade. Universe: Population 25 years and over.'
+- name: B15002e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > 5th and 6th grade. Universe: Population 25 years and over.'
+- name: B15002m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > 5th and 6th grade. Universe: Population 25 years and over.'
+- name: B15002e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > 7th and 8th grade. Universe: Population 25 years and over.'
+- name: B15002m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > 7th and 8th grade. Universe: Population 25 years and over.'
+- name: B15002e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > 9th grade. Universe: Population 25 years and over.'
+- name: B15002m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > 9th grade. Universe: Population 25 years and over.'
+- name: B15002e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > 10th grade. Universe: Population 25 years and over.'
+- name: B15002m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > 10th grade. Universe: Population 25 years and over.'
+- name: B15002e26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > 11th grade. Universe: Population 25 years and over.'
+- name: B15002m26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > 11th grade. Universe: Population 25 years and over.'
+- name: B15002e27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > 12th grade no diploma. Universe: Population 25 years and over.'
+- name: B15002m27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > 12th grade no diploma. Universe: Population 25 years and over.'
+- name: B15002e28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > High school graduate (includes equivalency). Universe: Population 25 years and over.'
+- name: B15002m28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > High school graduate (includes equivalency). Universe: Population 25 years and
+      over.'
+- name: B15002e29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Some college less than 1 year. Universe: Population 25 years and over.'
+- name: B15002m29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Some college less than 1 year. Universe: Population 25 years and over.'
+- name: B15002e30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Some college 1 or more years no degree. Universe: Population 25 years and over.'
+- name: B15002m30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Some college 1 or more years no degree. Universe: Population 25 years and over.'
+- name: B15002e31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Associate''s degree. Universe: Population 25 years and over.'
+- name: B15002m31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Associate''s degree. Universe: Population 25 years and over.'
+- name: B15002e32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Bachelor''s degree. Universe: Population 25 years and over.'
+- name: B15002m32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Bachelor''s degree. Universe: Population 25 years and over.'
+- name: B15002e33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Master''s degree. Universe: Population 25 years and over.'
+- name: B15002m33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Master''s degree. Universe: Population 25 years and over.'
+- name: B15002e34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Professional school degree. Universe: Population 25 years and over.'
+- name: B15002m34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Professional school degree. Universe: Population 25 years and over.'
+- name: B15002e35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25
+      years and over > Total > Female > Doctorate degree. Universe: Population 25 years and over.'
+- name: B15002m35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Female > Doctorate degree. Universe: Population 25 years and over.'
+- name: B15003e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total. Universe: Population 25 years and over.'
+- name: B15003m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total. Universe: Population 25 years and over.'
+- name: B15003e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > No schooling completed. Universe: Population 25 years and over.'
+- name: B15003m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > No schooling completed. Universe: Population 25 years and over.'
+- name: B15003e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Nursery school. Universe: Population 25 years and over.'
+- name: B15003m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Nursery school. Universe: Population 25 years and over.'
+- name: B15003e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Kindergarten. Universe: Population 25 years and over.'
+- name: B15003m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Kindergarten. Universe: Population 25 years and over.'
+- name: B15003e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 1st grade. Universe: Population 25 years and over.'
+- name: B15003m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 1st grade. Universe: Population 25 years and over.'
+- name: B15003e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 2nd grade. Universe: Population 25 years and over.'
+- name: B15003m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 2nd grade. Universe: Population 25 years and over.'
+- name: B15003e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 3rd grade. Universe: Population 25 years and over.'
+- name: B15003m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 3rd grade. Universe: Population 25 years and over.'
+- name: B15003e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 4th grade. Universe: Population 25 years and over.'
+- name: B15003m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 4th grade. Universe: Population 25 years and over.'
+- name: B15003e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 5th grade. Universe: Population 25 years and over.'
+- name: B15003m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 5th grade. Universe: Population 25 years and over.'
+- name: B15003e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 6th grade. Universe: Population 25 years and over.'
+- name: B15003m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 6th grade. Universe: Population 25 years and over.'
+- name: B15003e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 7th grade. Universe: Population 25 years and over.'
+- name: B15003m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 7th grade. Universe: Population 25 years and over.'
+- name: B15003e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 8th grade. Universe: Population 25 years and over.'
+- name: B15003m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 8th grade. Universe: Population 25 years and over.'
+- name: B15003e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 9th grade. Universe: Population 25 years and over.'
+- name: B15003m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 9th grade. Universe: Population 25 years and over.'
+- name: B15003e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 10th grade. Universe: Population 25 years and over.'
+- name: B15003m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 10th grade. Universe: Population 25 years and over.'
+- name: B15003e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 11th grade. Universe: Population 25 years and over.'
+- name: B15003m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 11th grade. Universe: Population 25 years and over.'
+- name: B15003e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > 12th grade no diploma. Universe: Population 25 years and over.'
+- name: B15003m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > 12th grade no diploma. Universe: Population 25 years and over.'
+- name: B15003e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Regular high school diploma. Universe: Population 25 years and over.'
+- name: B15003m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Regular high school diploma. Universe: Population 25 years and over.'
+- name: B15003e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > GED or alternative credential. Universe: Population 25 years and over.'
+- name: B15003m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > GED or alternative credential. Universe: Population 25 years and over.'
+- name: B15003e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Some college less than 1 year. Universe: Population 25 years and over.'
+- name: B15003m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Some college less than 1 year. Universe: Population 25 years and over.'
+- name: B15003e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Some college 1 or more years no degree. Universe: Population 25 years and over.'
+- name: B15003m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Some college 1 or more years no degree. Universe: Population 25 years and over.'
+- name: B15003e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Associate''s degree. Universe: Population 25 years and over.'
+- name: B15003m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Associate''s degree. Universe: Population 25 years and over.'
+- name: B15003e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Bachelor''s degree. Universe: Population 25 years and over.'
+- name: B15003m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Bachelor''s degree. Universe: Population 25 years and over.'
+- name: B15003e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Master''s degree. Universe: Population 25 years and over.'
+- name: B15003m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Master''s degree. Universe: Population 25 years and over.'
+- name: B15003e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Professional school degree. Universe: Population 25 years and over.'
+- name: B15003m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Professional school degree. Universe: Population 25 years and over.'
+- name: B15003e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population 25 years and
+      over > Total > Doctorate degree. Universe: Population 25 years and over.'
+- name: B15003m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER > Population
+      25 years and over > Total > Doctorate degree. Universe: Population 25 years and over.'
+- name: B15011e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total. Universe: POPULATION
+      25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total. Universe: POPULATION
+      25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male. Universe: POPULATION
+      25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male. Universe:
+      POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25 to 39 years.
+      Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25
+      to 39 years. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25 to 39 years
+      > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25
+      to 39 years > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25 to 39 years
+      > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25
+      to 39 years > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15011e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25 to 39 years
+      > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25
+      to 39 years > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25 to 39 years
+      > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25
+      to 39 years > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25 to 39 years
+      > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 25
+      to 39 years > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40 to 64 years.
+      Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40
+      to 64 years. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40 to 64 years
+      > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40
+      to 64 years > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40 to 64 years
+      > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40
+      to 64 years > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15011e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40 to 64 years
+      > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40
+      to 64 years > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40 to 64 years
+      > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40
+      to 64 years > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40 to 64 years
+      > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 40
+      to 64 years > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65 years and
+      over. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65
+      years and over. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65 years and
+      over > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65
+      years and over > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65 years and
+      over > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65
+      years and over > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15011e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65 years and
+      over > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65
+      years and over > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65 years and
+      over > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65
+      years and over > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65 years and
+      over > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Male > 65
+      years and over > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female. Universe: POPULATION
+      25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female. Universe:
+      POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25 to 39 years.
+      Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25
+      to 39 years. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25 to 39 years
+      > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25
+      to 39 years > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25 to 39 years
+      > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25
+      to 39 years > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15011e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25 to 39 years
+      > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25
+      to 39 years > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25 to 39 years
+      > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25
+      to 39 years > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25 to 39 years
+      > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 25
+      to 39 years > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011e28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40 to 64 years.
+      Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40
+      to 64 years. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40 to 64 years
+      > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40
+      to 64 years > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40 to 64 years
+      > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011m30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40
+      to 64 years > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15011e31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40 to 64 years
+      > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40
+      to 64 years > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40 to 64 years
+      > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40
+      to 64 years > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40 to 64 years
+      > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 40
+      to 64 years > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011e34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65 years and
+      over. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65
+      years and over. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65 years and
+      over > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65
+      years and over > Science and Engineering. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011e36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65 years and
+      over > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15011m36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65
+      years and over > Science and Engineering Related Fields. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15011e37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65 years and
+      over > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65
+      years and over > Business. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65 years and
+      over > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65
+      years and over > Education. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011e39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION 25 YEARS
+      AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65 years and
+      over > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15011m39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > SEX BY AGE BY FIELD OF BACHELOR''S DEGREE FOR FIRST MAJOR FOR THE POPULATION
+      25 YEARS AND OVER > POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Female > 65
+      years and over > Arts Humanities and Other. Universe: POPULATION 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER
+      ATTAINMENT.'
+- name: B15012e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total. Universe: TOTAL BACHELOR''S DEGREE
+      MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total. Universe: TOTAL BACHELOR''S
+      DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering > Computers
+      Mathematics and Statistics. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      > Computers Mathematics and Statistics. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER
+      WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering > Biological
+      Agricultural and Environmental Sciences. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER
+      WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      > Biological Agricultural and Environmental Sciences. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25
+      YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering > Physical
+      and Related Sciences. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      > Physical and Related Sciences. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH
+      A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering > Psychology.
+      Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      > Psychology. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15012e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering > Social
+      Sciences. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR
+      HIGHER ATTAINMENT.'
+- name: B15012m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      > Social Sciences. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering > Engineering.
+      Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      > Engineering. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15012e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering > Multidisciplinary
+      Studies. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR
+      HIGHER ATTAINMENT.'
+- name: B15012m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      > Multidisciplinary Studies. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering Related
+      Fields. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR
+      HIGHER ATTAINMENT.'
+- name: B15012m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Science and Engineering
+      Related Fields. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15012e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Business. Universe: TOTAL BACHELOR''S
+      DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Business. Universe: TOTAL
+      BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Education. Universe: TOTAL BACHELOR''S
+      DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Education. Universe: TOTAL
+      BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other > Literature
+      and Languages. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE
+      OR HIGHER ATTAINMENT.'
+- name: B15012m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other
+      > Literature and Languages. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other > Liberal
+      Arts and History. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other
+      > Liberal Arts and History. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other > Visual
+      and Performing Arts. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other
+      > Visual and Performing Arts. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A
+      BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other > Communications.
+      Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other
+      > Communications. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S
+      DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS TALLIED
+      FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other > Other.
+      Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT.'
+- name: B15012m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > TOTAL FIELDS OF BACHELOR''S DEGREES REPORTED > TOTAL BACHELOR''S DEGREE MAJORS
+      TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR HIGHER ATTAINMENT > Total > Arts Humanities and Other
+      > Other. Universe: TOTAL BACHELOR''S DEGREE MAJORS TALLIED FOR PEOPLE 25 YEARS AND OVER WITH A BACHELOR''S DEGREE OR
+      HIGHER ATTAINMENT.'
+cached: false
+properties:
+  description: 2019 Census Block Group estimates and margins of error for educational attainment.

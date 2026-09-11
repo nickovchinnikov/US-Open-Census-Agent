@@ -1,0 +1,9 @@
+# This file deliberately contains only environment-variable references.
+# Set their values in the Git-ignored .env file before creating the profile.
+datasource: snowflake
+account: ${SNOWFLAKE_ACCOUNT}
+user: ${SNOWFLAKE_USER}
+password: ${SNOWFLAKE_PASSWORD}
+database: ${SNOWFLAKE_DATABASE}
+sf_schema: ${SNOWFLAKE_SCHEMA}
+warehouse: ${SNOWFLAKE_WAREHOUSE}

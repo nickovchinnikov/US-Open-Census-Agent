@@ -1,0 +1,44 @@
+name: census_2019_county_fips
+table_reference:
+  catalog: US_OPEN_CENSUS_DATA_NEIGHBORHOOD_INSIGHTS_FREE_DATASET
+  schema: PUBLIC
+  table: 2019_METADATA_CBG_FIPS_CODES
+columns:
+- name: STATE
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: State name or abbreviation from the 2019 Census FIPS lookup.
+- name: STATE_FIPS
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Two-digit state FIPS code.
+- name: COUNTY_FIPS
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Three-digit county FIPS code within a state.
+- name: COUNTY
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: County name from the 2019 Census FIPS lookup.
+- name: CLASS_CODE
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Census county-equivalent class code.
+cached: false
+properties:
+  description: 2019 state and county FIPS-code lookup for human-readable Census geography labels.

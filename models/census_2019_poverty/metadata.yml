@@ -1,0 +1,2599 @@
+name: census_2019_poverty
+table_reference:
+  catalog: US_OPEN_CENSUS_DATA_NEIGHBORHOOD_INSIGHTS_FREE_DATASET
+  schema: PUBLIC
+  table: 2019_CBG_B17
+columns:
+- name: CENSUS_BLOCK_GROUP
+  type: TEXT
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: Twelve-digit Census Block Group identifier; one observation row is at this geographic grain.
+- name: B17010e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total. Universe: Families.'
+- name: B17010m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total. Universe: Families.'
+- name: B17010e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level.
+      Universe: Families.'
+- name: B17010m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level. Universe: Families.'
+- name: B17010e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Married-couple family. Universe: Families.'
+- name: B17010m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Married-couple family. Universe: Families.'
+- name: B17010e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Married-couple family > With related children of the householder under 18 years. Universe: Families.'
+- name: B17010m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Married-couple family > With related children of the householder under 18 years. Universe: Families.'
+- name: B17010e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Married-couple family > With related children of the householder under 18 years > Under 5 years only. Universe: Families.'
+- name: B17010m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Married-couple family > With related children of the householder under 18 years > Under 5 years only.
+      Universe: Families.'
+- name: B17010e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Married-couple family > With related children of the householder under 18 years > Under 5 years and 5 to 17 years.
+      Universe: Families.'
+- name: B17010m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Married-couple family > With related children of the householder under 18 years > Under 5 years and
+      5 to 17 years. Universe: Families.'
+- name: B17010e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Married-couple family > With related children of the householder under 18 years > 5 to 17 years only. Universe: Families.'
+- name: B17010m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Married-couple family > With related children of the householder under 18 years > 5 to 17 years only.
+      Universe: Families.'
+- name: B17010e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Married-couple family > No related children of the householder under 18 years. Universe: Families.'
+- name: B17010m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Married-couple family > No related children of the householder under 18 years. Universe: Families.'
+- name: B17010e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family. Universe: Families.'
+- name: B17010m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family. Universe: Families.'
+- name: B17010e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Male householder no spouse present. Universe: Families.'
+- name: B17010m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Male householder no spouse present. Universe: Families.'
+- name: B17010e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Male householder no spouse present > With related children of the householder under 18 years. Universe:
+      Families.'
+- name: B17010m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Male householder no spouse present > With related children of the householder under 18
+      years. Universe: Families.'
+- name: B17010e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Male householder no spouse present > With related children of the householder under 18 years > Under
+      5 years only. Universe: Families.'
+- name: B17010m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Male householder no spouse present > With related children of the householder under 18
+      years > Under 5 years only. Universe: Families.'
+- name: B17010e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Male householder no spouse present > With related children of the householder under 18 years > Under
+      5 years and 5 to 17 years. Universe: Families.'
+- name: B17010m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Male householder no spouse present > With related children of the householder under 18
+      years > Under 5 years and 5 to 17 years. Universe: Families.'
+- name: B17010e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Male householder no spouse present > With related children of the householder under 18 years > 5 to
+      17 years only. Universe: Families.'
+- name: B17010m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Male householder no spouse present > With related children of the householder under 18
+      years > 5 to 17 years only. Universe: Families.'
+- name: B17010e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Male householder no spouse present > No related children of the householder under 18 years. Universe:
+      Families.'
+- name: B17010m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Male householder no spouse present > No related children of the householder under 18
+      years. Universe: Families.'
+- name: B17010e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Female householder no spouse present. Universe: Families.'
+- name: B17010m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Female householder no spouse present. Universe: Families.'
+- name: B17010e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Female householder no spouse present > With related children of the householder under 18 years. Universe:
+      Families.'
+- name: B17010m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Female householder no spouse present > With related children of the householder under
+      18 years. Universe: Families.'
+- name: B17010e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Female householder no spouse present > With related children of the householder under 18 years > Under
+      5 years only. Universe: Families.'
+- name: B17010m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Female householder no spouse present > With related children of the householder under
+      18 years > Under 5 years only. Universe: Families.'
+- name: B17010e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Female householder no spouse present > With related children of the householder under 18 years > Under
+      5 years and 5 to 17 years. Universe: Families.'
+- name: B17010m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Female householder no spouse present > With related children of the householder under
+      18 years > Under 5 years and 5 to 17 years. Universe: Families.'
+- name: B17010e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Female householder no spouse present > With related children of the householder under 18 years > 5
+      to 17 years only. Universe: Families.'
+- name: B17010m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Female householder no spouse present > With related children of the householder under
+      18 years > 5 to 17 years only. Universe: Families.'
+- name: B17010e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below poverty level
+      > Other family > Female householder no spouse present > No related children of the householder under 18 years. Universe:
+      Families.'
+- name: B17010m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months below
+      poverty level > Other family > Female householder no spouse present > No related children of the householder under 18
+      years. Universe: Families.'
+- name: B17010e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level. Universe: Families.'
+- name: B17010m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level. Universe: Families.'
+- name: B17010e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Married-couple family. Universe: Families.'
+- name: B17010m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Married-couple family. Universe: Families.'
+- name: B17010e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Married-couple family > With related children of the householder under 18 years. Universe: Families.'
+- name: B17010m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Married-couple family > With related children of the householder under 18 years. Universe: Families.'
+- name: B17010e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Married-couple family > With related children of the householder under 18 years > Under 5 years only. Universe:
+      Families.'
+- name: B17010m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Married-couple family > With related children of the householder under 18 years > Under 5 years
+      only. Universe: Families.'
+- name: B17010e26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Married-couple family > With related children of the householder under 18 years > Under 5 years and 5 to 17
+      years. Universe: Families.'
+- name: B17010m26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Married-couple family > With related children of the householder under 18 years > Under 5 years
+      and 5 to 17 years. Universe: Families.'
+- name: B17010e27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Married-couple family > With related children of the householder under 18 years > 5 to 17 years only. Universe:
+      Families.'
+- name: B17010m27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Married-couple family > With related children of the householder under 18 years > 5 to 17 years
+      only. Universe: Families.'
+- name: B17010e28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Married-couple family > No related children of the householder under 18 years. Universe: Families.'
+- name: B17010m28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Married-couple family > No related children of the householder under 18 years. Universe: Families.'
+- name: B17010e29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family. Universe: Families.'
+- name: B17010m29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family. Universe: Families.'
+- name: B17010e30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Male householder no spouse present. Universe: Families.'
+- name: B17010m30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Male householder no spouse present. Universe: Families.'
+- name: B17010e31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Male householder no spouse present > With related children of the householder under 18 years.
+      Universe: Families.'
+- name: B17010m31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Male householder no spouse present > With related children of the householder under
+      18 years. Universe: Families.'
+- name: B17010e32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Male householder no spouse present > With related children of the householder under 18 years
+      > Under 5 years only. Universe: Families.'
+- name: B17010m32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Male householder no spouse present > With related children of the householder under
+      18 years > Under 5 years only. Universe: Families.'
+- name: B17010e33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Male householder no spouse present > With related children of the householder under 18 years
+      > Under 5 years and 5 to 17 years. Universe: Families.'
+- name: B17010m33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Male householder no spouse present > With related children of the householder under
+      18 years > Under 5 years and 5 to 17 years. Universe: Families.'
+- name: B17010e34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Male householder no spouse present > With related children of the householder under 18 years
+      > 5 to 17 years only. Universe: Families.'
+- name: B17010m34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Male householder no spouse present > With related children of the householder under
+      18 years > 5 to 17 years only. Universe: Families.'
+- name: B17010e35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Male householder no spouse present > No related children of the householder under 18 years. Universe:
+      Families.'
+- name: B17010m35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Male householder no spouse present > No related children of the householder under
+      18 years. Universe: Families.'
+- name: B17010e36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Female householder no spouse present. Universe: Families.'
+- name: B17010m36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Female householder no spouse present. Universe: Families.'
+- name: B17010e37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Female householder no spouse present > With related children of the householder under 18 years.
+      Universe: Families.'
+- name: B17010m37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Female householder no spouse present > With related children of the householder
+      under 18 years. Universe: Families.'
+- name: B17010e38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Female householder no spouse present > With related children of the householder under 18 years
+      > Under 5 years only. Universe: Families.'
+- name: B17010m38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Female householder no spouse present > With related children of the householder
+      under 18 years > Under 5 years only. Universe: Families.'
+- name: B17010e39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Female householder no spouse present > With related children of the householder under 18 years
+      > Under 5 years and 5 to 17 years. Universe: Families.'
+- name: B17010m39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Female householder no spouse present > With related children of the householder
+      under 18 years > Under 5 years and 5 to 17 years. Universe: Families.'
+- name: B17010e40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Female householder no spouse present > With related children of the householder under 18 years
+      > 5 to 17 years only. Universe: Families.'
+- name: B17010m40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Female householder no spouse present > With related children of the householder
+      under 18 years > 5 to 17 years only. Universe: Families.'
+- name: B17010e41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE OF RELATED
+      CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or above poverty
+      level > Other family > Female householder no spouse present > No related children of the householder under 18 years.
+      Universe: Families.'
+- name: B17010m41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS OF FAMILIES BY FAMILY TYPE BY PRESENCE
+      OF RELATED CHILDREN UNDER 18 YEARS BY AGE OF RELATED CHILDREN > Families > Total > Income in the past 12 months at or
+      above poverty level > Other family > Female householder no spouse present > No related children of the householder under
+      18 years. Universe: Families.'
+- name: B17011e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY FAMILY TYPE
+      > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past 12 months.
+      Universe: Families with income in the past 12 months below the poverty level.'
+- name: B17011m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY
+      FAMILY TYPE > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past
+      12 months. Universe: Families with income in the past 12 months below the poverty level.'
+- name: B17011e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY FAMILY TYPE
+      > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past 12 months
+      > Married-couple family. Universe: Families with income in the past 12 months below the poverty level.'
+- name: B17011m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY
+      FAMILY TYPE > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past
+      12 months > Married-couple family. Universe: Families with income in the past 12 months below the poverty level.'
+- name: B17011e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY FAMILY TYPE
+      > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past 12 months
+      > Other family. Universe: Families with income in the past 12 months below the poverty level.'
+- name: B17011m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY
+      FAMILY TYPE > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past
+      12 months > Other family. Universe: Families with income in the past 12 months below the poverty level.'
+- name: B17011e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY FAMILY TYPE
+      > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past 12 months
+      > Other family > Male householder no spouse present. Universe: Families with income in the past 12 months below the
+      poverty level.'
+- name: B17011m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY
+      FAMILY TYPE > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past
+      12 months > Other family > Male householder no spouse present. Universe: Families with income in the past 12 months
+      below the poverty level.'
+- name: B17011e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY FAMILY TYPE
+      > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past 12 months
+      > Other family > Female householder no spouse present. Universe: Families with income in the past 12 months below the
+      poverty level.'
+- name: B17011m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > AGGREGATE INCOME DEFICIT (DOLLARS) IN THE PAST 12 MONTHS FOR FAMILIES BY
+      FAMILY TYPE > Families with income in the past 12 months below the poverty level > Aggregate income deficit in the past
+      12 months > Other family > Female householder no spouse present. Universe: Families with income in the past 12 months
+      below the poverty level.'
+- name: B17017e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total. Universe: Households.'
+- name: B17017m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total. Universe: Households.'
+- name: B17017e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level. Universe: Households.'
+- name: B17017m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level. Universe: Households.'
+- name: B17017e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households. Universe: Households.'
+- name: B17017m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households. Universe: Households.'
+- name: B17017e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Married-couple family. Universe: Households.'
+- name: B17017m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Married-couple family.
+      Universe: Households.'
+- name: B17017e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Married-couple family > Householder
+      under 25 years. Universe: Households.'
+- name: B17017m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Married-couple family
+      > Householder under 25 years. Universe: Households.'
+- name: B17017e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Married-couple family > Householder
+      25 to 44 years. Universe: Households.'
+- name: B17017m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Married-couple family
+      > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Married-couple family > Householder
+      45 to 64 years. Universe: Households.'
+- name: B17017m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Married-couple family
+      > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Married-couple family > Householder
+      65 years and over. Universe: Households.'
+- name: B17017m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Married-couple family
+      > Householder 65 years and over. Universe: Households.'
+- name: B17017e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family. Universe: Households.'
+- name: B17017m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family. Universe:
+      Households.'
+- name: B17017e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder no
+      spouse present. Universe: Households.'
+- name: B17017m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder
+      no spouse present. Universe: Households.'
+- name: B17017e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder no
+      spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder
+      no spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder no
+      spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder
+      no spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder no
+      spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder
+      no spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder no
+      spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Male householder
+      no spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Female householder no
+      spouse present. Universe: Households.'
+- name: B17017m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Female
+      householder no spouse present. Universe: Households.'
+- name: B17017e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Female householder no
+      spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Female
+      householder no spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Female householder no
+      spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Female
+      householder no spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Female householder no
+      spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Female
+      householder no spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Family households > Other family > Female householder no
+      spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Family households > Other family > Female
+      householder no spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households. Universe: Households.'
+- name: B17017m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households. Universe: Households.'
+- name: B17017e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder. Universe: Households.'
+- name: B17017m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder. Universe:
+      Households.'
+- name: B17017e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder > Householder under
+      25 years. Universe: Households.'
+- name: B17017m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder >
+      Householder under 25 years. Universe: Households.'
+- name: B17017e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder > Householder 25
+      to 44 years. Universe: Households.'
+- name: B17017m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder >
+      Householder 25 to 44 years. Universe: Households.'
+- name: B17017e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder > Householder 45
+      to 64 years. Universe: Households.'
+- name: B17017m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder >
+      Householder 45 to 64 years. Universe: Households.'
+- name: B17017e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder > Householder 65
+      years and over. Universe: Households.'
+- name: B17017m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Male householder >
+      Householder 65 years and over. Universe: Households.'
+- name: B17017e26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder. Universe: Households.'
+- name: B17017m26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder.
+      Universe: Households.'
+- name: B17017e27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder > Householder
+      under 25 years. Universe: Households.'
+- name: B17017m27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder
+      > Householder under 25 years. Universe: Households.'
+- name: B17017e28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder > Householder
+      25 to 44 years. Universe: Households.'
+- name: B17017m28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder
+      > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder > Householder
+      45 to 64 years. Universe: Households.'
+- name: B17017m29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder
+      > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder > Householder
+      65 years and over. Universe: Households.'
+- name: B17017m30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months below poverty level > Nonfamily households > Female householder
+      > Householder 65 years and over. Universe: Households.'
+- name: B17017e31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level. Universe: Households.'
+- name: B17017m31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level. Universe: Households.'
+- name: B17017e32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households. Universe: Households.'
+- name: B17017m32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households. Universe: Households.'
+- name: B17017e33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family. Universe:
+      Households.'
+- name: B17017m33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family.
+      Universe: Households.'
+- name: B17017e34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family > Householder
+      under 25 years. Universe: Households.'
+- name: B17017m34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family
+      > Householder under 25 years. Universe: Households.'
+- name: B17017e35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family > Householder
+      25 to 44 years. Universe: Households.'
+- name: B17017m35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family
+      > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family > Householder
+      45 to 64 years. Universe: Households.'
+- name: B17017m36
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family
+      > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family > Householder
+      65 years and over. Universe: Households.'
+- name: B17017m37
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Married-couple family
+      > Householder 65 years and over. Universe: Households.'
+- name: B17017e38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family. Universe: Households.'
+- name: B17017m38
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family. Universe:
+      Households.'
+- name: B17017e39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male householder
+      no spouse present. Universe: Households.'
+- name: B17017m39
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male
+      householder no spouse present. Universe: Households.'
+- name: B17017e40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male householder
+      no spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017m40
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male
+      householder no spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017e41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male householder
+      no spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017m41
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male
+      householder no spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e42
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male householder
+      no spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017m42
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male
+      householder no spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e43
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male householder
+      no spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017m43
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Male
+      householder no spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017e44
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female householder
+      no spouse present. Universe: Households.'
+- name: B17017m44
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female
+      householder no spouse present. Universe: Households.'
+- name: B17017e45
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female householder
+      no spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017m45
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female
+      householder no spouse present > Householder under 25 years. Universe: Households.'
+- name: B17017e46
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female householder
+      no spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017m46
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female
+      householder no spouse present > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e47
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female householder
+      no spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017m47
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female
+      householder no spouse present > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e48
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female householder
+      no spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017m48
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Family households > Other family > Female
+      householder no spouse present > Householder 65 years and over. Universe: Households.'
+- name: B17017e49
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households. Universe: Households.'
+- name: B17017m49
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households. Universe: Households.'
+- name: B17017e50
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder. Universe:
+      Households.'
+- name: B17017m50
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder.
+      Universe: Households.'
+- name: B17017e51
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder > Householder
+      under 25 years. Universe: Households.'
+- name: B17017m51
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder
+      > Householder under 25 years. Universe: Households.'
+- name: B17017e52
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder > Householder
+      25 to 44 years. Universe: Households.'
+- name: B17017m52
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder
+      > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e53
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder > Householder
+      45 to 64 years. Universe: Households.'
+- name: B17017m53
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder
+      > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e54
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder > Householder
+      65 years and over. Universe: Households.'
+- name: B17017m54
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Male householder
+      > Householder 65 years and over. Universe: Households.'
+- name: B17017e55
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder. Universe:
+      Households.'
+- name: B17017m55
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder.
+      Universe: Households.'
+- name: B17017e56
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder > Householder
+      under 25 years. Universe: Households.'
+- name: B17017m56
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder
+      > Householder under 25 years. Universe: Households.'
+- name: B17017e57
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder > Householder
+      25 to 44 years. Universe: Households.'
+- name: B17017m57
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder
+      > Householder 25 to 44 years. Universe: Households.'
+- name: B17017e58
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder > Householder
+      45 to 64 years. Universe: Households.'
+- name: B17017m58
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder
+      > Householder 45 to 64 years. Universe: Households.'
+- name: B17017e59
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER > Households
+      > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder > Householder
+      65 years and over. Universe: Households.'
+- name: B17017m59
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS IN THE PAST 12 MONTHS BY HOUSEHOLD TYPE BY AGE OF HOUSEHOLDER
+      > Households > Total > Income in the past 12 months at or above poverty level > Nonfamily households > Female householder
+      > Householder 65 years and over. Universe: Households.'
+- name: B17021e1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total. Universe: Population for whom poverty status is determined.'
+- name: B17021m1
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total. Universe: Population for whom poverty status is determined.'
+- name: B17021e2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level. Universe: Population
+      for whom poverty status is determined.'
+- name: B17021m2
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level. Universe:
+      Population for whom poverty status is determined.'
+- name: B17021e3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households.
+      Universe: Population for whom poverty status is determined.'
+- name: B17021m3
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households. Universe: Population for whom poverty status is determined.'
+- name: B17021e4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In married couple families. Universe: Population for whom poverty status is determined.'
+- name: B17021m4
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In married couple families. Universe: Population for whom poverty status is determined.'
+- name: B17021e5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In married couple families > All relatives. Universe: Population for whom poverty status is determined.'
+- name: B17021m5
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In married couple families > All relatives. Universe: Population for whom poverty status is determined.'
+- name: B17021e6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In married couple families > Non-relatives. Universe: Population for whom poverty status is determined.'
+- name: B17021m6
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In married couple families > Non-relatives. Universe: Population for whom poverty status is determined.'
+- name: B17021e7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In other families. Universe: Population for whom poverty status is determined.'
+- name: B17021m7
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In other families. Universe: Population for whom poverty status is determined.'
+- name: B17021e8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In other families > Male householder no spouse present. Universe: Population for whom poverty status is determined.'
+- name: B17021m8
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In other families > Male householder no spouse present. Universe: Population for whom poverty status is
+      determined.'
+- name: B17021e9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In other families > Male householder no spouse present > All relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m9
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In other families > Male householder no spouse present > All relatives. Universe: Population for whom poverty
+      status is determined.'
+- name: B17021e10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In other families > Male householder no spouse present > Non-relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m10
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In other families > Male householder no spouse present > Non-relatives. Universe: Population for whom poverty
+      status is determined.'
+- name: B17021e11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In other families > Female householder no spouse present. Universe: Population for whom poverty status is determined.'
+- name: B17021m11
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In other families > Female householder no spouse present. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021e12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In other families > Female householder no spouse present > All relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m12
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In other families > Female householder no spouse present > All relatives. Universe: Population for whom
+      poverty status is determined.'
+- name: B17021e13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family households
+      > In other families > Female householder no spouse present > Non-relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m13
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In family
+      households > In other families > Female householder no spouse present > Non-relatives. Universe: Population for whom
+      poverty status is determined.'
+- name: B17021e14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family households
+      and other living arrangement. Universe: Population for whom poverty status is determined.'
+- name: B17021m14
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family
+      households and other living arrangement. Universe: Population for whom poverty status is determined.'
+- name: B17021e15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family households
+      and other living arrangement > Householder. Universe: Population for whom poverty status is determined.'
+- name: B17021m15
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family
+      households and other living arrangement > Householder. Universe: Population for whom poverty status is determined.'
+- name: B17021e16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family households
+      and other living arrangement > Householder > Living alone. Universe: Population for whom poverty status is determined.'
+- name: B17021m16
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family
+      households and other living arrangement > Householder > Living alone. Universe: Population for whom poverty status is
+      determined.'
+- name: B17021e17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family households
+      and other living arrangement > Householder > Not living alone. Universe: Population for whom poverty status is determined.'
+- name: B17021m17
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family
+      households and other living arrangement > Householder > Not living alone. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021e18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family households
+      and other living arrangement > Other living arrangement. Universe: Population for whom poverty status is determined.'
+- name: B17021m18
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months below poverty level > In non-family
+      households and other living arrangement > Other living arrangement. Universe: Population for whom poverty status is
+      determined.'
+- name: B17021e19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level. Universe: Population
+      for whom poverty status is determined.'
+- name: B17021m19
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level.
+      Universe: Population for whom poverty status is determined.'
+- name: B17021e20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households.
+      Universe: Population for whom poverty status is determined.'
+- name: B17021m20
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households. Universe: Population for whom poverty status is determined.'
+- name: B17021e21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In married couple families. Universe: Population for whom poverty status is determined.'
+- name: B17021m21
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In married couple families. Universe: Population for whom poverty status is determined.'
+- name: B17021e22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In married couple families > All relatives. Universe: Population for whom poverty status is determined.'
+- name: B17021m22
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In married couple families > All relatives. Universe: Population for whom poverty status is
+      determined.'
+- name: B17021e23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In married couple families > Non-relatives. Universe: Population for whom poverty status is determined.'
+- name: B17021m23
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In married couple families > Non-relatives. Universe: Population for whom poverty status is
+      determined.'
+- name: B17021e24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In other families. Universe: Population for whom poverty status is determined.'
+- name: B17021m24
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In other families. Universe: Population for whom poverty status is determined.'
+- name: B17021e25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In other families > Male householder no spouse present. Universe: Population for whom poverty status is determined.'
+- name: B17021m25
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In other families > Male householder no spouse present. Universe: Population for whom poverty
+      status is determined.'
+- name: B17021e26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In other families > Male householder no spouse present > All relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m26
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In other families > Male householder no spouse present > All relatives. Universe: Population
+      for whom poverty status is determined.'
+- name: B17021e27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In other families > Male householder no spouse present > Non-relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m27
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In other families > Male householder no spouse present > Non-relatives. Universe: Population
+      for whom poverty status is determined.'
+- name: B17021e28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In other families > Female householder no spouse present. Universe: Population for whom poverty status is determined.'
+- name: B17021m28
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In other families > Female householder no spouse present. Universe: Population for whom poverty
+      status is determined.'
+- name: B17021e29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In other families > Female householder no spouse present > All relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m29
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In other families > Female householder no spouse present > All relatives. Universe: Population
+      for whom poverty status is determined.'
+- name: B17021e30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In family households
+      > In other families > Female householder no spouse present > Non-relatives. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m30
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In family households > In other families > Female householder no spouse present > Non-relatives. Universe: Population
+      for whom poverty status is determined.'
+- name: B17021e31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In non-family
+      households and other living arrangement. Universe: Population for whom poverty status is determined.'
+- name: B17021m31
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In non-family households and other living arrangement. Universe: Population for whom poverty status is determined.'
+- name: B17021e32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In non-family
+      households and other living arrangement > Householder. Universe: Population for whom poverty status is determined.'
+- name: B17021m32
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In non-family households and other living arrangement > Householder. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021e33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In non-family
+      households and other living arrangement > Householder > Living alone. Universe: Population for whom poverty status is
+      determined.'
+- name: B17021m33
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In non-family households and other living arrangement > Householder > Living alone. Universe: Population for whom
+      poverty status is determined.'
+- name: B17021e34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In non-family
+      households and other living arrangement > Householder > Not living alone. Universe: Population for whom poverty status
+      is determined.'
+- name: B17021m34
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In non-family households and other living arrangement > Householder > Not living alone. Universe: Population for whom
+      poverty status is determined.'
+- name: B17021e35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Estimate: Estimate > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT > Population
+      for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level > In non-family
+      households and other living arrangement > Other living arrangement. Universe: Population for whom poverty status is
+      determined.'
+- name: B17021m35
+  type: DECIMAL(38, 0)
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+  properties:
+    description: 'Marginoferror: MarginOfError > POVERTY STATUS OF INDIVIDUALS IN THE PAST 12 MONTHS BY LIVING ARRANGEMENT
+      > Population for whom poverty status is determined > Total > Income in the past 12 months at or above poverty level
+      > In non-family households and other living arrangement > Other living arrangement. Universe: Population for whom poverty
+      status is determined.'
+cached: false
+properties:
+  description: 2019 Census Block Group estimates and margins of error for poverty measures.
