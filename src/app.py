@@ -1,30 +1,79 @@
+import os
+
 from agno.agent import Agent
+from agno.exceptions import InputCheckError
+from agno.guardrails import PIIDetectionGuardrail, PromptInjectionGuardrail
+from agno.guardrails.base import BaseGuardrail
 from agno.models.openai import OpenAIResponses
 from agno.os import AgentOS
 from agno.os.interfaces.agui import AGUI
+from agno.run.agent import RunInput
 from agno.tools.mcp import MCPTools
+from dotenv import load_dotenv
+
+from .prompts import CENSUS_AGENT_INSTRUCTIONS
+
+load_dotenv()
+
+WREN_ENV = {
+    name: value
+    for name in (
+        "SNOWFLAKE_ACCOUNT",
+        "SNOWFLAKE_USER",
+        "SNOWFLAKE_PASSWORD",
+        "SNOWFLAKE_DATABASE",
+        "SNOWFLAKE_SCHEMA",
+        "SNOWFLAKE_WAREHOUSE",
+    )
+    if (value := os.environ.get(name)) is not None
+}
+
+
+class InputLengthGuardrail(BaseGuardrail):
+    def __init__(self, max_chars: int = 4000):
+        self.max_chars = max_chars
+
+    def check(self, run_input: RunInput) -> None:
+        content = run_input.input_content_string()
+
+        if len(content) > self.max_chars:
+            raise InputCheckError(
+                f"Input is too long. Maximum length is {self.max_chars} characters."
+            )
+
+    async def async_check(
+        self,
+        run_input: RunInput,
+    ) -> None:
+        self.check(run_input)
+
 
 # Agno requires MCP 2.x, while Wren 0.14's MCP server uses the MCP 1.x API.
 # Run Wren in an isolated uvx environment so the two requirements do not clash.
 wren = MCPTools(
-    command="uvx --from 'wrenai[main,mcp,snowflake]==0.14.0' --with 'mcp<2' wren serve mcp"
+    command="uvx --from 'wrenai[main,mcp,snowflake]==0.14.0' --with 'mcp<2' wren serve mcp",
+    # The MCP SDK starts subprocesses with a restricted environment. Pass the
+    # Snowflake settings explicitly so Wren can resolve its named profile.
+    env=WREN_ENV,
+    timeout_seconds=60,
+    # This project defines MDL models but no Wren cubes. Keep the cube tools
+    # out of the agent's tool registry until real cube definitions are added.
+    exclude_tools=["query_cube", "list_cubes", "describe_cube"],
 )
 
 agent = Agent(
     name="Census Agent",
-    model=OpenAIResponses(id="gpt-5.4"),
+    model=OpenAIResponses(id="gpt-5.4-mini"),
     tools=[wren],
-    instructions="""
-You are a Census Q&A model
-
-Rules:
-- Wren is the source of truth for available data.
-- Use Wren tools to inspect the semantic model and schema.
-- Never invent Census variables, physical tables, columns or geography mappings.
-- Prefer verified measures present in the Wren model.
-- Use Wren to execute SQL against Snowflake.
-- If a requested metric cannot be derived correctly, explain why rather than approximating it incorrectly.
-""",
+    pre_hooks=[
+        PromptInjectionGuardrail(),
+        PIIDetectionGuardrail(
+            mask_pii=True,
+        ),
+        InputLengthGuardrail(max_chars=4000),
+    ],
+    instructions=CENSUS_AGENT_INSTRUCTIONS,
+    markdown=True,
 )
 
 agent_os = AgentOS(
@@ -38,4 +87,10 @@ app = agent_os.get_app()
 
 
 if __name__ == "__main__":
-    agent_os.serve(app=app, port=7777)
+    # Next.js owns Railway's public PORT. The API is reached locally by the
+    # bundled Next.js server; standalone deployments can still use PORT.
+    agent_os.serve(
+        app=app,
+        host="0.0.0.0",
+        port=int(os.environ.get("AGENT_PORT", os.environ.get("PORT", "7777"))),
+    )
