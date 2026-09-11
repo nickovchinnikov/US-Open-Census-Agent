@@ -6,6 +6,10 @@
       "source": "user",
       "source_file": "raw/among-census-block-groups-in-king-county-washington-which-fi.md"
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "residents_age_25_to_34_pct"],
+      "top_k": 5
+    },
     "question": "Among census block groups in King County, Washington, which five have the highest percentage of residents aged 25 to 34?"
   },
   {
@@ -14,6 +18,10 @@
     "metadata": {
       "source": "user",
       "source_file": "raw/compare-public-transit-commuting-rates-between-san-francisco.md"
+    },
+    "contract": {
+      "expected_columns": ["COUNTY", "public_transit_commute_pct"],
+      "tie_policy": "all"
     },
     "question": "Compare public-transit commuting rates between San Francisco County, California and Los Angeles County, California."
   },
@@ -27,6 +35,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["estimated_men", "estimated_women", "women_minus_men"]
+    },
     "question": "Compare the number of men and women living in Suffolk County, Massachusetts."
   },
   {
@@ -36,14 +47,21 @@
       "source": "user",
       "source_file": "raw/compare-the-percentage-of-men-and-women-age-25-or-older-with.md"
     },
+    "contract": {
+      "expected_columns": ["men_bachelors_or_higher_pct", "women_bachelors_or_higher_pct"]
+    },
     "question": "Compare the percentage of men and women age 25 or older with a bachelor's degree or higher in King County, Washington."
   },
   {
-    "sql": "SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd, a.B01001e1 AS total_population, a.B01002e1 AS median_age_years, 100.0 * (e.B15003e22 + e.B15003e23 + e.B15003e24 + e.B15003e25) / NULLIF(e.B15003e1, 0) AS bachelors_or_higher_pct_age_25_plus FROM census_2019_income AS i JOIN census_2019_age_sex AS a ON i.CENSUS_BLOCK_GROUP = a.CENSUS_BLOCK_GROUP JOIN census_2019_education AS e ON i.CENSUS_BLOCK_GROUP = e.CENSUS_BLOCK_GROUP JOIN census_2019_county_fips AS f ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'IL' AND f.COUNTY = 'Cook County' AND i.B19013e1 = 250001 ORDER BY i.CENSUS_BLOCK_GROUP",
+    "sql": "SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd, a.B01001e1 AS total_population, a.B01002e1 AS median_age_years, 100.0 * (e.B15003e22 + e.B15003e23 + e.B15003e24 + e.B15003e25) / NULLIF(e.B15003e1, 0) AS bachelors_or_higher_pct_age_25_plus FROM census_2019_income AS i JOIN census_2019_age_sex AS a ON i.CENSUS_BLOCK_GROUP = a.CENSUS_BLOCK_GROUP JOIN census_2019_education AS e ON i.CENSUS_BLOCK_GROUP = e.CENSUS_BLOCK_GROUP JOIN census_2019_county_fips AS f ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'IL' AND f.COUNTY = 'Cook County' AND i.B19013e1 = 250001 ORDER BY i.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "find-the-census-block-group-in-cook-county-illinois-with-the",
     "metadata": {
       "source": "user",
       "source_file": "raw/find-the-census-block-group-in-cook-county-illinois-with-the.md"
+    },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "median_household_income_2019_usd", "total_population", "median_age_years", "bachelors_or_higher_pct_age_25_plus"],
+      "tie_policy": "first_by_census_block_group"
     },
     "question": "Find the census block group in Cook County, Illinois with the highest median household income and report its population, median age, and percentage of adults age 25 or older with a bachelor's degree or higher."
   },
@@ -57,6 +75,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["estimated_children_under_18"]
+    },
     "question": "How many children under 18 live in Travis County, Texas?"
   },
   {
@@ -65,6 +86,9 @@
     "metadata": {
       "source": "user",
       "source_file": "raw/how-many-employed-people-in-san-francisco-county-california.md"
+    },
+    "contract": {
+      "expected_columns": ["estimated_workers_commuting_by_public_transportation"]
     },
     "question": "How many employed people in San Francisco County, California commute to work by public transportation?"
   },
@@ -78,7 +102,10 @@
         "source:verified-census-query"
       ]
     },
-    "question": "How many households in San Francisco County, California have an annual income above ,000?"
+    "contract": {
+      "expected_columns": ["estimated_households_income_100k_or_more"]
+    },
+    "question": "How many households in San Francisco County, California have an annual income above $100,000?"
   },
   {
     "sql": "SELECT SUM(i.B19001e2) + SUM(i.B19001e3) + SUM(i.B19001e4) + SUM(i.B19001e5) AS estimated_households_income_under_25k FROM census_2019_income AS i JOIN census_2019_county_fips AS f ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'TX' AND f.COUNTY = 'Travis County'",
@@ -89,6 +116,9 @@
       "tags": [
         "source:verified-census-query"
       ]
+    },
+    "contract": {
+      "expected_columns": ["estimated_households_income_under_25k"]
     },
     "question": "How many households in Travis County, Texas earn less than $25,000 per year?"
   },
@@ -102,6 +132,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["estimated_males_age_22_to_24"]
+    },
     "question": "How many males aged 22 to 24 lived in Wabash County, Indiana in 2019?"
   },
   {
@@ -114,6 +147,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["estimated_men_age_65_or_older"]
+    },
     "question": "How many men aged 65 or older live in Miami-Dade County?"
   },
   {
@@ -122,6 +158,9 @@
     "metadata": {
       "source": "user",
       "source_file": "raw/how-many-occupied-housing-units-are-there-in-suffolk-county.md"
+    },
+    "contract": {
+      "expected_columns": ["occupied_housing_units"]
     },
     "question": "How many occupied housing units are there in Suffolk County, Massachusetts?"
   },
@@ -135,6 +174,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["estimated_people_age_25_plus_bachelors_or_higher"]
+    },
     "question": "How many people age 25 or older in Cook County, Illinois have a bachelor's degree or higher?"
   },
   {
@@ -143,6 +185,9 @@
     "metadata": {
       "source": "user",
       "source_file": "raw/how-many-unemployed-people-live-in-travis-county-texas.md"
+    },
+    "contract": {
+      "expected_columns": ["estimated_unemployed_people"]
     },
     "question": "How many unemployed people live in Travis County, Texas?"
   },
@@ -156,6 +201,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["estimated_women_age_25_to_34"]
+    },
     "question": "How many women aged 25 to 34 live in San Francisco?"
   },
   {
@@ -167,6 +215,9 @@
       "tags": [
         "source:verified-census-query"
       ]
+    },
+    "contract": {
+      "expected_columns": ["mean_household_income_2019_usd"]
     },
     "question": "What is the average (mean) household income in Indiana?"
   },
@@ -180,6 +231,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["bachelors_or_higher_pct_age_25_plus"]
+    },
     "question": "What percentage of adults age 25 or older in Suffolk County, Massachusetts have a bachelor's degree or higher?"
   },
   {
@@ -192,6 +246,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["households_income_100k_or_more_pct"]
+    },
     "question": "What percentage of households in Miami-Dade County, Florida earn more than $100,000 per year?"
   },
   {
@@ -200,6 +257,9 @@
     "metadata": {
       "source": "user",
       "source_file": "raw/what-percentage-of-housing-units-in-miami-dade-county-florid.md"
+    },
+    "contract": {
+      "expected_columns": ["vacant_housing_units_pct"]
     },
     "question": "What percentage of housing units in Miami-Dade County, Florida are vacant?"
   },
@@ -213,6 +273,9 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["female_population_pct"]
+    },
     "question": "What percentage of the population in King County, Washington is female?"
   },
   {
@@ -222,19 +285,26 @@
       "source": "user",
       "source_file": "raw/what-percentage-of-workers-in-new-york-county-new-york-commu.md"
     },
+    "contract": {
+      "expected_columns": ["car_truck_or_van_commute_pct"]
+    },
     "question": "What percentage of workers in New York County, New York commute by car, truck, or van?"
   },
   {
-    "sql": "WITH king_county AS (SELECT c.CENSUS_BLOCK_GROUP, c.B08301e1 AS total_workers_age_16_plus, c.B08301e21 AS workers_working_from_home, 100.0 * c.B08301e21 / NULLIF(c.B08301e1, 0) AS work_from_home_pct FROM census_2019_commuting AS c JOIN census_2019_county_fips AS f ON SUBSTRING(c.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(c.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'WA' AND f.COUNTY = 'King County' AND c.B08301e1 > 0), highest AS (SELECT MAX(work_from_home_pct) AS highest_work_from_home_pct FROM king_county) SELECT k.CENSUS_BLOCK_GROUP, k.total_workers_age_16_plus, k.workers_working_from_home, k.work_from_home_pct FROM king_county AS k CROSS JOIN highest AS h WHERE k.work_from_home_pct = h.highest_work_from_home_pct ORDER BY k.CENSUS_BLOCK_GROUP",
+    "sql": "WITH king_county AS (SELECT c.CENSUS_BLOCK_GROUP, c.B08301e1 AS total_workers_age_16_plus, c.B08301e21 AS workers_working_from_home, 100.0 * c.B08301e21 / NULLIF(c.B08301e1, 0) AS work_from_home_pct FROM census_2019_commuting AS c JOIN census_2019_county_fips AS f ON SUBSTRING(c.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(c.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'WA' AND f.COUNTY = 'King County' AND c.B08301e1 > 0), highest AS (SELECT MAX(work_from_home_pct) AS highest_work_from_home_pct FROM king_county) SELECT k.CENSUS_BLOCK_GROUP, k.total_workers_age_16_plus, k.workers_working_from_home, k.work_from_home_pct FROM king_county AS k CROSS JOIN highest AS h WHERE k.work_from_home_pct = h.highest_work_from_home_pct ORDER BY k.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-king-county-washington-has-the-h",
     "metadata": {
       "source": "user",
       "source_file": "raw/which-census-block-group-in-king-county-washington-has-the-h.md"
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "work_from_home_pct"],
+      "tie_policy": "first_by_census_block_group"
+    },
     "question": "Which census block group in King County, Washington has the highest percentage of workers who work from home?"
   },
   {
-    "sql": "WITH los_angeles_county AS (SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd FROM census_2019_income AS i JOIN census_2019_county_fips AS f ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'CA' AND f.COUNTY = 'Los Angeles County' AND i.B19013e1 IS NOT NULL), lowest AS (SELECT MIN(median_household_income_2019_usd) AS lowest_income FROM los_angeles_county) SELECT l.CENSUS_BLOCK_GROUP, l.median_household_income_2019_usd FROM los_angeles_county AS l CROSS JOIN lowest AS x WHERE l.median_household_income_2019_usd = x.lowest_income ORDER BY l.CENSUS_BLOCK_GROUP",
+    "sql": "WITH los_angeles_county AS (SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd FROM census_2019_income AS i JOIN census_2019_county_fips AS f ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'CA' AND f.COUNTY = 'Los Angeles County' AND i.B19013e1 IS NOT NULL), lowest AS (SELECT MIN(median_household_income_2019_usd) AS lowest_income FROM los_angeles_county) SELECT l.CENSUS_BLOCK_GROUP, l.median_household_income_2019_usd FROM los_angeles_county AS l CROSS JOIN lowest AS x WHERE l.median_household_income_2019_usd = x.lowest_income ORDER BY l.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-los-angeles-county-california-ha",
     "metadata": {
       "source": "user",
@@ -243,10 +313,14 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "median_household_income_2019_usd"],
+      "tie_policy": "first_by_census_block_group"
+    },
     "question": "Which census block group in Los Angeles County, California has the lowest median household income?"
   },
   {
-    "sql": "SELECT a.CENSUS_BLOCK_GROUP, a.B01001e1 AS total_population FROM census_2019_age_sex AS a JOIN census_2019_county_fips AS f ON SUBSTRING(a.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(a.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'CA' AND f.COUNTY = 'Los Angeles County' AND a.B01001e1 IS NOT NULL ORDER BY total_population DESC LIMIT 1",
+    "sql": "SELECT a.CENSUS_BLOCK_GROUP, a.B01001e1 AS total_population FROM census_2019_age_sex AS a JOIN census_2019_county_fips AS f ON SUBSTRING(a.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(a.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'CA' AND f.COUNTY = 'Los Angeles County' AND a.B01001e1 IS NOT NULL ORDER BY total_population DESC, a.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-los-angeles-county-has-the-large",
     "metadata": {
       "source": "user",
@@ -255,19 +329,27 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "total_population"],
+      "tie_policy": "first_by_census_block_group"
+    },
     "question": "Which census block group in Los Angeles County has the largest population?"
   },
   {
-    "sql": "WITH miami_dade AS (SELECT e.CENSUS_BLOCK_GROUP, e.B23025e3 AS civilian_labor_force, e.B23025e5 AS unemployed_people, 100.0 * e.B23025e5 / NULLIF(e.B23025e3, 0) AS unemployment_rate_pct FROM census_2019_employment AS e JOIN census_2019_county_fips AS f ON SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'FL' AND f.COUNTY = 'Miami-Dade County' AND e.B23025e3 > 0), highest AS (SELECT MAX(unemployment_rate_pct) AS highest_unemployment_rate_pct FROM miami_dade) SELECT m.CENSUS_BLOCK_GROUP, m.civilian_labor_force, m.unemployed_people, m.unemployment_rate_pct FROM miami_dade AS m CROSS JOIN highest AS h WHERE m.unemployment_rate_pct = h.highest_unemployment_rate_pct ORDER BY m.CENSUS_BLOCK_GROUP",
+    "sql": "WITH miami_dade AS (SELECT e.CENSUS_BLOCK_GROUP, e.B23025e3 AS civilian_labor_force, e.B23025e5 AS unemployed_people, 100.0 * e.B23025e5 / NULLIF(e.B23025e3, 0) AS unemployment_rate_pct FROM census_2019_employment AS e JOIN census_2019_county_fips AS f ON SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'FL' AND f.COUNTY = 'Miami-Dade County' AND e.B23025e3 > 0), highest AS (SELECT MAX(unemployment_rate_pct) AS highest_unemployment_rate_pct FROM miami_dade) SELECT m.CENSUS_BLOCK_GROUP, m.civilian_labor_force, m.unemployed_people, m.unemployment_rate_pct FROM miami_dade AS m CROSS JOIN highest AS h WHERE m.unemployment_rate_pct = h.highest_unemployment_rate_pct ORDER BY m.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-miami-dade-county-florida-has-th",
     "metadata": {
       "source": "user",
       "source_file": "raw/which-census-block-group-in-miami-dade-county-florida-has-th.md"
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "unemployment_rate_pct"],
+      "tie_policy": "first_by_census_block_group"
+    },
     "question": "Which census block group in Miami-Dade County, Florida has the highest unemployment rate?"
   },
   {
-    "sql": "WITH new_york_county AS (SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd FROM census_2019_income AS i JOIN census_2019_county_fips AS f ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'NY' AND f.COUNTY = 'New York County' AND i.B19013e1 IS NOT NULL), highest AS (SELECT MAX(median_household_income_2019_usd) AS highest_income FROM new_york_county) SELECT n.CENSUS_BLOCK_GROUP, n.median_household_income_2019_usd FROM new_york_county AS n CROSS JOIN highest AS h WHERE n.median_household_income_2019_usd = h.highest_income ORDER BY n.CENSUS_BLOCK_GROUP",
+    "sql": "WITH new_york_county AS (SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd FROM census_2019_income AS i JOIN census_2019_county_fips AS f ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'NY' AND f.COUNTY = 'New York County' AND i.B19013e1 IS NOT NULL), highest AS (SELECT MAX(median_household_income_2019_usd) AS highest_income FROM new_york_county) SELECT n.CENSUS_BLOCK_GROUP, n.median_household_income_2019_usd FROM new_york_county AS n CROSS JOIN highest AS h WHERE n.median_household_income_2019_usd = h.highest_income ORDER BY n.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-new-york-county-new-york-has-the",
     "metadata": {
       "source": "user",
@@ -276,10 +358,14 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "median_household_income_2019_usd"],
+      "tie_policy": "first_by_census_block_group"
+    },
     "question": "Which census block group in New York County, New York has the highest median household income?"
   },
   {
-    "sql": "WITH san_francisco_county AS (SELECT e.CENSUS_BLOCK_GROUP, e.B15003e22 + e.B15003e23 + e.B15003e24 + e.B15003e25 AS estimated_people_age_25_plus_bachelors_or_higher FROM census_2019_education AS e JOIN census_2019_county_fips AS f ON SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'CA' AND f.COUNTY = 'San Francisco County'), highest AS (SELECT MAX(estimated_people_age_25_plus_bachelors_or_higher) AS highest_count FROM san_francisco_county) SELECT s.CENSUS_BLOCK_GROUP, s.estimated_people_age_25_plus_bachelors_or_higher FROM san_francisco_county AS s CROSS JOIN highest AS h WHERE s.estimated_people_age_25_plus_bachelors_or_higher = h.highest_count ORDER BY s.CENSUS_BLOCK_GROUP",
+    "sql": "WITH san_francisco_county AS (SELECT e.CENSUS_BLOCK_GROUP, e.B15003e22 + e.B15003e23 + e.B15003e24 + e.B15003e25 AS estimated_people_age_25_plus_bachelors_or_higher FROM census_2019_education AS e JOIN census_2019_county_fips AS f ON SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'CA' AND f.COUNTY = 'San Francisco County'), highest AS (SELECT MAX(estimated_people_age_25_plus_bachelors_or_higher) AS highest_count FROM san_francisco_county) SELECT s.CENSUS_BLOCK_GROUP, s.estimated_people_age_25_plus_bachelors_or_higher FROM san_francisco_county AS s CROSS JOIN highest AS h WHERE s.estimated_people_age_25_plus_bachelors_or_higher = h.highest_count ORDER BY s.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-san-francisco-county-california",
     "metadata": {
       "source": "user",
@@ -288,10 +374,14 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "estimated_people_age_25_plus_bachelors_or_higher"],
+      "tie_policy": "first_by_census_block_group"
+    },
     "question": "Which census block group in San Francisco County, California has the highest number of residents age 25 or older with a bachelor's degree or higher?"
   },
   {
-    "sql": "WITH san_francisco AS (SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd FROM census_2019_income AS i WHERE SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = '06' AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = '075' AND i.B19013e1 IS NOT NULL), highest AS (SELECT MAX(median_household_income_2019_usd) AS highest_income FROM san_francisco) SELECT s.CENSUS_BLOCK_GROUP, s.median_household_income_2019_usd FROM san_francisco AS s CROSS JOIN highest AS h WHERE s.median_household_income_2019_usd = h.highest_income ORDER BY s.CENSUS_BLOCK_GROUP",
+    "sql": "WITH san_francisco AS (SELECT i.CENSUS_BLOCK_GROUP, i.B19013e1 AS median_household_income_2019_usd FROM census_2019_income AS i WHERE SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = '06' AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = '075' AND i.B19013e1 IS NOT NULL), highest AS (SELECT MAX(median_household_income_2019_usd) AS highest_income FROM san_francisco) SELECT s.CENSUS_BLOCK_GROUP, s.median_household_income_2019_usd FROM san_francisco AS s CROSS JOIN highest AS h WHERE s.median_household_income_2019_usd = h.highest_income ORDER BY s.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-san-francisco-has-the-highest-me",
     "metadata": {
       "source": "user",
@@ -300,14 +390,22 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "median_household_income_2019_usd"],
+      "tie_policy": "first_by_census_block_group"
+    },
     "question": "Which census block group in San Francisco has the highest median household income?"
   },
   {
-    "sql": "WITH travis_county AS (SELECT h.CENSUS_BLOCK_GROUP, h.B25003e1 AS occupied_housing_units, h.B25003e3 AS renter_occupied_housing_units, 100.0 * h.B25003e3 / NULLIF(h.B25003e1, 0) AS renter_occupied_pct FROM census_2019_housing AS h JOIN census_2019_county_fips AS f ON SUBSTRING(h.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(h.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'TX' AND f.COUNTY = 'Travis County' AND h.B25003e1 > 0), highest AS (SELECT MAX(renter_occupied_pct) AS highest_renter_occupied_pct FROM travis_county) SELECT t.CENSUS_BLOCK_GROUP, t.occupied_housing_units, t.renter_occupied_housing_units, t.renter_occupied_pct FROM travis_county AS t CROSS JOIN highest AS x WHERE t.renter_occupied_pct = x.highest_renter_occupied_pct ORDER BY t.CENSUS_BLOCK_GROUP",
+    "sql": "WITH travis_county AS (SELECT h.CENSUS_BLOCK_GROUP, h.B25003e1 AS occupied_housing_units, h.B25003e3 AS renter_occupied_housing_units, 100.0 * h.B25003e3 / NULLIF(h.B25003e1, 0) AS renter_occupied_pct FROM census_2019_housing AS h JOIN census_2019_county_fips AS f ON SUBSTRING(h.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(h.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'TX' AND f.COUNTY = 'Travis County' AND h.B25003e1 > 0), highest AS (SELECT MAX(renter_occupied_pct) AS highest_renter_occupied_pct FROM travis_county) SELECT t.CENSUS_BLOCK_GROUP, t.occupied_housing_units, t.renter_occupied_housing_units, t.renter_occupied_pct FROM travis_county AS t CROSS JOIN highest AS x WHERE t.renter_occupied_pct = x.highest_renter_occupied_pct ORDER BY t.CENSUS_BLOCK_GROUP LIMIT 1",
     "id": "which-census-block-group-in-travis-county-texas-has-the-high",
     "metadata": {
       "source": "user",
       "source_file": "raw/which-census-block-group-in-travis-county-texas-has-the-high.md"
+    },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "renter_occupied_pct"],
+      "tie_policy": "first_by_census_block_group"
     },
     "question": "Which census block group in Travis County, Texas has the highest percentage of renter-occupied housing units?"
   },
@@ -321,6 +419,10 @@
         "source:verified-census-query"
       ]
     },
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "median_household_income_2019_usd"],
+      "tie_policy": "all"
+    },
     "question": "Which census block groups in King County, Washington have a median household income above $150,000?"
   },
   {
@@ -330,7 +432,11 @@
       "source": "user",
       "source_file": "raw/which-census-block-groups-in-san-francisco-county-california.md"
     },
-    "question": "Which census block groups in San Francisco County, California have a median household income above ,000 and more than 30% of adults age 25 or older with a bachelor's degree or higher?"
+    "contract": {
+      "expected_columns": ["CENSUS_BLOCK_GROUP", "median_household_income_2019_usd", "bachelors_or_higher_pct_age_25_plus"],
+      "tie_policy": "all"
+    },
+    "question": "Which census block groups in San Francisco County, California have a median household income above $100,000 and more than 30% of adults age 25 or older with a bachelor's degree or higher?"
   },
   {
     "sql": "SELECT f.COUNTY, 100.0 * SUM(e.B23025e5) / NULLIF(SUM(e.B23025e3), 0) AS unemployment_rate_pct FROM census_2019_employment AS e JOIN census_2019_county_fips AS f ON SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS WHERE f.STATE = 'IN' GROUP BY f.COUNTY ORDER BY unemployment_rate_pct DESC LIMIT 10",
@@ -341,6 +447,10 @@
       "tags": [
         "source:verified-census-query"
       ]
+    },
+    "contract": {
+      "expected_columns": ["COUNTY", "unemployment_rate_pct"],
+      "top_k": 10
     },
     "question": "Which Indiana counties had the highest unemployment rate in 2019?"
   }

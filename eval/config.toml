@@ -1,0 +1,19 @@
+# Copy or edit this file to benchmark another OpenAI Responses model.
+
+[agent]
+model = "gpt-5.4-mini"
+temperature = 0.0
+max_output_tokens = 4096
+# reasoning_effort = "medium"
+
+[run]
+dataset = "eval/dataset.json"
+results_dir = "eval/results"
+case_timeout_seconds = 120
+# Wren MCP applies 1,000 by default. Use the same cap for the golden query.
+query_row_limit = 1000
+
+[comparison]
+absolute_tolerance = 0.001
+relative_tolerance = 0.001
+ignore_row_order = true

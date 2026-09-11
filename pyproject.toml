@@ -7,5 +7,6 @@ requires-python = ">=3.13"
 dependencies = [
     "agno[agui,mcp,os]>=3.0.9",
     "openai>=3.13.0",
+    "pandas>=2.3.0",
     "wrenai[main,mcp,memory,snowflake]>=0.14.0",
 ]

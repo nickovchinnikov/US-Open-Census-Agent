@@ -89,3 +89,37 @@ Add only these service variables in Railway: `OPENAI_API_KEY`,
 `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PASSWORD`,
 `SNOWFLAKE_DATABASE`, `SNOWFLAKE_SCHEMA`, and `SNOWFLAKE_WAREHOUSE`.
 Optionally set `COPILOTKIT_TELEMETRY_DISABLED=true`.
+
+## Result-based agent evaluation
+
+The eval suite grades database results rather than generated SQL strings. It
+compares the final agent `run_sql` result with golden SQL using pandas dataframe
+comparison, including configured float tolerance and optional row-order ignore.
+
+Configure the model and evaluation parameters in
+[`eval/config.toml`](eval/config.toml). Then run the full suite:
+
+```bash
+uv run python -m eval.run
+```
+
+Each run creates both a machine-readable `report.json` and a readable
+`report.md` in `eval/results/<timestamp>-<model>/`. The process returns a
+non-zero exit code if any case fails, making it suitable for CI.
+
+Useful overrides:
+
+```bash
+# Benchmark a different OpenAI Responses model.
+uv run python -m eval.run --model gpt-5.6-mini --run-name gpt-5-6-mini
+
+# Iterate on a single query or a tagged slice.
+uv run python -m eval.run --name which-indiana-counties-had-the-highest-unemployment-rate-in
+uv run python -m eval.run --tag source:verified-census-query
+
+# Fast deterministic sample: the first 10 selected dataset records.
+uv run python -m eval.run --limit 10
+
+# Reuse a previous golden-result cache when the underlying dataset is unchanged.
+uv run python -m eval.run --no-refresh-golden-results
+```
