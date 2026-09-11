@@ -31,7 +31,7 @@ WREN_ENV = {
 
 
 class InputLengthGuardrail(BaseGuardrail):
-    def __init__(self, max_chars: int = 4000):
+    def __init__(self, max_chars: int = 1000):
         self.max_chars = max_chars
 
     def check(self, run_input: RunInput) -> None:
@@ -74,13 +74,17 @@ agent = Agent(
     tools=[wren],
     db=db,
     add_history_to_context=True,
-    num_history_runs=3,
+    # Keep conversational continuity without re-sending potentially large Wren
+    # schema/query outputs from earlier runs to the model.
+    num_history_runs=2,
+    max_tool_calls_from_history=0,
+    store_tool_messages=False,
     pre_hooks=[
         PromptInjectionGuardrail(),
         PIIDetectionGuardrail(
             mask_pii=True,
         ),
-        InputLengthGuardrail(max_chars=4000),
+        InputLengthGuardrail(max_chars=1000),
     ],
     instructions=CENSUS_AGENT_INSTRUCTIONS,
     markdown=True,
