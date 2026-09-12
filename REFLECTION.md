@@ -29,6 +29,8 @@ Each test contains a human-reviewed golden query. The harness executes it agains
 
 The evaluation set covers counts, percentages, rankings, joins, county-level aggregation, and invalid aggregation cases. I also added unit tests for the comparison logic.
 
+Manual adversarial testing covered direct and indirect prompt injection, system-prompt and secret exfiltration, arbitrary SQL execution, SQL statement smuggling, authority spoofing, multi-turn policy poisoning, and attempts to override Census aggregation semantics. In the tested scenarios, no out-of-scope SQL was executed and semantic constraints were preserved. The exact prompts, observed outcomes, known issues, and limits of this testing are documented in [TEST.md](TEST.md); these tests are not intended to constitute a complete security assessment.
+
 The latest saved evaluation passed **35 of 37 cases (95%)**, with **13.02 seconds average latency**.
 
 Failures were used as a feedback loop: inspect the SQL and result, identify whether the problem was in the semantic model or agent instructions, fix it, and rerun the affected cases.

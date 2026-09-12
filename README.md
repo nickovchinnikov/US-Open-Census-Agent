@@ -117,6 +117,9 @@ average latency of **13.02 seconds**. The two remaining failures are recorded
 in the committed [evaluation report](eval/results/20260912T010025Z-gpt-5.4-mini/report.md)
 and are retained as regression cases rather than omitted from the result.
 
+Manual adversarial tests, their exact prompts, observed outcomes, and known
+semantic limitations are documented in [TEST.md](TEST.md).
+
 Configure the model and evaluation parameters in
 [`eval/config.toml`](eval/config.toml). Then run the full suite:
 
