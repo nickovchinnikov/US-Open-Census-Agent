@@ -3,6 +3,12 @@
 This project uses Wren AI to model and query the Snowflake database
 `US_OPEN_CENSUS_DATA_NEIGHBORHOOD_INSIGHTS_FREE_DATASET`.
 
+## Live demo
+
+The public application is available at
+[us-open-census-agent-production.up.railway.app](https://us-open-census-agent-production.up.railway.app/).
+No application-level authentication is required.
+
 ## Connection setup
 
 Copy the values for the Snowflake account, user, password, and schema into `.env`.
@@ -102,6 +108,14 @@ gated Hugging Face model; it is forwarded to the Wren MCP subprocess.
 The eval suite grades database results rather than generated SQL strings. It
 compares the final agent `run_sql` result with golden SQL using pandas dataframe
 comparison, including configured float tolerance and optional row-order ignore.
+
+### Latest result
+
+The latest full result-based evaluation, using `gpt-5.4-mini`, completed all
+executions and passed **35 of 37 cases** (**95%** result accuracy), with an
+average latency of **13.02 seconds**. The two remaining failures are recorded
+in the committed [evaluation report](eval/results/20260912T010025Z-gpt-5.4-mini/report.md)
+and are retained as regression cases rather than omitted from the result.
 
 Configure the model and evaluation parameters in
 [`eval/config.toml`](eval/config.toml). Then run the full suite:
