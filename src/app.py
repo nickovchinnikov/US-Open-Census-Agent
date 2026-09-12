@@ -45,6 +45,14 @@ WREN_ENV = {
         "SNOWFLAKE_DATABASE",
         "SNOWFLAKE_SCHEMA",
         "SNOWFLAKE_WAREHOUSE",
+        # The Docker image preloads Wren's SentenceTransformer model here.
+        # Forward its explicit cache location to the restricted MCP subprocess.
+        "HF_HOME",
+        "HF_HUB_OFFLINE",
+        "TRANSFORMERS_OFFLINE",
+        # Optional: useful only when deliberately changing to a private or
+        # gated Hugging Face model. The default Wren model is public.
+        "HF_TOKEN",
     )
     if (value := os.environ.get(name)) is not None
 }

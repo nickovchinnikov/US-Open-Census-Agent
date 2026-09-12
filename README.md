@@ -85,10 +85,17 @@ autodeploy enabled for `master`. Railway detects the root
 - The container creates the required Wren `us-open-census` profile on startup
   from the Snowflake variables below.
 
-Add only these service variables in Railway: `OPENAI_API_KEY`,
+Add these service variables in Railway: `OPENAI_API_KEY`,
 `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PASSWORD`,
 `SNOWFLAKE_DATABASE`, `SNOWFLAKE_SCHEMA`, and `SNOWFLAKE_WAREHOUSE`.
 Optionally set `COPILOTKIT_TELEMETRY_DISABLED=true`.
+
+The image preloads Wren's public semantic-memory model
+`sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` during its
+build, then runs it offline. `HF_TOKEN` is therefore **not** needed for the
+default configuration and must never be added to the Dockerfile. Set it only
+as a Railway/Docker secret if you intentionally switch to a private or
+gated Hugging Face model; it is forwarded to the Wren MCP subprocess.
 
 ## Result-based agent evaluation
 

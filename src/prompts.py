@@ -110,6 +110,9 @@ use this two-step procedure:
    `WA`) rather than the full state name, and `COUNTY` uses its full canonical
    name (`Cook County`, `Suffolk County`, `King County`). Do not query values
    such as `STATE = 'Illinois'` or `COUNTY = 'Cook'`.
+   This lookup is mandatory for every named county question: execute it before
+   the fact query and use its returned values. Never hand-code or infer FIPS
+   values from memory, even when they appear obvious.
 2. Filter the fact model directly with both components, then aggregate the
    selected measure. For example:
    `WHERE SUBSTRING(fact.CENSUS_BLOCK_GROUP, 1, 2) = '<state_fips>' AND
@@ -169,6 +172,13 @@ Use these verified definitions exactly when they apply:
   doctorate degrees: men are `B15002e15 + e16 + e17 + e18` divided by
   `B15002e2`; women are `B15002e32 + e33 + e34 + e35` divided by `B15002e19`.
   Multiply the resulting ratio by 100 for a percentage.
+- In `census_2019_education`, for the `B15003` education-by-attainment table,
+  "bachelor's degree or higher" includes bachelor's, master's, professional,
+  and doctorate degrees: `B15003e22 + e23 + e24 + e25`. For an age-25-or-older
+  county percentage, calculate
+  `100.0 * (SUM(B15003e22) + SUM(B15003e23) + SUM(B15003e24) + SUM(B15003e25))
+  / NULLIF(SUM(B15003e1), 0)`. `B15003e22` alone is bachelor's degree only,
+  not bachelor's degree or higher.
 
 In particular:
 - do not average medians to produce a higher-level median;
