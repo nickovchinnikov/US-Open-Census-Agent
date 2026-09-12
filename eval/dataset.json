@@ -453,5 +453,70 @@
       "top_k": 10
     },
     "question": "Which Indiana counties had the highest unemployment rate in 2019?"
+  },
+  {
+    "sql": null,
+    "id": "unavailable-king-county-median-income-2024",
+    "metadata": {
+      "source": "user",
+      "tags": ["negative", "unavailable", "year"]
+    },
+    "contract": {
+      "outcome": "unavailable",
+      "expected_response": "Unavailable: 2024 data is not available; this dataset contains 2019 data only."
+    },
+    "question": "What was the median household income in King County, Washington in 2024?"
+  },
+  {
+    "sql": null,
+    "id": "unavailable-seattle-city-women-age-25-to-34",
+    "metadata": {
+      "source": "user",
+      "tags": ["negative", "unavailable", "geography"]
+    },
+    "contract": {
+      "outcome": "unavailable",
+      "expected_response": "Unavailable: Seattle city-proper geography is not available in this dataset."
+    },
+    "question": "How many women aged 25 to 34 live in Seattle city proper?"
+  },
+  {
+    "sql": null,
+    "id": "unavailable-travis-county-unemployment-2030",
+    "metadata": {
+      "source": "user",
+      "tags": ["negative", "unavailable", "forecast"]
+    },
+    "contract": {
+      "outcome": "unavailable",
+      "expected_response": "Unavailable: 2030 forecasts are not available in this dataset."
+    },
+    "question": "What will the unemployment rate in Travis County, Texas be in 2030?"
+  },
+  {
+    "sql": null,
+    "id": "unavailable-miami-dade-software-engineer-salary",
+    "metadata": {
+      "source": "user",
+      "tags": ["negative", "unavailable", "metric"]
+    },
+    "contract": {
+      "outcome": "unavailable",
+      "expected_response": "Unavailable: salary data is not available in this dataset."
+    },
+    "question": "What is the average salary of software engineers in Miami-Dade County, Florida?"
+  },
+  {
+    "sql": null,
+    "id": "unavailable-safest-san-francisco-neighborhood",
+    "metadata": {
+      "source": "user",
+      "tags": ["negative", "unavailable", "safety"]
+    },
+    "contract": {
+      "outcome": "unavailable",
+      "expected_response": "Unavailable: safety data is not available in this dataset."
+    },
+    "question": "Which neighborhood in San Francisco is the safest?"
   }
 ]

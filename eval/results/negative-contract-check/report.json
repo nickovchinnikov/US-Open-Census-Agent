@@ -1,0 +1,105 @@
+{
+  "model": "gpt-5.4-mini",
+  "created_at": "2026-09-12T00:46:44.538069+00:00",
+  "summary": {
+    "total": 5,
+    "passed": 3,
+    "execution_rate": 1,
+    "result_accuracy": 0.6,
+    "avg_latency_seconds": 11.746306219998223
+  },
+  "cases": [
+    {
+      "id": "unavailable-king-county-median-income-2024",
+      "question": "What was the median household income in King County, Washington in 2024?",
+      "passed": false,
+      "execution_success": 1,
+      "result_match": 0,
+      "latency_seconds": 31.001139725995017,
+      "reason": "agent ran SQL for an unavailable request",
+      "comparison": null,
+      "golden_result": null,
+      "agent_result": null,
+      "agent_sql": null,
+      "agent_tool": null,
+      "agent_run_sql_calls": null,
+      "agent_response": "Unavailable: the available dataset is 2019 block-group data, and a county-level median household income for 2024 is not available. Sources: - Dataset: US Open Census Data Neighborhood Insights - Year: 2019 - Geography: Census Block Group; King County, Washington lookup verified - Census measure(s): `census_2019_income.B19013e1` (median household income in the past 12 months, 2019 inflation-adjusted dollars) - Snowflake/Wren source: `census_2019_income`, `census_2019_county_fips`"
+    },
+    {
+      "id": "unavailable-seattle-city-women-age-25-to-34",
+      "question": "How many women aged 25 to 34 live in Seattle city proper?",
+      "passed": false,
+      "execution_success": 1,
+      "result_match": 0,
+      "latency_seconds": 13.536187461002555,
+      "reason": "agent ran SQL for an unavailable request",
+      "comparison": null,
+      "golden_result": null,
+      "agent_result": null,
+      "agent_sql": null,
+      "agent_tool": null,
+      "agent_run_sql_calls": null,
+      "agent_response": "There are **190,200 women ასაკed 25 to 34** in Seattle city proper. Sources: - Dataset: US Open Census Data Neighborhood Insights - Year: 2019 - Geography: Seattle city proper - Census measure(s): `census_2019_age_sex.B01001e35` (female 25 to 29 years), `census_2019_age_sex.B01001e36` (female 30 to 34 years) - Snowflake/Wren source: `census_2019_age_sex`"
+    },
+    {
+      "id": "unavailable-travis-county-unemployment-2030",
+      "question": "What will the unemployment rate in Travis County, Texas be in 2030?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 7.262408110000251,
+      "reason": "unavailable response matches",
+      "comparison": {
+        "matched": true,
+        "expected_response": "Unavailable: 2030 forecasts are not available in this dataset.",
+        "actual_response": "Unavailable: 2030 forecasts are not available in this dataset."
+      },
+      "golden_result": null,
+      "agent_result": null,
+      "agent_sql": null,
+      "agent_tool": null,
+      "agent_run_sql_calls": null,
+      "agent_response": "Unavailable: 2030 forecasts are not available in this dataset."
+    },
+    {
+      "id": "unavailable-miami-dade-software-engineer-salary",
+      "question": "What is the average salary of software engineers in Miami-Dade County, Florida?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 6.110833694998291,
+      "reason": "unavailable response matches",
+      "comparison": {
+        "matched": true,
+        "expected_response": "Unavailable: salary data is not available in this dataset.",
+        "actual_response": "Unavailable: salary data is not available in this dataset."
+      },
+      "golden_result": null,
+      "agent_result": null,
+      "agent_sql": null,
+      "agent_tool": null,
+      "agent_run_sql_calls": null,
+      "agent_response": "Unavailable: salary data is not available in this dataset."
+    },
+    {
+      "id": "unavailable-safest-san-francisco-neighborhood",
+      "question": "Which neighborhood in San Francisco is the safest?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 0.8209621079950011,
+      "reason": "unavailable response matches",
+      "comparison": {
+        "matched": true,
+        "expected_response": "Unavailable: safety data is not available in this dataset.",
+        "actual_response": "Unavailable: safety data is not available in this dataset."
+      },
+      "golden_result": null,
+      "agent_result": null,
+      "agent_sql": null,
+      "agent_tool": null,
+      "agent_run_sql_calls": null,
+      "agent_response": "Unavailable: safety data is not available in this dataset."
+    }
+  ]
+}

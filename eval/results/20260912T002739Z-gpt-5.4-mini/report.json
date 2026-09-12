@@ -1,0 +1,3293 @@
+{
+  "model": "gpt-5.4-mini",
+  "created_at": "2026-09-12T00:27:39.634127+00:00",
+  "summary": {
+    "total": 30,
+    "passed": 28,
+    "execution_rate": 1,
+    "result_accuracy": 0.9333333333333333,
+    "avg_latency_seconds": 14.701676241699897
+  },
+  "cases": [
+    {
+      "id": "among-census-block-groups-in-king-county-washington-which-fi",
+      "question": "Among census block groups in King County, Washington, which five have the highest percentage of residents aged 25 to 34?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 29.156889912002953,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 5,
+        "actual_rows": 5
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "total_population",
+          "residents_age_25_to_34",
+          "residents_age_25_to_34_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "530330067001",
+            "total_population": 3361,
+            "residents_age_25_to_34": 2342,
+            "residents_age_25_to_34_pct": 69.681642
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330075003",
+            "total_population": 1796,
+            "residents_age_25_to_34": 1094,
+            "residents_age_25_to_34_pct": 60.91314
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330084003",
+            "total_population": 1292,
+            "residents_age_25_to_34": 779,
+            "residents_age_25_to_34_pct": 60.294118
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323092",
+            "total_population": 5193,
+            "residents_age_25_to_34": 3044,
+            "residents_age_25_to_34_pct": 58.61737
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330047002",
+            "total_population": 2106,
+            "residents_age_25_to_34": 1229,
+            "residents_age_25_to_34_pct": 58.357075
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "residents_age_25_to_34_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "530330067001",
+            "residents_age_25_to_34_pct": 69.6816
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330075003",
+            "residents_age_25_to_34_pct": 60.9131
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330084003",
+            "residents_age_25_to_34_pct": 60.2941
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323092",
+            "residents_age_25_to_34_pct": 58.6174
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330047002",
+            "residents_age_25_to_34_pct": 58.3571
+          }
+        ],
+        "row_count": 5,
+        "truncated": false
+      },
+      "agent_sql": "SELECT\n  CENSUS_BLOCK_GROUP,\n  (B01001e11 + B01001e12 + B01001e35 + B01001e36) / NULLIF(B01001e1, 0) * 100 AS residents_age_25_to_34_pct\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '033'\n  AND B01001e1 IS NOT NULL\n  AND B01001e1 <> 0\nORDER BY residents_age_25_to_34_pct DESC NULLS LAST\nLIMIT 5",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT STATE_FIPS, COUNTY_FIPS\nFROM census_2019_county_fips\nWHERE STATE = 'WA' AND COUNTY = 'King County'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"STATE_FIPS\",\n    \"COUNTY_FIPS\"\n  ],\n  \"rows\": [\n    {\n      \"STATE_FIPS\": \"53\",\n      \"COUNTY_FIPS\": \"033\"\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": false
+        },
+        {
+          "name": "run_sql",
+          "sql": "SELECT\n  CENSUS_BLOCK_GROUP,\n  (B01001e11 + B01001e12 + B01001e35 + B01001e36) / NULLIF(B01001e1, 0) * 100 AS residents_age_25_to_34_pct\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '033'\n  AND B01001e1 IS NOT NULL\n  AND B01001e1 <> 0\nORDER BY residents_age_25_to_34_pct DESC NULLS LAST\nLIMIT 5",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"residents_age_25_to_34_pct\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330067001\",\n      \"residents_age_25_to_34_pct\": 69.6816\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330075003\",\n      \"residents_age_25_to_34_pct\": 60.9131\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330084003\",\n      \"residents_age_25_to_34_pct\": 60.2941\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323092\",\n      \"residents_age_25_to_34_pct\": 58.6174\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330047002\",\n      \"residents_age_25_to_34_pct\": 58.3571\n    }\n  ],\n  \"row_count\": 5,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "compare-public-transit-commuting-rates-between-san-francisco",
+      "question": "Compare public-transit commuting rates between San Francisco County, California and Los Angeles County, California.",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 18.556997291998414,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 2,
+        "actual_rows": 2
+      },
+      "golden_result": {
+        "columns": [
+          "COUNTY",
+          "total_workers_age_16_plus",
+          "workers_commuting_by_public_transportation",
+          "public_transit_commute_pct"
+        ],
+        "rows": [
+          {
+            "COUNTY": "San Francisco County",
+            "total_workers_age_16_plus": 512455,
+            "workers_commuting_by_public_transportation": 178167,
+            "public_transit_commute_pct": 34.767345
+          },
+          {
+            "COUNTY": "Los Angeles County",
+            "total_workers_age_16_plus": 4811408,
+            "workers_commuting_by_public_transportation": 279730,
+            "public_transit_commute_pct": 5.813891
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "COUNTY",
+          "public_transit_commute_pct"
+        ],
+        "rows": [
+          {
+            "COUNTY": "Los Angeles County",
+            "public_transit_commute_pct": 5.81
+          },
+          {
+            "COUNTY": "San Francisco County",
+            "public_transit_commute_pct": 34.77
+          }
+        ],
+        "row_count": 2,
+        "truncated": false
+      },
+      "agent_sql": "WITH county_lookup AS (\n  SELECT STATE, STATE_FIPS, COUNTY_FIPS, COUNTY\n  FROM census_2019_county_fips\n  WHERE (STATE = 'CA' AND COUNTY IN ('San Francisco County', 'Los Angeles County'))\n)\nSELECT\n  l.COUNTY,\n  ROUND(SUM(c.B08301e10) * 100.0 / NULLIF(SUM(c.B08301e1), 0), 2) AS public_transit_commute_pct\nFROM census_2019_commuting c\nJOIN county_lookup l\n  ON SUBSTRING(c.CENSUS_BLOCK_GROUP, 1, 2) = l.STATE_FIPS\n AND SUBSTRING(c.CENSUS_BLOCK_GROUP, 3, 3) = l.COUNTY_FIPS\nGROUP BY l.COUNTY\nORDER BY CASE l.COUNTY WHEN 'San Francisco County' THEN 1 WHEN 'Los Angeles County' THEN 2 ELSE 3 END",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH county_lookup AS (\n  SELECT STATE, STATE_FIPS, COUNTY_FIPS, COUNTY\n  FROM census_2019_county_fips\n  WHERE (STATE = 'CA' AND COUNTY IN ('San Francisco County', 'Los Angeles County'))\n)\nSELECT\n  l.COUNTY,\n  ROUND(SUM(c.B08301e10) * 100.0 / NULLIF(SUM(c.B08301e1), 0), 2) AS public_transit_commute_pct\nFROM census_2019_commuting c\nJOIN county_lookup l\n  ON SUBSTRING(c.CENSUS_BLOCK_GROUP, 1, 2) = l.STATE_FIPS\n AND SUBSTRING(c.CENSUS_BLOCK_GROUP, 3, 3) = l.COUNTY_FIPS\nGROUP BY l.COUNTY\nORDER BY CASE l.COUNTY WHEN 'San Francisco County' THEN 1 WHEN 'Los Angeles County' THEN 2 ELSE 3 END",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"COUNTY\",\n    \"public_transit_commute_pct\"\n  ],\n  \"rows\": [\n    {\n      \"COUNTY\": \"Los Angeles County\",\n      \"public_transit_commute_pct\": 5.81\n    },\n    {\n      \"COUNTY\": \"San Francisco County\",\n      \"public_transit_commute_pct\": 34.77\n    }\n  ],\n  \"row_count\": 2,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "compare-the-number-of-men-and-women-living-in-suffolk-county",
+      "question": "Compare the number of men and women living in Suffolk County, Massachusetts.",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 15.110752298998705,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_men",
+          "estimated_women",
+          "women_minus_men"
+        ],
+        "rows": [
+          {
+            "estimated_men": 384878,
+            "estimated_women": 411727,
+            "women_minus_men": 26849
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_men",
+          "estimated_women",
+          "women_minus_men"
+        ],
+        "rows": [
+          {
+            "estimated_men": 384878,
+            "estimated_women": 411727,
+            "women_minus_men": 26849
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'MA' AND COUNTY = 'Suffolk County'\n)\nSELECT\n  SUM(a.B01001e2) AS estimated_men,\n  SUM(a.B01001e26) AS estimated_women,\n  SUM(a.B01001e26) - SUM(a.B01001e2) AS women_minus_men\nFROM census_2019_age_sex a\nJOIN fips\n  ON SUBSTRING(a.CENSUS_BLOCK_GROUP, 1, 2) = fips.STATE_FIPS\n AND SUBSTRING(a.CENSUS_BLOCK_GROUP, 3, 3) = fips.COUNTY_FIPS;",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'MA' AND COUNTY = 'Suffolk County'\n)\nSELECT\n  SUM(a.B01001e2) AS estimated_men,\n  SUM(a.B01001e26) AS estimated_women,\n  SUM(a.B01001e26) - SUM(a.B01001e2) AS women_minus_men\nFROM census_2019_age_sex a\nJOIN fips\n  ON SUBSTRING(a.CENSUS_BLOCK_GROUP, 1, 2) = fips.STATE_FIPS\n AND SUBSTRING(a.CENSUS_BLOCK_GROUP, 3, 3) = fips.COUNTY_FIPS;",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_men\",\n    \"estimated_women\",\n    \"women_minus_men\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_men\": 384878,\n      \"estimated_women\": 411727,\n      \"women_minus_men\": 26849\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "compare-the-percentage-of-men-and-women-age-25-or-older-with",
+      "question": "Compare the percentage of men and women age 25 or older with a bachelor's degree or higher in King County, Washington.",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 17.354102120996686,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "men_age_25_plus",
+          "men_bachelors_or_higher",
+          "men_bachelors_or_higher_pct",
+          "women_age_25_plus",
+          "women_bachelors_or_higher",
+          "women_bachelors_or_higher_pct"
+        ],
+        "rows": [
+          {
+            "men_age_25_plus": 780327,
+            "men_bachelors_or_higher": 413219,
+            "men_bachelors_or_higher_pct": 52.954595,
+            "women_age_25_plus": 786761,
+            "women_bachelors_or_higher": 409396,
+            "women_bachelors_or_higher_pct": 52.035625
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "men_bachelors_or_higher_pct",
+          "women_bachelors_or_higher_pct"
+        ],
+        "rows": [
+          {
+            "men_bachelors_or_higher_pct": 52.954595,
+            "women_bachelors_or_higher_pct": 52.035625
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT\n  100.0 * SUM(education.B15002e15 + education.B15002e16 + education.B15002e17 + education.B15002e18) / NULLIF(SUM(education.B15002e2), 0) AS men_bachelors_or_higher_pct,\n  100.0 * SUM(education.B15002e32 + education.B15002e33 + education.B15002e34 + education.B15002e35) / NULLIF(SUM(education.B15002e19), 0) AS women_bachelors_or_higher_pct\nFROM census_2019_education AS education\nWHERE SUBSTRING(education.CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(education.CENSUS_BLOCK_GROUP, 3, 3) = '033'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT fips.STATE_FIPS, fips.COUNTY_FIPS\nFROM census_2019_county_fips AS fips\nWHERE fips.STATE = 'WA'\n  AND fips.COUNTY = 'King County'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"STATE_FIPS\",\n    \"COUNTY_FIPS\"\n  ],\n  \"rows\": [\n    {\n      \"STATE_FIPS\": \"53\",\n      \"COUNTY_FIPS\": \"033\"\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": false
+        },
+        {
+          "name": "run_sql",
+          "sql": "SELECT\n  100.0 * SUM(education.B15002e15 + education.B15002e16 + education.B15002e17 + education.B15002e18) / NULLIF(SUM(education.B15002e2), 0) AS men_bachelors_or_higher_pct,\n  100.0 * SUM(education.B15002e32 + education.B15002e33 + education.B15002e34 + education.B15002e35) / NULLIF(SUM(education.B15002e19), 0) AS women_bachelors_or_higher_pct\nFROM census_2019_education AS education\nWHERE SUBSTRING(education.CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(education.CENSUS_BLOCK_GROUP, 3, 3) = '033'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"men_bachelors_or_higher_pct\",\n    \"women_bachelors_or_higher_pct\"\n  ],\n  \"rows\": [\n    {\n      \"men_bachelors_or_higher_pct\": 52.954595,\n      \"women_bachelors_or_higher_pct\": 52.035625\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "find-the-census-block-group-in-cook-county-illinois-with-the",
+      "question": "Find the census block group in Cook County, Illinois with the highest median household income and report its population, median age, and percentage of adults age 25 or older with a bachelor's degree or higher.",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 19.462104248006654,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd",
+          "total_population",
+          "median_age_years",
+          "bachelors_or_higher_pct_age_25_plus"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "170318001001",
+            "median_household_income_2019_usd": 250001,
+            "total_population": 942,
+            "median_age_years": 51,
+            "bachelors_or_higher_pct_age_25_plus": 86.156112
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd",
+          "total_population",
+          "median_age_years",
+          "bachelors_or_higher_pct_age_25_plus"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "170318001001",
+            "median_household_income_2019_usd": 250001,
+            "total_population": 942,
+            "median_age_years": 51,
+            "bachelors_or_higher_pct_age_25_plus": 86.1561
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH cook_fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'IL' AND COUNTY = 'Cook County'\n), ranked AS (\n  SELECT\n    i.CENSUS_BLOCK_GROUP,\n    i.B19013e1 AS median_household_income_2019_usd,\n    a.B01003e1 AS total_population,\n    a.B01002e1 AS median_age_years,\n    (e.B15002e15 + e.B15002e16 + e.B15002e17 + e.B15002e18 + e.B15002e32 + e.B15002e33 + e.B15002e34 + e.B15002e35) / NULLIF(e.B15002e1, 0) * 100 AS bachelors_or_higher_pct_age_25_plus,\n    ROW_NUMBER() OVER (\n      ORDER BY i.B19013e1 DESC NULLS LAST, i.CENSUS_BLOCK_GROUP ASC\n    ) AS rn\n  FROM census_2019_income i\n  JOIN census_2019_age_sex a\n    ON i.CENSUS_BLOCK_GROUP = a.CENSUS_BLOCK_GROUP\n  JOIN census_2019_education e\n    ON i.CENSUS_BLOCK_GROUP = e.CENSUS_BLOCK_GROUP\n  JOIN cook_fips f\n    ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS\n   AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS\n)\nSELECT CENSUS_BLOCK_GROUP, median_household_income_2019_usd, total_population, median_age_years, bachelors_or_higher_pct_age_25_plus\nFROM ranked\nWHERE rn = 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH cook_fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'IL' AND COUNTY = 'Cook County'\n), ranked AS (\n  SELECT\n    i.CENSUS_BLOCK_GROUP,\n    i.B19013e1 AS median_household_income_2019_usd,\n    a.B01003e1 AS total_population,\n    a.B01002e1 AS median_age_years,\n    (e.B15002e15 + e.B15002e16 + e.B15002e17 + e.B15002e18 + e.B15002e32 + e.B15002e33 + e.B15002e34 + e.B15002e35) / NULLIF(e.B15002e1, 0) * 100 AS bachelors_or_higher_pct_age_25_plus,\n    ROW_NUMBER() OVER (\n      ORDER BY i.B19013e1 DESC NULLS LAST, i.CENSUS_BLOCK_GROUP ASC\n    ) AS rn\n  FROM census_2019_income i\n  JOIN census_2019_age_sex a\n    ON i.CENSUS_BLOCK_GROUP = a.CENSUS_BLOCK_GROUP\n  JOIN census_2019_education e\n    ON i.CENSUS_BLOCK_GROUP = e.CENSUS_BLOCK_GROUP\n  JOIN cook_fips f\n    ON SUBSTRING(i.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS\n   AND SUBSTRING(i.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS\n)\nSELECT CENSUS_BLOCK_GROUP, median_household_income_2019_usd, total_population, median_age_years, bachelors_or_higher_pct_age_25_plus\nFROM ranked\nWHERE rn = 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"median_household_income_2019_usd\",\n    \"total_population\",\n    \"median_age_years\",\n    \"bachelors_or_higher_pct_age_25_plus\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"170318001001\",\n      \"median_household_income_2019_usd\": 250001,\n      \"total_population\": 942,\n      \"median_age_years\": 51,\n      \"bachelors_or_higher_pct_age_25_plus\": 86.1561\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-children-under-18-live-in-travis-county-texas",
+      "question": "How many children under 18 live in Travis County, Texas?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 12.10891219900077,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_children_under_18"
+        ],
+        "rows": [
+          {
+            "estimated_children_under_18": 269975
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_children_under_18"
+        ],
+        "rows": [
+          {
+            "estimated_children_under_18": 269975
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(B01001e3 + B01001e4 + B01001e5 + B01001e6 + B01001e27 + B01001e28 + B01001e29 + B01001e30) AS estimated_children_under_18\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '48' AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '453';",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(B01001e3 + B01001e4 + B01001e5 + B01001e6 + B01001e27 + B01001e28 + B01001e29 + B01001e30) AS estimated_children_under_18\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '48' AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '453';",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_children_under_18\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_children_under_18\": 269975\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-employed-people-in-san-francisco-county-california",
+      "question": "How many employed people in San Francisco County, California commute to work by public transportation?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 10.802833434005152,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_workers_commuting_by_public_transportation"
+        ],
+        "rows": [
+          {
+            "estimated_workers_commuting_by_public_transportation": 178167
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_workers_commuting_by_public_transportation"
+        ],
+        "rows": [
+          {
+            "estimated_workers_commuting_by_public_transportation": 178167
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(commuting.B08301e10) AS estimated_workers_commuting_by_public_transportation\nFROM census_2019_commuting AS commuting\nWHERE SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 3, 3) = '075'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(commuting.B08301e10) AS estimated_workers_commuting_by_public_transportation\nFROM census_2019_commuting AS commuting\nWHERE SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 3, 3) = '075'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_workers_commuting_by_public_transportation\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_workers_commuting_by_public_transportation\": 178167\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        },
+        {
+          "name": "run_sql",
+          "sql": "SELECT STATE_FIPS, COUNTY_FIPS, STATE, COUNTY\nFROM census_2019_county_fips\nWHERE STATE = 'CA' AND COUNTY = 'San Francisco County'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"STATE_FIPS\",\n    \"COUNTY_FIPS\",\n    \"STATE\",\n    \"COUNTY\"\n  ],\n  \"rows\": [\n    {\n      \"STATE_FIPS\": \"06\",\n      \"COUNTY_FIPS\": \"075\",\n      \"STATE\": \"CA\",\n      \"COUNTY\": \"San Francisco County\"\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": false
+        }
+      ]
+    },
+    {
+      "id": "how-many-households-in-san-francisco-county-california-have",
+      "question": "How many households in San Francisco County, California have an annual income above $100,000?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 14.044805343000917,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_households_income_100k_or_more"
+        ],
+        "rows": [
+          {
+            "estimated_households_income_100k_or_more": 197476
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_households_income_100k_or_more"
+        ],
+        "rows": [
+          {
+            "estimated_households_income_100k_or_more": 197476
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(B19001e14 + B19001e15 + B19001e16 + B19001e17) AS estimated_households_income_100k_or_more\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '075'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(B19001e14 + B19001e15 + B19001e16 + B19001e17) AS estimated_households_income_100k_or_more\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '075'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_households_income_100k_or_more\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_households_income_100k_or_more\": 197476\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-households-in-travis-county-texas-earn-less-than-25",
+      "question": "How many households in Travis County, Texas earn less than $25,000 per year?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 15.589561009997851,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_households_income_under_25k"
+        ],
+        "rows": [
+          {
+            "estimated_households_income_under_25k": 65853
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_households_income_under_25k"
+        ],
+        "rows": [
+          {
+            "estimated_households_income_under_25k": 65853
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'TX' AND COUNTY = 'Travis County'\n)\nSELECT SUM(B19001e2 + B19001e3 + B19001e4 + B19001e5) AS estimated_households_income_under_25k\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = (SELECT STATE_FIPS FROM fips)\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = (SELECT COUNTY_FIPS FROM fips);",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'TX' AND COUNTY = 'Travis County'\n)\nSELECT SUM(B19001e2 + B19001e3 + B19001e4 + B19001e5) AS estimated_households_income_under_25k\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = (SELECT STATE_FIPS FROM fips)\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = (SELECT COUNTY_FIPS FROM fips);",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_households_income_under_25k\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_households_income_under_25k\": 65853\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-males-aged-22-to-24-lived-in-wabash-county-indiana",
+      "question": "How many males aged 22 to 24 lived in Wabash County, Indiana in 2019?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 13.587067694003053,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_males_age_22_to_24"
+        ],
+        "rows": [
+          {
+            "estimated_males_age_22_to_24": 613
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_males_age_22_to_24"
+        ],
+        "rows": [
+          {
+            "estimated_males_age_22_to_24": 613
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(B01001e10) AS estimated_males_age_22_to_24\nFROM census_2019_age_sex fact\nWHERE SUBSTRING(fact.CENSUS_BLOCK_GROUP, 1, 2) = (\n  SELECT STATE_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'IN' AND COUNTY = 'Wabash County'\n  LIMIT 1\n)\nAND SUBSTRING(fact.CENSUS_BLOCK_GROUP, 3, 3) = (\n  SELECT COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'IN' AND COUNTY = 'Wabash County'\n  LIMIT 1\n)",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(B01001e10) AS estimated_males_age_22_to_24\nFROM census_2019_age_sex fact\nWHERE SUBSTRING(fact.CENSUS_BLOCK_GROUP, 1, 2) = (\n  SELECT STATE_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'IN' AND COUNTY = 'Wabash County'\n  LIMIT 1\n)\nAND SUBSTRING(fact.CENSUS_BLOCK_GROUP, 3, 3) = (\n  SELECT COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'IN' AND COUNTY = 'Wabash County'\n  LIMIT 1\n)",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_males_age_22_to_24\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_males_age_22_to_24\": 613\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-men-aged-65-or-older-live-in-miami-dade-county",
+      "question": "How many men aged 65 or older live in Miami-Dade County?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 13.654188915003033,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_men_age_65_or_older"
+        ],
+        "rows": [
+          {
+            "estimated_men_age_65_or_older": 179355
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_men_age_65_or_older"
+        ],
+        "rows": [
+          {
+            "estimated_men_age_65_or_older": 179355
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(B01001e20 + B01001e21 + B01001e22 + B01001e23 + B01001e24 + B01001e25) AS estimated_men_age_65_or_older\nFROM census_2019_age_sex fact\nWHERE SUBSTRING(fact.CENSUS_BLOCK_GROUP, 1, 2) = (\n  SELECT STATE_FIPS FROM census_2019_county_fips\n  WHERE STATE = 'FL' AND COUNTY = 'Miami-Dade County'\n  LIMIT 1\n)\nAND SUBSTRING(fact.CENSUS_BLOCK_GROUP, 3, 3) = (\n  SELECT COUNTY_FIPS FROM census_2019_county_fips\n  WHERE STATE = 'FL' AND COUNTY = 'Miami-Dade County'\n  LIMIT 1\n)",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(B01001e20 + B01001e21 + B01001e22 + B01001e23 + B01001e24 + B01001e25) AS estimated_men_age_65_or_older\nFROM census_2019_age_sex fact\nWHERE SUBSTRING(fact.CENSUS_BLOCK_GROUP, 1, 2) = (\n  SELECT STATE_FIPS FROM census_2019_county_fips\n  WHERE STATE = 'FL' AND COUNTY = 'Miami-Dade County'\n  LIMIT 1\n)\nAND SUBSTRING(fact.CENSUS_BLOCK_GROUP, 3, 3) = (\n  SELECT COUNTY_FIPS FROM census_2019_county_fips\n  WHERE STATE = 'FL' AND COUNTY = 'Miami-Dade County'\n  LIMIT 1\n)",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_men_age_65_or_older\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_men_age_65_or_older\": 179355\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-occupied-housing-units-are-there-in-suffolk-county",
+      "question": "How many occupied housing units are there in Suffolk County, Massachusetts?",
+      "passed": false,
+      "execution_success": 1,
+      "result_match": 0,
+      "latency_seconds": 11.577765549001924,
+      "reason": "DataFrame.iloc[:, 0] (column name=\"occupied_housing_units\") are different\n\nDataFrame.iloc[:, 0] (column name=\"occupied_housing_units\") values are different (100.0 %)\n[index]: [0]\n[left]:  [309844]\n[right]: [3713]\nAt positional index 0, first diff: 309844 != 3713",
+      "comparison": {
+        "matched": false,
+        "reason": "DataFrame.iloc[:, 0] (column name=\"occupied_housing_units\") are different\n\nDataFrame.iloc[:, 0] (column name=\"occupied_housing_units\") values are different (100.0 %)\n[index]: [0]\n[left]:  [309844]\n[right]: [3713]\nAt positional index 0, first diff: 309844 != 3713",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "occupied_housing_units"
+        ],
+        "rows": [
+          {
+            "occupied_housing_units": 309844
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "occupied_housing_units"
+        ],
+        "rows": [
+          {
+            "occupied_housing_units": 3713
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(B25002e2) AS occupied_housing_units\nFROM census_2019_housing\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '25'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '019'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(B25002e2) AS occupied_housing_units\nFROM census_2019_housing\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '25'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '019'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"occupied_housing_units\"\n  ],\n  \"rows\": [\n    {\n      \"occupied_housing_units\": 3713\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-people-age-25-or-older-in-cook-county-illinois-have",
+      "question": "How many people age 25 or older in Cook County, Illinois have a bachelor's degree or higher?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 13.00069489100133,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_people_age_25_plus_bachelors_or_higher"
+        ],
+        "rows": [
+          {
+            "estimated_people_age_25_plus_bachelors_or_higher": 1392515
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_people_age_25_plus_bachelors_or_higher"
+        ],
+        "rows": [
+          {
+            "estimated_people_age_25_plus_bachelors_or_higher": 1392515
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(B15003e22 + B15003e23 + B15003e24 + B15003e25) AS estimated_people_age_25_plus_bachelors_or_higher\nFROM census_2019_education e\nJOIN census_2019_county_fips f\n  ON f.STATE = 'IL'\n AND f.COUNTY = 'Cook County'\nWHERE SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS\n  AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(B15003e22 + B15003e23 + B15003e24 + B15003e25) AS estimated_people_age_25_plus_bachelors_or_higher\nFROM census_2019_education e\nJOIN census_2019_county_fips f\n  ON f.STATE = 'IL'\n AND f.COUNTY = 'Cook County'\nWHERE SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS\n  AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_people_age_25_plus_bachelors_or_higher\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_people_age_25_plus_bachelors_or_higher\": 1392515\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-unemployed-people-live-in-travis-county-texas",
+      "question": "How many unemployed people live in Travis County, Texas?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 10.851696933998028,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_unemployed_people"
+        ],
+        "rows": [
+          {
+            "estimated_unemployed_people": 27318
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_unemployed_people"
+        ],
+        "rows": [
+          {
+            "estimated_unemployed_people": 27318
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT SUM(B23025e5) AS estimated_unemployed_people\nFROM census_2019_employment e\nWHERE SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = '48'\n  AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = '453'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT SUM(B23025e5) AS estimated_unemployed_people\nFROM census_2019_employment e\nWHERE SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = '48'\n  AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = '453'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_unemployed_people\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_unemployed_people\": 27318\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "how-many-women-aged-25-to-34-live-in-san-francisco",
+      "question": "How many women aged 25 to 34 live in San Francisco?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 15.59964578099607,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "estimated_women_age_25_to_34"
+        ],
+        "rows": [
+          {
+            "estimated_women_age_25_to_34": 98738
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "estimated_women_age_25_to_34"
+        ],
+        "rows": [
+          {
+            "estimated_women_age_25_to_34": 98738
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'CA' AND COUNTY = 'San Francisco County'\n)\nSELECT SUM(B01001e35 + B01001e36) AS estimated_women_age_25_to_34\nFROM census_2019_age_sex a\nJOIN fips\n  ON SUBSTRING(a.CENSUS_BLOCK_GROUP, 1, 2) = fips.STATE_FIPS\n AND SUBSTRING(a.CENSUS_BLOCK_GROUP, 3, 3) = fips.COUNTY_FIPS;",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'CA' AND COUNTY = 'San Francisco County'\n)\nSELECT SUM(B01001e35 + B01001e36) AS estimated_women_age_25_to_34\nFROM census_2019_age_sex a\nJOIN fips\n  ON SUBSTRING(a.CENSUS_BLOCK_GROUP, 1, 2) = fips.STATE_FIPS\n AND SUBSTRING(a.CENSUS_BLOCK_GROUP, 3, 3) = fips.COUNTY_FIPS;",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"estimated_women_age_25_to_34\"\n  ],\n  \"rows\": [\n    {\n      \"estimated_women_age_25_to_34\": 98738\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "what-is-the-average-mean-household-income-in-indiana",
+      "question": "What is the average (mean) household income in Indiana?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 11.480410969998047,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "mean_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "mean_household_income_2019_usd": 75024.142134
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "mean_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "mean_household_income_2019_usd": 75024.142134
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT\n  SUM(B19025e1) / NULLIF(SUM(B19001e1), 0) AS mean_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '18'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT\n  SUM(B19025e1) / NULLIF(SUM(B19001e1), 0) AS mean_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '18'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"mean_household_income_2019_usd\"\n  ],\n  \"rows\": [\n    {\n      \"mean_household_income_2019_usd\": 75024.142134\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "what-percentage-of-adults-age-25-or-older-in-suffolk-county",
+      "question": "What percentage of adults age 25 or older in Suffolk County, Massachusetts have a bachelor's degree or higher?",
+      "passed": false,
+      "execution_success": 1,
+      "result_match": 0,
+      "latency_seconds": 10.417260938003892,
+      "reason": "DataFrame.iloc[:, 0] (column name=\"bachelors_or_higher_pct_age_25_plus\") are different\n\nDataFrame.iloc[:, 0] (column name=\"bachelors_or_higher_pct_age_25_plus\") values are different (100.0 %)\n[index]: [0]\n[left]:  [46.062865]\n[right]: [25.341823]\nAt positional index 0, first diff: 46.062865 != 25.341823",
+      "comparison": {
+        "matched": false,
+        "reason": "DataFrame.iloc[:, 0] (column name=\"bachelors_or_higher_pct_age_25_plus\") are different\n\nDataFrame.iloc[:, 0] (column name=\"bachelors_or_higher_pct_age_25_plus\") values are different (100.0 %)\n[index]: [0]\n[left]:  [46.062865]\n[right]: [25.341823]\nAt positional index 0, first diff: 46.062865 != 25.341823",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "bachelors_or_higher_pct_age_25_plus"
+        ],
+        "rows": [
+          {
+            "bachelors_or_higher_pct_age_25_plus": 46.062865
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "bachelors_or_higher_pct_age_25_plus"
+        ],
+        "rows": [
+          {
+            "bachelors_or_higher_pct_age_25_plus": 25.341823
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT\n  100.0 * SUM(B15003e22) / NULLIF(SUM(B15003e1), 0) AS bachelors_or_higher_pct_age_25_plus\nFROM census_2019_education\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '25'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '025';",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT\n  100.0 * SUM(B15003e22) / NULLIF(SUM(B15003e1), 0) AS bachelors_or_higher_pct_age_25_plus\nFROM census_2019_education\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '25'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '025';",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"bachelors_or_higher_pct_age_25_plus\"\n  ],\n  \"rows\": [\n    {\n      \"bachelors_or_higher_pct_age_25_plus\": 25.341823\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "what-percentage-of-households-in-miami-dade-county-florida-e",
+      "question": "What percentage of households in Miami-Dade County, Florida earn more than $100,000 per year?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 10.039006143000734,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "households_income_100k_or_more_pct"
+        ],
+        "rows": [
+          {
+            "households_income_100k_or_more_pct": 23.258378
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "households_income_100k_or_more_pct"
+        ],
+        "rows": [
+          {
+            "households_income_100k_or_more_pct": 23.2584
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT\n  (SUM(B19001e14) + SUM(B19001e15) + SUM(B19001e16) + SUM(B19001e17)) / NULLIF(SUM(B19001e1), 0) * 100 AS households_income_100k_or_more_pct\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '12'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '086';",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT\n  (SUM(B19001e14) + SUM(B19001e15) + SUM(B19001e16) + SUM(B19001e17)) / NULLIF(SUM(B19001e1), 0) * 100 AS households_income_100k_or_more_pct\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '12'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '086';",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"households_income_100k_or_more_pct\"\n  ],\n  \"rows\": [\n    {\n      \"households_income_100k_or_more_pct\": 23.2584\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "what-percentage-of-housing-units-in-miami-dade-county-florid",
+      "question": "What percentage of housing units in Miami-Dade County, Florida are vacant?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 16.351981523002905,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "total_housing_units",
+          "vacant_housing_units",
+          "vacant_housing_units_pct"
+        ],
+        "rows": [
+          {
+            "total_housing_units": 1024194,
+            "vacant_housing_units": 140822,
+            "vacant_housing_units_pct": 13.749544
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "vacant_housing_units_pct"
+        ],
+        "rows": [
+          {
+            "vacant_housing_units_pct": 13.749544
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT\n  100.0 * SUM(h.B25002e3) / NULLIF(SUM(h.B25002e1), 0) AS vacant_housing_units_pct\nFROM census_2019_housing h\nWHERE SUBSTRING(h.CENSUS_BLOCK_GROUP, 1, 2) = '12'\n  AND SUBSTRING(h.CENSUS_BLOCK_GROUP, 3, 3) = '086'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT\n  100.0 * SUM(h.B25002e3) / NULLIF(SUM(h.B25002e1), 0) AS vacant_housing_units_pct\nFROM census_2019_housing h\nWHERE SUBSTRING(h.CENSUS_BLOCK_GROUP, 1, 2) = '12'\n  AND SUBSTRING(h.CENSUS_BLOCK_GROUP, 3, 3) = '086'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"vacant_housing_units_pct\"\n  ],\n  \"rows\": [\n    {\n      \"vacant_housing_units_pct\": 13.749544\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "what-percentage-of-the-population-in-king-county-washington",
+      "question": "What percentage of the population in King County, Washington is female?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 14.098903917001735,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "female_population_pct"
+        ],
+        "rows": [
+          {
+            "female_population_pct": 49.867866
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "female_population_pct"
+        ],
+        "rows": [
+          {
+            "female_population_pct": 49.8679
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT\n  SUM(B01001e26) / NULLIF(SUM(B01001e1), 0) * 100 AS female_population_pct\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '033'",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT\n  SUM(B01001e26) / NULLIF(SUM(B01001e1), 0) * 100 AS female_population_pct\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '033'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"female_population_pct\"\n  ],\n  \"rows\": [\n    {\n      \"female_population_pct\": 49.8679\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "what-percentage-of-workers-in-new-york-county-new-york-commu",
+      "question": "What percentage of workers in New York County, New York commute by car, truck, or van?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 16.502125833998434,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "total_workers_age_16_plus",
+          "workers_commuting_by_car_truck_or_van",
+          "car_truck_or_van_commute_pct"
+        ],
+        "rows": [
+          {
+            "total_workers_age_16_plus": 887191,
+            "workers_commuting_by_car_truck_or_van": 69935,
+            "car_truck_or_van_commute_pct": 7.882745
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "car_truck_or_van_commute_pct"
+        ],
+        "rows": [
+          {
+            "car_truck_or_van_commute_pct": 7.882745
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'NY' AND COUNTY = 'New York County'\n)\nSELECT\n  100.0 * SUM(commuting.B08301e2) / NULLIF(SUM(commuting.B08301e1), 0) AS car_truck_or_van_commute_pct\nFROM census_2019_commuting AS commuting\nJOIN fips\n  ON SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 1, 2) = fips.STATE_FIPS\n AND SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 3, 3) = fips.COUNTY_FIPS;",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'NY' AND COUNTY = 'New York County'\n)\nSELECT\n  100.0 * SUM(commuting.B08301e2) / NULLIF(SUM(commuting.B08301e1), 0) AS car_truck_or_van_commute_pct\nFROM census_2019_commuting AS commuting\nJOIN fips\n  ON SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 1, 2) = fips.STATE_FIPS\n AND SUBSTRING(commuting.CENSUS_BLOCK_GROUP, 3, 3) = fips.COUNTY_FIPS;",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"car_truck_or_van_commute_pct\"\n  ],\n  \"rows\": [\n    {\n      \"car_truck_or_van_commute_pct\": 7.882745\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-king-county-washington-has-the-h",
+      "question": "Which census block group in King County, Washington has the highest percentage of workers who work from home?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 17.721365934005007,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "total_workers_age_16_plus",
+          "workers_working_from_home",
+          "work_from_home_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "530330277011",
+            "total_workers_age_16_plus": 400,
+            "workers_working_from_home": 162,
+            "work_from_home_pct": 40.5
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "work_from_home_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "530330277011",
+            "work_from_home_pct": 40.5
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH king_fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'WA' AND COUNTY = 'King County'\n), ranked AS (\n  SELECT\n    c.CENSUS_BLOCK_GROUP,\n    CASE\n      WHEN c.B08301e1 IS NULL OR c.B08301e1 = 0 THEN NULL\n      ELSE c.B08301e21 / c.B08301e1 * 100\n    END AS work_from_home_pct\n  FROM census_2019_commuting c\n  JOIN king_fips k\n    ON SUBSTRING(c.CENSUS_BLOCK_GROUP, 1, 2) = k.STATE_FIPS\n   AND SUBSTRING(c.CENSUS_BLOCK_GROUP, 3, 3) = k.COUNTY_FIPS\n  WHERE c.B08301e1 IS NOT NULL\n    AND c.B08301e1 <> 0\n)\nSELECT CENSUS_BLOCK_GROUP, work_from_home_pct\nFROM ranked\nORDER BY work_from_home_pct DESC NULLS LAST, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH king_fips AS (\n  SELECT STATE_FIPS, COUNTY_FIPS\n  FROM census_2019_county_fips\n  WHERE STATE = 'WA' AND COUNTY = 'King County'\n), ranked AS (\n  SELECT\n    c.CENSUS_BLOCK_GROUP,\n    CASE\n      WHEN c.B08301e1 IS NULL OR c.B08301e1 = 0 THEN NULL\n      ELSE c.B08301e21 / c.B08301e1 * 100\n    END AS work_from_home_pct\n  FROM census_2019_commuting c\n  JOIN king_fips k\n    ON SUBSTRING(c.CENSUS_BLOCK_GROUP, 1, 2) = k.STATE_FIPS\n   AND SUBSTRING(c.CENSUS_BLOCK_GROUP, 3, 3) = k.COUNTY_FIPS\n  WHERE c.B08301e1 IS NOT NULL\n    AND c.B08301e1 <> 0\n)\nSELECT CENSUS_BLOCK_GROUP, work_from_home_pct\nFROM ranked\nORDER BY work_from_home_pct DESC NULLS LAST, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"work_from_home_pct\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330277011\",\n      \"work_from_home_pct\": 40.5\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-los-angeles-county-california-ha",
+      "question": "Which census block group in Los Angeles County, California has the lowest median household income?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 13.265975349997461,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060372063001",
+            "median_household_income_2019_usd": 4645
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060372063001",
+            "median_household_income_2019_usd": 4645
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '037'\n  AND B19013e1 IS NOT NULL\nORDER BY B19013e1 ASC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '037'\n  AND B19013e1 IS NOT NULL\nORDER BY B19013e1 ASC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"median_household_income_2019_usd\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"060372063001\",\n      \"median_household_income_2019_usd\": 4645\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-los-angeles-county-has-the-large",
+      "question": "Which census block group in Los Angeles County has the largest population?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 13.28763174899359,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "total_population"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060372756021",
+            "total_population": 12100
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "total_population"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060372756021",
+            "total_population": 12100
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT CENSUS_BLOCK_GROUP, B01003e1 AS total_population\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06' AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '037'\nORDER BY total_population DESC NULLS LAST, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT CENSUS_BLOCK_GROUP, B01003e1 AS total_population\nFROM census_2019_age_sex\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06' AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '037'\nORDER BY total_population DESC NULLS LAST, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"total_population\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"060372756021\",\n      \"total_population\": 12100\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-miami-dade-county-florida-has-th",
+      "question": "Which census block group in Miami-Dade County, Florida has the highest unemployment rate?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 15.18437692799489,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "civilian_labor_force",
+          "unemployed_people",
+          "unemployment_rate_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "120869807001",
+            "civilian_labor_force": 210,
+            "unemployed_people": 103,
+            "unemployment_rate_pct": 49.047619
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "unemployment_rate_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "120869807001",
+            "unemployment_rate_pct": 49.047619047619044
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH ranked AS (\n  SELECT\n    CENSUS_BLOCK_GROUP,\n    CASE\n      WHEN B23025e3 IS NULL OR B23025e3 = 0 THEN NULL\n      ELSE (B23025e5::FLOAT / B23025e3::FLOAT) * 100\n    END AS unemployment_rate_pct\n  FROM census_2019_employment\n  WHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '12'\n    AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '086'\n)\nSELECT CENSUS_BLOCK_GROUP, unemployment_rate_pct\nFROM ranked\nWHERE unemployment_rate_pct IS NOT NULL\nORDER BY unemployment_rate_pct DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT COUNTY_FIPS FROM census_2019_county_fips WHERE STATE = 'FL' AND COUNTY = 'Miami-Dade County'",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"COUNTY_FIPS\"\n  ],\n  \"rows\": [\n    {\n      \"COUNTY_FIPS\": \"086\"\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": false
+        },
+        {
+          "name": "run_sql",
+          "sql": "WITH ranked AS (\n  SELECT\n    CENSUS_BLOCK_GROUP,\n    CASE\n      WHEN B23025e3 IS NULL OR B23025e3 = 0 THEN NULL\n      ELSE (B23025e5::FLOAT / B23025e3::FLOAT) * 100\n    END AS unemployment_rate_pct\n  FROM census_2019_employment\n  WHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '12'\n    AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '086'\n)\nSELECT CENSUS_BLOCK_GROUP, unemployment_rate_pct\nFROM ranked\nWHERE unemployment_rate_pct IS NOT NULL\nORDER BY unemployment_rate_pct DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"unemployment_rate_pct\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"120869807001\",\n      \"unemployment_rate_pct\": 49.047619047619044\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-new-york-county-new-york-has-the",
+      "question": "Which census block group in New York County, New York has the highest median household income?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 12.967775003999122,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "360610021001",
+            "median_household_income_2019_usd": 250001
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "360610021001",
+            "median_household_income_2019_usd": 250001
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '36'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '061'\n  AND B19013e1 IS NOT NULL\nORDER BY median_household_income_2019_usd DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '36'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '061'\n  AND B19013e1 IS NOT NULL\nORDER BY median_household_income_2019_usd DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"median_household_income_2019_usd\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"360610021001\",\n      \"median_household_income_2019_usd\": 250001\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-san-francisco-county-california",
+      "question": "Which census block group in San Francisco County, California has the highest number of residents age 25 or older with a bachelor's degree or higher?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 11.328071229996567,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "estimated_people_age_25_plus_bachelors_or_higher"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060750607001",
+            "estimated_people_age_25_plus_bachelors_or_higher": 6702
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "estimated_people_age_25_plus_bachelors_or_higher"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060750607001",
+            "estimated_people_age_25_plus_bachelors_or_higher": 6702
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH san_francisco_county AS (\n  SELECT\n    e.CENSUS_BLOCK_GROUP,\n    e.B15003e22 + e.B15003e23 + e.B15003e24 + e.B15003e25 AS estimated_people_age_25_plus_bachelors_or_higher\n  FROM census_2019_education AS e\n  JOIN census_2019_county_fips AS f\n    ON SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS\n   AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS\n  WHERE f.STATE = 'CA'\n    AND f.COUNTY = 'San Francisco County'\n    AND e.B15003e1 IS NOT NULL\n), highest AS (\n  SELECT MAX(estimated_people_age_25_plus_bachelors_or_higher) AS highest_count\n  FROM san_francisco_county\n)\nSELECT s.CENSUS_BLOCK_GROUP, s.estimated_people_age_25_plus_bachelors_or_higher\nFROM san_francisco_county AS s\nCROSS JOIN highest AS h\nWHERE s.estimated_people_age_25_plus_bachelors_or_higher = h.highest_count\nORDER BY s.CENSUS_BLOCK_GROUP\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH san_francisco_county AS (\n  SELECT\n    e.CENSUS_BLOCK_GROUP,\n    e.B15003e22 + e.B15003e23 + e.B15003e24 + e.B15003e25 AS estimated_people_age_25_plus_bachelors_or_higher\n  FROM census_2019_education AS e\n  JOIN census_2019_county_fips AS f\n    ON SUBSTRING(e.CENSUS_BLOCK_GROUP, 1, 2) = f.STATE_FIPS\n   AND SUBSTRING(e.CENSUS_BLOCK_GROUP, 3, 3) = f.COUNTY_FIPS\n  WHERE f.STATE = 'CA'\n    AND f.COUNTY = 'San Francisco County'\n    AND e.B15003e1 IS NOT NULL\n), highest AS (\n  SELECT MAX(estimated_people_age_25_plus_bachelors_or_higher) AS highest_count\n  FROM san_francisco_county\n)\nSELECT s.CENSUS_BLOCK_GROUP, s.estimated_people_age_25_plus_bachelors_or_higher\nFROM san_francisco_county AS s\nCROSS JOIN highest AS h\nWHERE s.estimated_people_age_25_plus_bachelors_or_higher = h.highest_count\nORDER BY s.CENSUS_BLOCK_GROUP\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"estimated_people_age_25_plus_bachelors_or_higher\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"060750607001\",\n      \"estimated_people_age_25_plus_bachelors_or_higher\": 6702\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-san-francisco-has-the-highest-me",
+      "question": "Which census block group in San Francisco has the highest median household income?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 10.799179488996742,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060750128002",
+            "median_household_income_2019_usd": 250001
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "060750128002",
+            "median_household_income_2019_usd": 250001
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '075'\n  AND B19013e1 IS NOT NULL\nORDER BY median_household_income_2019_usd DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '06'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '075'\n  AND B19013e1 IS NOT NULL\nORDER BY median_household_income_2019_usd DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"median_household_income_2019_usd\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"060750128002\",\n      \"median_household_income_2019_usd\": 250001\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-group-in-travis-county-texas-has-the-high",
+      "question": "Which census block group in Travis County, Texas has the highest percentage of renter-occupied housing units?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 15.560338498995407,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 1,
+        "actual_rows": 1
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "occupied_housing_units",
+          "renter_occupied_housing_units",
+          "renter_occupied_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "484530002031",
+            "occupied_housing_units": 884,
+            "renter_occupied_housing_units": 884,
+            "renter_occupied_pct": 100.0
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "renter_occupied_pct"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "484530002031",
+            "renter_occupied_pct": 100.0
+          }
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "agent_sql": "WITH travis AS (\n  SELECT\n    CENSUS_BLOCK_GROUP,\n    CASE\n      WHEN B25003e1 IS NULL OR B25003e1 = 0 THEN NULL\n      ELSE (B25003e3::DOUBLE / B25003e1::DOUBLE) * 100\n    END AS renter_occupied_pct\n  FROM census_2019_housing\n  WHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '48'\n    AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '453'\n)\nSELECT CENSUS_BLOCK_GROUP, renter_occupied_pct\nFROM travis\nWHERE renter_occupied_pct IS NOT NULL\nORDER BY renter_occupied_pct DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "WITH travis AS (\n  SELECT\n    CENSUS_BLOCK_GROUP,\n    CASE\n      WHEN B25003e1 IS NULL OR B25003e1 = 0 THEN NULL\n      ELSE (B25003e3::DOUBLE / B25003e1::DOUBLE) * 100\n    END AS renter_occupied_pct\n  FROM census_2019_housing\n  WHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '48'\n    AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '453'\n)\nSELECT CENSUS_BLOCK_GROUP, renter_occupied_pct\nFROM travis\nWHERE renter_occupied_pct IS NOT NULL\nORDER BY renter_occupied_pct DESC, CENSUS_BLOCK_GROUP ASC\nLIMIT 1",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"renter_occupied_pct\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"484530002031\",\n      \"renter_occupied_pct\": 100.0\n    }\n  ],\n  \"row_count\": 1,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    },
+    {
+      "id": "which-census-block-groups-in-king-county-washington-have-a-m",
+      "question": "Which census block groups in King County, Washington have a median household income above $150,000?",
+      "passed": true,
+      "execution_success": 1,
+      "result_match": 1,
+      "latency_seconds": 21.587866121000843,
+      "reason": "dataframes match",
+      "comparison": {
+        "matched": true,
+        "reason": "dataframes match",
+        "expected_rows": 204,
+        "actual_rows": 204
+      },
+      "golden_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "530330225002",
+            "median_household_income_2019_usd": 222083
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246022",
+            "median_household_income_2019_usd": 221875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330078002",
+            "median_household_income_2019_usd": 220952
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323164",
+            "median_household_income_2019_usd": 219688
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330239003",
+            "median_household_income_2019_usd": 216489
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330062001",
+            "median_household_income_2019_usd": 216488
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330041006",
+            "median_household_income_2019_usd": 215536
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323282",
+            "median_household_income_2019_usd": 215208
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330239002",
+            "median_household_income_2019_usd": 214524
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330062003",
+            "median_household_income_2019_usd": 213906
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323133",
+            "median_household_income_2019_usd": 213824
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330242001",
+            "median_household_income_2019_usd": 213056
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228013",
+            "median_household_income_2019_usd": 212024
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224003",
+            "median_household_income_2019_usd": 212019
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250051",
+            "median_household_income_2019_usd": 211923
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241003",
+            "median_household_income_2019_usd": 211029
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322123",
+            "median_household_income_2019_usd": 210789
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323222",
+            "median_household_income_2019_usd": 209643
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330242002",
+            "median_household_income_2019_usd": 208750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323161",
+            "median_household_income_2019_usd": 207614
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322071",
+            "median_household_income_2019_usd": 206932
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323183",
+            "median_household_income_2019_usd": 206688
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330001001",
+            "median_household_income_2019_usd": 206400
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330226064",
+            "median_household_income_2019_usd": 206161
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323234",
+            "median_household_income_2019_usd": 205372
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322141",
+            "median_household_income_2019_usd": 204302
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249032",
+            "median_household_income_2019_usd": 202891
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330040002",
+            "median_household_income_2019_usd": 200536
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323115",
+            "median_household_income_2019_usd": 200357
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249013",
+            "median_household_income_2019_usd": 200046
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330222031",
+            "median_household_income_2019_usd": 197375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322072",
+            "median_household_income_2019_usd": 197212
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250034",
+            "median_household_income_2019_usd": 196111
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330044001",
+            "median_household_income_2019_usd": 196042
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249031",
+            "median_household_income_2019_usd": 195685
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330245003",
+            "median_household_income_2019_usd": 195481
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224005",
+            "median_household_income_2019_usd": 195417
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330239004",
+            "median_household_income_2019_usd": 195313
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322122",
+            "median_household_income_2019_usd": 193625
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330095003",
+            "median_household_income_2019_usd": 193056
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250032",
+            "median_household_income_2019_usd": 193000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330064002",
+            "median_household_income_2019_usd": 191944
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323291",
+            "median_household_income_2019_usd": 190952
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330016001",
+            "median_household_income_2019_usd": 189519
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323182",
+            "median_household_income_2019_usd": 189250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322131",
+            "median_household_income_2019_usd": 188846
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250063",
+            "median_household_income_2019_usd": 188583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330230001",
+            "median_household_income_2019_usd": 187587
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229025",
+            "median_household_income_2019_usd": 187250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330243005",
+            "median_household_income_2019_usd": 185347
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249022",
+            "median_household_income_2019_usd": 185170
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330022002",
+            "median_household_income_2019_usd": 159722
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330227022",
+            "median_household_income_2019_usd": 159438
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330060003",
+            "median_household_income_2019_usd": 159223
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322112",
+            "median_household_income_2019_usd": 158981
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323244",
+            "median_household_income_2019_usd": 158875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324022",
+            "median_household_income_2019_usd": 158750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330215001",
+            "median_household_income_2019_usd": 158375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324014",
+            "median_household_income_2019_usd": 157321
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330240001",
+            "median_household_income_2019_usd": 156875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330316034",
+            "median_household_income_2019_usd": 156696
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323281",
+            "median_household_income_2019_usd": 156667
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322121",
+            "median_household_income_2019_usd": 156563
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322102",
+            "median_household_income_2019_usd": 156510
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324021",
+            "median_household_income_2019_usd": 156198
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330296012",
+            "median_household_income_2019_usd": 156156
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330064003",
+            "median_household_income_2019_usd": 156146
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228022",
+            "median_household_income_2019_usd": 156094
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330080015",
+            "median_household_income_2019_usd": 156034
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330221012",
+            "median_household_income_2019_usd": 155739
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322133",
+            "median_household_income_2019_usd": 155625
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322031",
+            "median_household_income_2019_usd": 155262
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322084",
+            "median_household_income_2019_usd": 155259
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330057002",
+            "median_household_income_2019_usd": 155192
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330279005",
+            "median_household_income_2019_usd": 155123
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229022",
+            "median_household_income_2019_usd": 154844
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330033002",
+            "median_household_income_2019_usd": 154813
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250014",
+            "median_household_income_2019_usd": 154773
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323162",
+            "median_household_income_2019_usd": 154643
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322111",
+            "median_household_income_2019_usd": 154211
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228031",
+            "median_household_income_2019_usd": 154093
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330009001",
+            "median_household_income_2019_usd": 153542
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330317051",
+            "median_household_income_2019_usd": 153487
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330069002",
+            "median_household_income_2019_usd": 153281
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322142",
+            "median_household_income_2019_usd": 153241
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330027003",
+            "median_household_income_2019_usd": 153173
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330235001",
+            "median_household_income_2019_usd": 153000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330320103",
+            "median_household_income_2019_usd": 152939
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330059004",
+            "median_household_income_2019_usd": 152466
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249021",
+            "median_household_income_2019_usd": 152292
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330016002",
+            "median_household_income_2019_usd": 151528
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330237001",
+            "median_household_income_2019_usd": 151447
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322101",
+            "median_household_income_2019_usd": 151369
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330220062",
+            "median_household_income_2019_usd": 151333
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322032",
+            "median_household_income_2019_usd": 151204
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330027004",
+            "median_household_income_2019_usd": 151161
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330217002",
+            "median_household_income_2019_usd": 150694
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330226042",
+            "median_household_income_2019_usd": 150694
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228023",
+            "median_household_income_2019_usd": 150694
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322085",
+            "median_household_income_2019_usd": 150391
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229011",
+            "median_household_income_2019_usd": 150221
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330204022",
+            "median_household_income_2019_usd": 150179
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330005001",
+            "median_household_income_2019_usd": 185000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249033",
+            "median_household_income_2019_usd": 184438
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330095001",
+            "median_household_income_2019_usd": 183973
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323151",
+            "median_household_income_2019_usd": 183646
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330237002",
+            "median_household_income_2019_usd": 183173
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330041002",
+            "median_household_income_2019_usd": 182854
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249034",
+            "median_household_income_2019_usd": 182763
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330027002",
+            "median_household_income_2019_usd": 182730
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322132",
+            "median_household_income_2019_usd": 182708
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330234042",
+            "median_household_income_2019_usd": 182563
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323223",
+            "median_household_income_2019_usd": 181875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330245002",
+            "median_household_income_2019_usd": 181607
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330236031",
+            "median_household_income_2019_usd": 181339
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323221",
+            "median_household_income_2019_usd": 180278
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056005",
+            "median_household_income_2019_usd": 180069
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330223001",
+            "median_household_income_2019_usd": 179583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323071",
+            "median_household_income_2019_usd": 179000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229021",
+            "median_household_income_2019_usd": 178958
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323093",
+            "median_household_income_2019_usd": 178750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330041005",
+            "median_household_income_2019_usd": 178734
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330069001",
+            "median_household_income_2019_usd": 178333
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330223002",
+            "median_household_income_2019_usd": 178021
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330240002",
+            "median_household_income_2019_usd": 177308
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323201",
+            "median_household_income_2019_usd": 177000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246011",
+            "median_household_income_2019_usd": 176818
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330060002",
+            "median_household_income_2019_usd": 176447
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330031004",
+            "median_household_income_2019_usd": 166912
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330034002",
+            "median_household_income_2019_usd": 166875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323153",
+            "median_household_income_2019_usd": 166849
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323181",
+            "median_household_income_2019_usd": 166607
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330062002",
+            "median_household_income_2019_usd": 166364
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056001",
+            "median_household_income_2019_usd": 166328
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330251013",
+            "median_household_income_2019_usd": 165929
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330214001",
+            "median_household_income_2019_usd": 165764
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330064001",
+            "median_household_income_2019_usd": 165750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056002",
+            "median_household_income_2019_usd": 165735
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330247023",
+            "median_household_income_2019_usd": 165438
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330227032",
+            "median_household_income_2019_usd": 164583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330233002",
+            "median_household_income_2019_usd": 164444
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322143",
+            "median_household_income_2019_usd": 164444
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330101001",
+            "median_household_income_2019_usd": 163295
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323211",
+            "median_household_income_2019_usd": 163224
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324013",
+            "median_household_income_2019_usd": 162823
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330226032",
+            "median_household_income_2019_usd": 161360
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330065001",
+            "median_household_income_2019_usd": 161250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249011",
+            "median_household_income_2019_usd": 161161
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330042001",
+            "median_household_income_2019_usd": 160588
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323075",
+            "median_household_income_2019_usd": 160515
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330216004",
+            "median_household_income_2019_usd": 160435
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324012",
+            "median_household_income_2019_usd": 160147
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330057004",
+            "median_household_income_2019_usd": 160114
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330326021",
+            "median_household_income_2019_usd": 160107
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323203",
+            "median_household_income_2019_usd": 176375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330319033",
+            "median_household_income_2019_usd": 176042
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330096005",
+            "median_household_income_2019_usd": 175946
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330326024",
+            "median_household_income_2019_usd": 174766
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330059002",
+            "median_household_income_2019_usd": 174141
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323242",
+            "median_household_income_2019_usd": 174000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330227023",
+            "median_household_income_2019_usd": 173750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330096001",
+            "median_household_income_2019_usd": 173063
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323111",
+            "median_household_income_2019_usd": 172670
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249012",
+            "median_household_income_2019_usd": 172667
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330291022",
+            "median_household_income_2019_usd": 172587
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249023",
+            "median_household_income_2019_usd": 172125
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330046002",
+            "median_household_income_2019_usd": 171000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330208004",
+            "median_household_income_2019_usd": 170972
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250031",
+            "median_household_income_2019_usd": 170577
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330247025",
+            "median_household_income_2019_usd": 170543
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330039002",
+            "median_household_income_2019_usd": 170132
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323174",
+            "median_household_income_2019_usd": 169267
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224002",
+            "median_household_income_2019_usd": 168922
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330204024",
+            "median_household_income_2019_usd": 168839
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330098002",
+            "median_household_income_2019_usd": 168370
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056003",
+            "median_household_income_2019_usd": 167857
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323231",
+            "median_household_income_2019_usd": 167583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330236013",
+            "median_household_income_2019_usd": 167266
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330026004",
+            "median_household_income_2019_usd": 166923
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330041003",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330063004",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241001",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241002",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241004",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246021",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250061",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323171",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323213",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323261",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323214",
+            "median_household_income_2019_usd": 247647
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323263",
+            "median_household_income_2019_usd": 245781
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322033",
+            "median_household_income_2019_usd": 243449
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229023",
+            "median_household_income_2019_usd": 241458
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246013",
+            "median_household_income_2019_usd": 240208
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323184",
+            "median_household_income_2019_usd": 239063
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246012",
+            "median_household_income_2019_usd": 238750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224006",
+            "median_household_income_2019_usd": 236250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323172",
+            "median_household_income_2019_usd": 233636
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330245001",
+            "median_household_income_2019_usd": 231023
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322151",
+            "median_household_income_2019_usd": 230125
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322152",
+            "median_household_income_2019_usd": 229792
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323283",
+            "median_household_income_2019_usd": 229375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246023",
+            "median_household_income_2019_usd": 228704
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330078001",
+            "median_household_income_2019_usd": 222344
+          }
+        ],
+        "truncated": false
+      },
+      "agent_result": {
+        "columns": [
+          "CENSUS_BLOCK_GROUP",
+          "median_household_income_2019_usd"
+        ],
+        "rows": [
+          {
+            "CENSUS_BLOCK_GROUP": "530330041003",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330063004",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241001",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241002",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241004",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246021",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250061",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323171",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323213",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323261",
+            "median_household_income_2019_usd": 250001
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323214",
+            "median_household_income_2019_usd": 247647
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323263",
+            "median_household_income_2019_usd": 245781
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322033",
+            "median_household_income_2019_usd": 243449
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229023",
+            "median_household_income_2019_usd": 241458
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246013",
+            "median_household_income_2019_usd": 240208
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323184",
+            "median_household_income_2019_usd": 239063
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246012",
+            "median_household_income_2019_usd": 238750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224006",
+            "median_household_income_2019_usd": 236250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323172",
+            "median_household_income_2019_usd": 233636
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330245001",
+            "median_household_income_2019_usd": 231023
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322151",
+            "median_household_income_2019_usd": 230125
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322152",
+            "median_household_income_2019_usd": 229792
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323283",
+            "median_household_income_2019_usd": 229375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246023",
+            "median_household_income_2019_usd": 228704
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330078001",
+            "median_household_income_2019_usd": 222344
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330225002",
+            "median_household_income_2019_usd": 222083
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246022",
+            "median_household_income_2019_usd": 221875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330078002",
+            "median_household_income_2019_usd": 220952
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323164",
+            "median_household_income_2019_usd": 219688
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330239003",
+            "median_household_income_2019_usd": 216489
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330062001",
+            "median_household_income_2019_usd": 216488
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330041006",
+            "median_household_income_2019_usd": 215536
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323282",
+            "median_household_income_2019_usd": 215208
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330239002",
+            "median_household_income_2019_usd": 214524
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330062003",
+            "median_household_income_2019_usd": 213906
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323133",
+            "median_household_income_2019_usd": 213824
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330242001",
+            "median_household_income_2019_usd": 213056
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228013",
+            "median_household_income_2019_usd": 212024
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224003",
+            "median_household_income_2019_usd": 212019
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250051",
+            "median_household_income_2019_usd": 211923
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330241003",
+            "median_household_income_2019_usd": 211029
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322123",
+            "median_household_income_2019_usd": 210789
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323222",
+            "median_household_income_2019_usd": 209643
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330242002",
+            "median_household_income_2019_usd": 208750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323161",
+            "median_household_income_2019_usd": 207614
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322071",
+            "median_household_income_2019_usd": 206932
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323183",
+            "median_household_income_2019_usd": 206688
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330001001",
+            "median_household_income_2019_usd": 206400
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330226064",
+            "median_household_income_2019_usd": 206161
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323234",
+            "median_household_income_2019_usd": 205372
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322141",
+            "median_household_income_2019_usd": 204302
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249032",
+            "median_household_income_2019_usd": 202891
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330040002",
+            "median_household_income_2019_usd": 200536
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323115",
+            "median_household_income_2019_usd": 200357
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249013",
+            "median_household_income_2019_usd": 200046
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330222031",
+            "median_household_income_2019_usd": 197375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322072",
+            "median_household_income_2019_usd": 197212
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250034",
+            "median_household_income_2019_usd": 196111
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330044001",
+            "median_household_income_2019_usd": 196042
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249031",
+            "median_household_income_2019_usd": 195685
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330245003",
+            "median_household_income_2019_usd": 195481
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224005",
+            "median_household_income_2019_usd": 195417
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330239004",
+            "median_household_income_2019_usd": 195313
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322122",
+            "median_household_income_2019_usd": 193625
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330095003",
+            "median_household_income_2019_usd": 193056
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250032",
+            "median_household_income_2019_usd": 193000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330064002",
+            "median_household_income_2019_usd": 191944
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323291",
+            "median_household_income_2019_usd": 190952
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330016001",
+            "median_household_income_2019_usd": 189519
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323182",
+            "median_household_income_2019_usd": 189250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322131",
+            "median_household_income_2019_usd": 188846
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250063",
+            "median_household_income_2019_usd": 188583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330230001",
+            "median_household_income_2019_usd": 187587
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229025",
+            "median_household_income_2019_usd": 187250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330243005",
+            "median_household_income_2019_usd": 185347
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249022",
+            "median_household_income_2019_usd": 185170
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330005001",
+            "median_household_income_2019_usd": 185000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249033",
+            "median_household_income_2019_usd": 184438
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330095001",
+            "median_household_income_2019_usd": 183973
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323151",
+            "median_household_income_2019_usd": 183646
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330237002",
+            "median_household_income_2019_usd": 183173
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330041002",
+            "median_household_income_2019_usd": 182854
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249034",
+            "median_household_income_2019_usd": 182763
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330027002",
+            "median_household_income_2019_usd": 182730
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322132",
+            "median_household_income_2019_usd": 182708
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330234042",
+            "median_household_income_2019_usd": 182563
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323223",
+            "median_household_income_2019_usd": 181875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330245002",
+            "median_household_income_2019_usd": 181607
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330236031",
+            "median_household_income_2019_usd": 181339
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323221",
+            "median_household_income_2019_usd": 180278
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056005",
+            "median_household_income_2019_usd": 180069
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330223001",
+            "median_household_income_2019_usd": 179583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323071",
+            "median_household_income_2019_usd": 179000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229021",
+            "median_household_income_2019_usd": 178958
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323093",
+            "median_household_income_2019_usd": 178750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330041005",
+            "median_household_income_2019_usd": 178734
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330069001",
+            "median_household_income_2019_usd": 178333
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330223002",
+            "median_household_income_2019_usd": 178021
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330240002",
+            "median_household_income_2019_usd": 177308
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323201",
+            "median_household_income_2019_usd": 177000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330246011",
+            "median_household_income_2019_usd": 176818
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330060002",
+            "median_household_income_2019_usd": 176447
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323203",
+            "median_household_income_2019_usd": 176375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330319033",
+            "median_household_income_2019_usd": 176042
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330096005",
+            "median_household_income_2019_usd": 175946
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330326024",
+            "median_household_income_2019_usd": 174766
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330059002",
+            "median_household_income_2019_usd": 174141
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323242",
+            "median_household_income_2019_usd": 174000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330227023",
+            "median_household_income_2019_usd": 173750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330096001",
+            "median_household_income_2019_usd": 173063
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323111",
+            "median_household_income_2019_usd": 172670
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249012",
+            "median_household_income_2019_usd": 172667
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330291022",
+            "median_household_income_2019_usd": 172587
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249023",
+            "median_household_income_2019_usd": 172125
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330046002",
+            "median_household_income_2019_usd": 171000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330208004",
+            "median_household_income_2019_usd": 170972
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250031",
+            "median_household_income_2019_usd": 170577
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330247025",
+            "median_household_income_2019_usd": 170543
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330039002",
+            "median_household_income_2019_usd": 170132
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323174",
+            "median_household_income_2019_usd": 169267
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330224002",
+            "median_household_income_2019_usd": 168922
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330204024",
+            "median_household_income_2019_usd": 168839
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330098002",
+            "median_household_income_2019_usd": 168370
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056003",
+            "median_household_income_2019_usd": 167857
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323231",
+            "median_household_income_2019_usd": 167583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330236013",
+            "median_household_income_2019_usd": 167266
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330026004",
+            "median_household_income_2019_usd": 166923
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330031004",
+            "median_household_income_2019_usd": 166912
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330034002",
+            "median_household_income_2019_usd": 166875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323153",
+            "median_household_income_2019_usd": 166849
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323181",
+            "median_household_income_2019_usd": 166607
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330062002",
+            "median_household_income_2019_usd": 166364
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056001",
+            "median_household_income_2019_usd": 166328
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330251013",
+            "median_household_income_2019_usd": 165929
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330214001",
+            "median_household_income_2019_usd": 165764
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330064001",
+            "median_household_income_2019_usd": 165750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330056002",
+            "median_household_income_2019_usd": 165735
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330247023",
+            "median_household_income_2019_usd": 165438
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330227032",
+            "median_household_income_2019_usd": 164583
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330233002",
+            "median_household_income_2019_usd": 164444
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322143",
+            "median_household_income_2019_usd": 164444
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330101001",
+            "median_household_income_2019_usd": 163295
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323211",
+            "median_household_income_2019_usd": 163224
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324013",
+            "median_household_income_2019_usd": 162823
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330226032",
+            "median_household_income_2019_usd": 161360
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330065001",
+            "median_household_income_2019_usd": 161250
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249011",
+            "median_household_income_2019_usd": 161161
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330042001",
+            "median_household_income_2019_usd": 160588
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323075",
+            "median_household_income_2019_usd": 160515
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330216004",
+            "median_household_income_2019_usd": 160435
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324012",
+            "median_household_income_2019_usd": 160147
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330057004",
+            "median_household_income_2019_usd": 160114
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330326021",
+            "median_household_income_2019_usd": 160107
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330022002",
+            "median_household_income_2019_usd": 159722
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330227022",
+            "median_household_income_2019_usd": 159438
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330060003",
+            "median_household_income_2019_usd": 159223
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322112",
+            "median_household_income_2019_usd": 158981
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323244",
+            "median_household_income_2019_usd": 158875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324022",
+            "median_household_income_2019_usd": 158750
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330215001",
+            "median_household_income_2019_usd": 158375
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324014",
+            "median_household_income_2019_usd": 157321
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330240001",
+            "median_household_income_2019_usd": 156875
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330316034",
+            "median_household_income_2019_usd": 156696
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323281",
+            "median_household_income_2019_usd": 156667
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322121",
+            "median_household_income_2019_usd": 156563
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322102",
+            "median_household_income_2019_usd": 156510
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330324021",
+            "median_household_income_2019_usd": 156198
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330296012",
+            "median_household_income_2019_usd": 156156
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330064003",
+            "median_household_income_2019_usd": 156146
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228022",
+            "median_household_income_2019_usd": 156094
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330080015",
+            "median_household_income_2019_usd": 156034
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330221012",
+            "median_household_income_2019_usd": 155739
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322133",
+            "median_household_income_2019_usd": 155625
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322031",
+            "median_household_income_2019_usd": 155262
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322084",
+            "median_household_income_2019_usd": 155259
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330057002",
+            "median_household_income_2019_usd": 155192
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330279005",
+            "median_household_income_2019_usd": 155123
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229022",
+            "median_household_income_2019_usd": 154844
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330033002",
+            "median_household_income_2019_usd": 154813
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330250014",
+            "median_household_income_2019_usd": 154773
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330323162",
+            "median_household_income_2019_usd": 154643
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322111",
+            "median_household_income_2019_usd": 154211
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228031",
+            "median_household_income_2019_usd": 154093
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330009001",
+            "median_household_income_2019_usd": 153542
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330317051",
+            "median_household_income_2019_usd": 153487
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330069002",
+            "median_household_income_2019_usd": 153281
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322142",
+            "median_household_income_2019_usd": 153241
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330027003",
+            "median_household_income_2019_usd": 153173
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330235001",
+            "median_household_income_2019_usd": 153000
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330320103",
+            "median_household_income_2019_usd": 152939
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330059004",
+            "median_household_income_2019_usd": 152466
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330249021",
+            "median_household_income_2019_usd": 152292
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330016002",
+            "median_household_income_2019_usd": 151528
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330237001",
+            "median_household_income_2019_usd": 151447
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322101",
+            "median_household_income_2019_usd": 151369
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330220062",
+            "median_household_income_2019_usd": 151333
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322032",
+            "median_household_income_2019_usd": 151204
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330027004",
+            "median_household_income_2019_usd": 151161
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330217002",
+            "median_household_income_2019_usd": 150694
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330226042",
+            "median_household_income_2019_usd": 150694
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330228023",
+            "median_household_income_2019_usd": 150694
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330322085",
+            "median_household_income_2019_usd": 150391
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330229011",
+            "median_household_income_2019_usd": 150221
+          },
+          {
+            "CENSUS_BLOCK_GROUP": "530330204022",
+            "median_household_income_2019_usd": 150179
+          }
+        ],
+        "row_count": 204,
+        "truncated": false
+      },
+      "agent_sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '033'\n  AND B19013e1 > 150000\nORDER BY median_household_income_2019_usd DESC, CENSUS_BLOCK_GROUP",
+      "agent_tool": null,
+      "agent_run_sql_calls": [
+        {
+          "name": "run_sql",
+          "sql": "SELECT CENSUS_BLOCK_GROUP, B19013e1 AS median_household_income_2019_usd\nFROM census_2019_income\nWHERE SUBSTRING(CENSUS_BLOCK_GROUP, 1, 2) = '53'\n  AND SUBSTRING(CENSUS_BLOCK_GROUP, 3, 3) = '033'\n  AND B19013e1 > 150000\nORDER BY median_household_income_2019_usd DESC, CENSUS_BLOCK_GROUP",
+          "tool_call_error": false,
+          "raw_result": "{\n  \"columns\": [\n    \"CENSUS_BLOCK_GROUP\",\n    \"median_household_income_2019_usd\"\n  ],\n  \"rows\": [\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330041003\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330063004\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330241001\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330241002\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330241004\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330246021\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330250061\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323171\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323213\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323261\",\n      \"median_household_income_2019_usd\": 250001\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323214\",\n      \"median_household_income_2019_usd\": 247647\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323263\",\n      \"median_household_income_2019_usd\": 245781\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322033\",\n      \"median_household_income_2019_usd\": 243449\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330229023\",\n      \"median_household_income_2019_usd\": 241458\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330246013\",\n      \"median_household_income_2019_usd\": 240208\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323184\",\n      \"median_household_income_2019_usd\": 239063\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330246012\",\n      \"median_household_income_2019_usd\": 238750\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330224006\",\n      \"median_household_income_2019_usd\": 236250\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323172\",\n      \"median_household_income_2019_usd\": 233636\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330245001\",\n      \"median_household_income_2019_usd\": 231023\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322151\",\n      \"median_household_income_2019_usd\": 230125\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322152\",\n      \"median_household_income_2019_usd\": 229792\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323283\",\n      \"median_household_income_2019_usd\": 229375\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330246023\",\n      \"median_household_income_2019_usd\": 228704\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330078001\",\n      \"median_household_income_2019_usd\": 222344\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330225002\",\n      \"median_household_income_2019_usd\": 222083\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330246022\",\n      \"median_household_income_2019_usd\": 221875\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330078002\",\n      \"median_household_income_2019_usd\": 220952\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323164\",\n      \"median_household_income_2019_usd\": 219688\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330239003\",\n      \"median_household_income_2019_usd\": 216489\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330062001\",\n      \"median_household_income_2019_usd\": 216488\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330041006\",\n      \"median_household_income_2019_usd\": 215536\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323282\",\n      \"median_household_income_2019_usd\": 215208\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330239002\",\n      \"median_household_income_2019_usd\": 214524\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330062003\",\n      \"median_household_income_2019_usd\": 213906\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323133\",\n      \"median_household_income_2019_usd\": 213824\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330242001\",\n      \"median_household_income_2019_usd\": 213056\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330228013\",\n      \"median_household_income_2019_usd\": 212024\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330224003\",\n      \"median_household_income_2019_usd\": 212019\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330250051\",\n      \"median_household_income_2019_usd\": 211923\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330241003\",\n      \"median_household_income_2019_usd\": 211029\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322123\",\n      \"median_household_income_2019_usd\": 210789\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323222\",\n      \"median_household_income_2019_usd\": 209643\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330242002\",\n      \"median_household_income_2019_usd\": 208750\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323161\",\n      \"median_household_income_2019_usd\": 207614\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322071\",\n      \"median_household_income_2019_usd\": 206932\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323183\",\n      \"median_household_income_2019_usd\": 206688\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330001001\",\n      \"median_household_income_2019_usd\": 206400\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330226064\",\n      \"median_household_income_2019_usd\": 206161\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323234\",\n      \"median_household_income_2019_usd\": 205372\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322141\",\n      \"median_household_income_2019_usd\": 204302\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249032\",\n      \"median_household_income_2019_usd\": 202891\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330040002\",\n      \"median_household_income_2019_usd\": 200536\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323115\",\n      \"median_household_income_2019_usd\": 200357\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249013\",\n      \"median_household_income_2019_usd\": 200046\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330222031\",\n      \"median_household_income_2019_usd\": 197375\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322072\",\n      \"median_household_income_2019_usd\": 197212\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330250034\",\n      \"median_household_income_2019_usd\": 196111\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330044001\",\n      \"median_household_income_2019_usd\": 196042\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249031\",\n      \"median_household_income_2019_usd\": 195685\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330245003\",\n      \"median_household_income_2019_usd\": 195481\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330224005\",\n      \"median_household_income_2019_usd\": 195417\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330239004\",\n      \"median_household_income_2019_usd\": 195313\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322122\",\n      \"median_household_income_2019_usd\": 193625\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330095003\",\n      \"median_household_income_2019_usd\": 193056\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330250032\",\n      \"median_household_income_2019_usd\": 193000\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330064002\",\n      \"median_household_income_2019_usd\": 191944\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323291\",\n      \"median_household_income_2019_usd\": 190952\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330016001\",\n      \"median_household_income_2019_usd\": 189519\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323182\",\n      \"median_household_income_2019_usd\": 189250\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322131\",\n      \"median_household_income_2019_usd\": 188846\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330250063\",\n      \"median_household_income_2019_usd\": 188583\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330230001\",\n      \"median_household_income_2019_usd\": 187587\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330229025\",\n      \"median_household_income_2019_usd\": 187250\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330243005\",\n      \"median_household_income_2019_usd\": 185347\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249022\",\n      \"median_household_income_2019_usd\": 185170\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330005001\",\n      \"median_household_income_2019_usd\": 185000\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249033\",\n      \"median_household_income_2019_usd\": 184438\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330095001\",\n      \"median_household_income_2019_usd\": 183973\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323151\",\n      \"median_household_income_2019_usd\": 183646\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330237002\",\n      \"median_household_income_2019_usd\": 183173\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330041002\",\n      \"median_household_income_2019_usd\": 182854\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249034\",\n      \"median_household_income_2019_usd\": 182763\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330027002\",\n      \"median_household_income_2019_usd\": 182730\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322132\",\n      \"median_household_income_2019_usd\": 182708\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330234042\",\n      \"median_household_income_2019_usd\": 182563\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323223\",\n      \"median_household_income_2019_usd\": 181875\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330245002\",\n      \"median_household_income_2019_usd\": 181607\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330236031\",\n      \"median_household_income_2019_usd\": 181339\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323221\",\n      \"median_household_income_2019_usd\": 180278\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330056005\",\n      \"median_household_income_2019_usd\": 180069\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330223001\",\n      \"median_household_income_2019_usd\": 179583\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323071\",\n      \"median_household_income_2019_usd\": 179000\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330229021\",\n      \"median_household_income_2019_usd\": 178958\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323093\",\n      \"median_household_income_2019_usd\": 178750\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330041005\",\n      \"median_household_income_2019_usd\": 178734\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330069001\",\n      \"median_household_income_2019_usd\": 178333\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330223002\",\n      \"median_household_income_2019_usd\": 178021\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330240002\",\n      \"median_household_income_2019_usd\": 177308\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323201\",\n      \"median_household_income_2019_usd\": 177000\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330246011\",\n      \"median_household_income_2019_usd\": 176818\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330060002\",\n      \"median_household_income_2019_usd\": 176447\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323203\",\n      \"median_household_income_2019_usd\": 176375\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330319033\",\n      \"median_household_income_2019_usd\": 176042\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330096005\",\n      \"median_household_income_2019_usd\": 175946\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330326024\",\n      \"median_household_income_2019_usd\": 174766\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330059002\",\n      \"median_household_income_2019_usd\": 174141\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323242\",\n      \"median_household_income_2019_usd\": 174000\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330227023\",\n      \"median_household_income_2019_usd\": 173750\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330096001\",\n      \"median_household_income_2019_usd\": 173063\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323111\",\n      \"median_household_income_2019_usd\": 172670\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249012\",\n      \"median_household_income_2019_usd\": 172667\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330291022\",\n      \"median_household_income_2019_usd\": 172587\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249023\",\n      \"median_household_income_2019_usd\": 172125\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330046002\",\n      \"median_household_income_2019_usd\": 171000\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330208004\",\n      \"median_household_income_2019_usd\": 170972\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330250031\",\n      \"median_household_income_2019_usd\": 170577\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330247025\",\n      \"median_household_income_2019_usd\": 170543\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330039002\",\n      \"median_household_income_2019_usd\": 170132\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323174\",\n      \"median_household_income_2019_usd\": 169267\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330224002\",\n      \"median_household_income_2019_usd\": 168922\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330204024\",\n      \"median_household_income_2019_usd\": 168839\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330098002\",\n      \"median_household_income_2019_usd\": 168370\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330056003\",\n      \"median_household_income_2019_usd\": 167857\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323231\",\n      \"median_household_income_2019_usd\": 167583\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330236013\",\n      \"median_household_income_2019_usd\": 167266\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330026004\",\n      \"median_household_income_2019_usd\": 166923\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330031004\",\n      \"median_household_income_2019_usd\": 166912\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330034002\",\n      \"median_household_income_2019_usd\": 166875\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323153\",\n      \"median_household_income_2019_usd\": 166849\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323181\",\n      \"median_household_income_2019_usd\": 166607\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330062002\",\n      \"median_household_income_2019_usd\": 166364\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330056001\",\n      \"median_household_income_2019_usd\": 166328\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330251013\",\n      \"median_household_income_2019_usd\": 165929\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330214001\",\n      \"median_household_income_2019_usd\": 165764\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330064001\",\n      \"median_household_income_2019_usd\": 165750\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330056002\",\n      \"median_household_income_2019_usd\": 165735\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330247023\",\n      \"median_household_income_2019_usd\": 165438\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330227032\",\n      \"median_household_income_2019_usd\": 164583\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330233002\",\n      \"median_household_income_2019_usd\": 164444\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322143\",\n      \"median_household_income_2019_usd\": 164444\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330101001\",\n      \"median_household_income_2019_usd\": 163295\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323211\",\n      \"median_household_income_2019_usd\": 163224\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330324013\",\n      \"median_household_income_2019_usd\": 162823\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330226032\",\n      \"median_household_income_2019_usd\": 161360\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330065001\",\n      \"median_household_income_2019_usd\": 161250\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249011\",\n      \"median_household_income_2019_usd\": 161161\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330042001\",\n      \"median_household_income_2019_usd\": 160588\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323075\",\n      \"median_household_income_2019_usd\": 160515\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330216004\",\n      \"median_household_income_2019_usd\": 160435\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330324012\",\n      \"median_household_income_2019_usd\": 160147\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330057004\",\n      \"median_household_income_2019_usd\": 160114\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330326021\",\n      \"median_household_income_2019_usd\": 160107\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330022002\",\n      \"median_household_income_2019_usd\": 159722\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330227022\",\n      \"median_household_income_2019_usd\": 159438\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330060003\",\n      \"median_household_income_2019_usd\": 159223\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322112\",\n      \"median_household_income_2019_usd\": 158981\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323244\",\n      \"median_household_income_2019_usd\": 158875\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330324022\",\n      \"median_household_income_2019_usd\": 158750\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330215001\",\n      \"median_household_income_2019_usd\": 158375\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330324014\",\n      \"median_household_income_2019_usd\": 157321\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330240001\",\n      \"median_household_income_2019_usd\": 156875\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330316034\",\n      \"median_household_income_2019_usd\": 156696\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323281\",\n      \"median_household_income_2019_usd\": 156667\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322121\",\n      \"median_household_income_2019_usd\": 156563\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322102\",\n      \"median_household_income_2019_usd\": 156510\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330324021\",\n      \"median_household_income_2019_usd\": 156198\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330296012\",\n      \"median_household_income_2019_usd\": 156156\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330064003\",\n      \"median_household_income_2019_usd\": 156146\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330228022\",\n      \"median_household_income_2019_usd\": 156094\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330080015\",\n      \"median_household_income_2019_usd\": 156034\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330221012\",\n      \"median_household_income_2019_usd\": 155739\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322133\",\n      \"median_household_income_2019_usd\": 155625\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322031\",\n      \"median_household_income_2019_usd\": 155262\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322084\",\n      \"median_household_income_2019_usd\": 155259\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330057002\",\n      \"median_household_income_2019_usd\": 155192\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330279005\",\n      \"median_household_income_2019_usd\": 155123\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330229022\",\n      \"median_household_income_2019_usd\": 154844\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330033002\",\n      \"median_household_income_2019_usd\": 154813\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330250014\",\n      \"median_household_income_2019_usd\": 154773\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330323162\",\n      \"median_household_income_2019_usd\": 154643\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322111\",\n      \"median_household_income_2019_usd\": 154211\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330228031\",\n      \"median_household_income_2019_usd\": 154093\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330009001\",\n      \"median_household_income_2019_usd\": 153542\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330317051\",\n      \"median_household_income_2019_usd\": 153487\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330069002\",\n      \"median_household_income_2019_usd\": 153281\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322142\",\n      \"median_household_income_2019_usd\": 153241\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330027003\",\n      \"median_household_income_2019_usd\": 153173\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330235001\",\n      \"median_household_income_2019_usd\": 153000\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330320103\",\n      \"median_household_income_2019_usd\": 152939\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330059004\",\n      \"median_household_income_2019_usd\": 152466\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330249021\",\n      \"median_household_income_2019_usd\": 152292\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330016002\",\n      \"median_household_income_2019_usd\": 151528\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330237001\",\n      \"median_household_income_2019_usd\": 151447\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322101\",\n      \"median_household_income_2019_usd\": 151369\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330220062\",\n      \"median_household_income_2019_usd\": 151333\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322032\",\n      \"median_household_income_2019_usd\": 151204\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330027004\",\n      \"median_household_income_2019_usd\": 151161\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330217002\",\n      \"median_household_income_2019_usd\": 150694\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330226042\",\n      \"median_household_income_2019_usd\": 150694\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330228023\",\n      \"median_household_income_2019_usd\": 150694\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330322085\",\n      \"median_household_income_2019_usd\": 150391\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330229011\",\n      \"median_household_income_2019_usd\": 150221\n    },\n    {\n      \"CENSUS_BLOCK_GROUP\": \"530330204022\",\n      \"median_household_income_2019_usd\": 150179\n    }\n  ],\n  \"row_count\": 204,\n  \"truncated\": false\n}",
+          "matches_output_contract": true
+        }
+      ]
+    }
+  ]
+}

@@ -104,6 +104,15 @@ def agent_result(run: AnyRunOutput, expected_columns: list[str]) -> tuple[dict[s
     )
 
 
+def response_text(run: AnyRunOutput) -> str:
+    value = getattr(run, "content", "")
+    return " ".join(str(value).split())
+
+
+def has_run_sql(run: AnyRunOutput) -> bool:
+    return any((getattr(tool, "tool_name", "") or "").casefold().endswith("run_sql") for tool in getattr(run, "tools", []) or [])
+
+
 class ResultScorer:
     """Minimal Agno scorer: run golden SQL, compare two dataframes, retain evidence."""
 
@@ -114,8 +123,39 @@ class ResultScorer:
 
     async def ascore(self, run: AnyRunOutput, expected: Any = None) -> Score:
         case_id = expected["id"]
+        contract = expected["contract"]
+        if contract.get("outcome") == "unavailable":
+            actual = response_text(run)
+            expected_response = contract["expected_response"]
+            if has_run_sql(run):
+                detail = {
+                    "execution_success": 1,
+                    "result_match": 0,
+                    "reason": "agent ran SQL for an unavailable request",
+                    "agent_response": actual,
+                }
+            else:
+                matched = actual.casefold().rstrip(".") == expected_response.casefold().rstrip(".")
+                detail = {
+                    "execution_success": 1,
+                    "result_match": int(matched),
+                    "reason": "unavailable response matches" if matched else "unexpected unavailable response",
+                    "agent_response": actual,
+                    "comparison": {
+                        "matched": matched,
+                        "expected_response": expected_response,
+                        "actual_response": actual,
+                    },
+                }
+            self.details[case_id] = detail
+            return Score(
+                value=float(detail["result_match"]),
+                passed=bool(detail["result_match"]),
+                reason=detail["reason"],
+                detail=detail,
+            )
         try:
-            actual, sql, calls = agent_result(run, expected["contract"]["expected_columns"])
+            actual, sql, calls = agent_result(run, contract["expected_columns"])
         except AgentResultError as error:
             detail = {
                 "execution_success": 0,
@@ -127,7 +167,6 @@ class ResultScorer:
         except Exception as error:
             detail = {"execution_success": 0, "result_match": 0, "reason": f"agent result error: {type(error).__name__}: {error}"}
         else:
-            contract = expected["contract"]
             options = replace(self.options, top_k=int(contract.get("top_k", self.options.top_k)))
             try:
                 golden = await asyncio.to_thread(golden_result, expected["sql"], self.row_limit)
@@ -166,8 +205,10 @@ def load_dataset(path: Path) -> list[dict[str, Any]]:
     valid = isinstance(data, list) and all(
         {"id", "question", "sql", "contract"} <= set(item)
         and isinstance(item["contract"], Mapping)
-        and isinstance(item["contract"].get("expected_columns"), list)
-        and item["contract"]["expected_columns"]
+        and (
+            (isinstance(item["contract"].get("expected_columns"), list) and item["contract"]["expected_columns"])
+            or (item["contract"].get("outcome") == "unavailable" and isinstance(item["contract"].get("expected_response"), str))
+        )
         for item in data
     )
     if not valid:
@@ -176,6 +217,8 @@ def load_dataset(path: Path) -> list[dict[str, Any]]:
 
 
 def case_input(item: Mapping[str, Any]) -> str:
+    if item["contract"].get("outcome") == "unavailable":
+        return str(item["question"])
     columns = ", ".join(item["contract"]["expected_columns"])
     contract = item["contract"]
     output_rule = f"Finish with one run_sql table containing exactly these columns, in this order: {columns}."
@@ -211,6 +254,7 @@ def report(suite: Any, dataset: list[dict[str, Any]], scorer: ResultScorer, conf
                 "agent_sql": detail.get("agent_sql"),
                 "agent_tool": detail.get("agent_tool"),
                 "agent_run_sql_calls": detail.get("agent_run_sql_calls"),
+                "agent_response": detail.get("agent_response"),
             }
         )
     latencies = [case["latency_seconds"] for case in cases if case["latency_seconds"] is not None]
