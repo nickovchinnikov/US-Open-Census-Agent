@@ -59,13 +59,16 @@ WREN_ENV = {
 
 
 # Agno requires MCP 2.x, while Wren 0.14's MCP server uses the MCP 1.x API.
-# Run Wren in an isolated uvx environment so the two requirements do not clash.
+# Run Wren in a separate virtual environment so the two requirements do not clash.
 wren = MCPTools(
-    command="uvx --from 'wrenai[main,mcp,snowflake,memory]==0.14.0' --with 'mcp<2' wren serve mcp",
+    # MCPTools allows uv as a launcher. --no-project is important:
+    # this invokes the prebuilt Wren binary and must never resolve packages at
+    # container startup.
+    command="uv run --no-project /opt/wren-mcp/bin/wren serve mcp",
     # The MCP SDK starts subprocesses with a restricted environment. Pass the
     # Snowflake settings explicitly so Wren can resolve its named profile.
     env=WREN_ENV,
-    timeout_seconds=60,
+    timeout_seconds=120,
     # This project defines MDL models but no Wren cubes. Keep the cube tools
     # out of the agent's tool registry until real cube definitions are added.
     exclude_tools=["query_cube", "list_cubes", "describe_cube"],
