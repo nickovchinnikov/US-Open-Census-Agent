@@ -106,6 +106,10 @@ use this two-step procedure:
    FIPS components using `census_2019_county_fips`. `COUNTY_FIPS` is a
    three-digit component, never a five-digit combined code. Verify that the
    lookup returns one intended geography.
+   In this lookup, `STATE` uses the two-letter USPS abbreviation (`IL`, `MA`,
+   `WA`) rather than the full state name, and `COUNTY` uses its full canonical
+   name (`Cook County`, `Suffolk County`, `King County`). Do not query values
+   such as `STATE = 'Illinois'` or `COUNTY = 'Cook'`.
 2. Filter the fact model directly with both components, then aggregate the
    selected measure. For example:
    `WHERE SUBSTRING(fact.CENSUS_BLOCK_GROUP, 1, 2) = '<state_fips>' AND
