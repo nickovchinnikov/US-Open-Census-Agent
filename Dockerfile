@@ -27,6 +27,11 @@ RUN npm ci --prefix frontend
 
 COPY . ./
 RUN uv sync --frozen --no-dev
+# Agno starts Wren through uvx because their MCP SDK major versions differ.
+# Pre-create that exact isolated environment while building the image: without
+# this, a fresh --rm container downloads and installs Wren on its first boot,
+# which can exceed MCPTools' initialization timeout.
+RUN uvx --from "wrenai[main,mcp,snowflake,memory]==0.14.0" --with "mcp<2" wren --help
 # The MCP server uses semantic schema retrieval. Build its derived local
 # LanceDB index into the image so a fresh container never falls back to a
 # full-schema response on the first question.
