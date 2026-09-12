@@ -57,8 +57,11 @@ def _table_to_frame(table: Mapping[str, Any]) -> pd.DataFrame:
 def _sort_rows(frame: pd.DataFrame) -> pd.DataFrame:
     if frame.empty:
         return frame.reset_index(drop=True)
-    keys = pd.util.hash_pandas_object(frame.astype(str), index=False)
-    return frame.assign(_eval_sort_key=keys).sort_values("_eval_sort_key", kind="stable").drop(columns="_eval_sort_key").reset_index(drop=True)
+    # Do not hash the whole row: a tolerated float difference changes the hash
+    # and can pair rows with different keys (for example, different counties).
+    keys = frame.map(lambda value: "" if pd.isna(value) else str(value))
+    order = keys.sort_values(list(keys.columns), kind="stable").index
+    return frame.loc[order].reset_index(drop=True)
 
 
 def _answer_columns(frame: pd.DataFrame, columns: Sequence[str] | None) -> pd.DataFrame:

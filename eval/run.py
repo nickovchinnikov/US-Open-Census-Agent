@@ -64,9 +64,10 @@ def golden_result(sql: str, row_limit: int) -> dict[str, Any]:
     return table(value)
 
 
-def agent_result(run: AnyRunOutput) -> tuple[dict[str, Any], str]:
-    """Read the final run_sql result: the prompt requires it to be the answer query."""
-    last_tool: dict[str, Any] | None = None
+def agent_result(run: AnyRunOutput, expected_columns: list[str]) -> tuple[dict[str, Any], str, list[dict[str, Any]]]:
+    """Select the last SQL result that satisfies the case's output contract."""
+    calls: list[dict[str, Any]] = []
+    selected: tuple[dict[str, Any], str] | None = None
     for tool in reversed(getattr(run, "tools", []) or []):
         if not (getattr(tool, "tool_name", "") or "").casefold().endswith("run_sql"):
             continue
@@ -76,7 +77,7 @@ def agent_result(run: AnyRunOutput) -> tuple[dict[str, Any], str]:
             "tool_call_error": bool(getattr(tool, "tool_call_error", False)),
             "raw_result": getattr(tool, "result", None),
         }
-        last_tool = evidence
+        calls.append(evidence)
         if evidence["tool_call_error"]:
             continue
         raw = getattr(tool, "result", None)
@@ -85,10 +86,22 @@ def agent_result(run: AnyRunOutput) -> tuple[dict[str, Any], str]:
         try:
             if isinstance(raw, str):
                 raw = json.loads(raw)
-            return table(raw), evidence["sql"]
+            result = table(raw)
         except (TypeError, ValueError, json.JSONDecodeError) as error:
-            raise AgentResultError(f"final run_sql result is not a table: {error}", evidence) from error
-    raise AgentResultError("agent did not finish with a successful run_sql result", last_tool or {})
+            evidence["result_error"] = str(error)
+            continue
+        available = {str(column).strip().casefold() for column in result["columns"]}
+        required = {column.strip().casefold() for column in expected_columns}
+        evidence["matches_output_contract"] = required <= available
+        if evidence["matches_output_contract"] and selected is None:
+            selected = (result, evidence["sql"])
+    if selected is not None:
+        return *selected, list(reversed(calls))
+    required_text = ", ".join(expected_columns)
+    raise AgentResultError(
+        f"agent did not execute a run_sql query with required answer columns: {required_text}",
+        {"run_sql_calls": list(reversed(calls))},
+    )
 
 
 class ResultScorer:
@@ -102,13 +115,14 @@ class ResultScorer:
     async def ascore(self, run: AnyRunOutput, expected: Any = None) -> Score:
         case_id = expected["id"]
         try:
-            actual, sql = agent_result(run)
+            actual, sql, calls = agent_result(run, expected["contract"]["expected_columns"])
         except AgentResultError as error:
             detail = {
                 "execution_success": 0,
                 "result_match": 0,
                 "reason": str(error),
                 "agent_tool": error.tool,
+                "agent_run_sql_calls": error.tool.get("run_sql_calls"),
             }
         except Exception as error:
             detail = {"execution_success": 0, "result_match": 0, "reason": f"agent result error: {type(error).__name__}: {error}"}
@@ -125,6 +139,7 @@ class ResultScorer:
                     "reason": f"golden result error: {type(error).__name__}: {error}",
                     "agent_result": actual,
                     "agent_sql": sql,
+                    "agent_run_sql_calls": calls,
                 }
             else:
                 detail = {
@@ -134,6 +149,7 @@ class ResultScorer:
                     "golden_result": golden,
                     "agent_result": actual,
                     "agent_sql": sql,
+                    "agent_run_sql_calls": calls,
                     "comparison": comparison.to_dict(),
                 }
         self.details[case_id] = detail
@@ -194,6 +210,7 @@ def report(suite: Any, dataset: list[dict[str, Any]], scorer: ResultScorer, conf
                 "agent_result": detail.get("agent_result"),
                 "agent_sql": detail.get("agent_sql"),
                 "agent_tool": detail.get("agent_tool"),
+                "agent_run_sql_calls": detail.get("agent_run_sql_calls"),
             }
         )
     latencies = [case["latency_seconds"] for case in cases if case["latency_seconds"] is not None]

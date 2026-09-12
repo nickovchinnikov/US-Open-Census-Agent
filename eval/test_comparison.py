@@ -41,6 +41,11 @@ class ResultComparisonTests(unittest.TestCase):
         self.assertFalse(result.matched)
         self.assertIn("missing required answer columns: rate", result.reason)
 
+    def test_unordered_rows_with_tolerated_float_difference_keep_their_keys(self) -> None:
+        expected = {"columns": ["county", "rate"], "rows": [["San Francisco County", 34.767345], ["Los Angeles County", 5.813891]]}
+        actual = {"columns": ["county", "rate"], "rows": [["Los Angeles County", 5.81], ["San Francisco County", 34.77]]}
+        self.assertTrue(compare_results(expected, actual, columns=["county", "rate"]).matched)
+
 
 if __name__ == "__main__":
     unittest.main()
