@@ -78,7 +78,7 @@ Start the Agno backend with `uv run python -m src.app`, then follow the short
 setup in [`frontend/README.md`](frontend/README.md) to open the UI at
 `http://localhost:3000`.
 
-## Production deployment (Railway)
+## Production deployment (Railway CI/CD)
 
 Deploy this repository as **one Railway service**, connected to GitHub with
 autodeploy enabled for `master`. Railway detects the root
@@ -102,6 +102,8 @@ build, then runs it offline. `HF_TOKEN` is therefore **not** needed for the
 default configuration and must never be added to the Dockerfile. Set it only
 as a Railway/Docker secret if you intentionally switch to a private or
 gated Hugging Face model; it is forwarded to the Wren MCP subprocess.
+
+*This provides a simple CI/CD path: changes pushed to the configured branch are rebuilt and deployed automatically.*
 
 ## Result-based agent evaluation
 
