@@ -84,32 +84,46 @@ export default function Home() {
       useSingleEndpoint
     >
       <main className="app-shell">
-        <section className="chat-panel" aria-label="Census analyst chat">
-          <header className="topbar">
-            <div className="brand">
-              <div className="brand-mark" aria-hidden="true">US</div>
-              <div>
-                <p className="eyebrow">US OPEN CENSUS</p>
-                <h1>Census Data Analyst</h1>
-              </div>
+        <header className="topbar">
+          <div className="brand">
+            <div className="brand-mark" aria-hidden="true">US</div>
+            <div>
+              <p className="eyebrow">US OPEN CENSUS</p>
+              <h1>Census Data Analyst</h1>
             </div>
-            <div className="status" title="Queries use the Wren semantic layer">
-              <span className="status-dot" /> Grounded data access
-            </div>
-          </header>
-
-          <div className="intro">
-            <h2>Ask questions your data can answer.</h2>
-            <p>
-              The agent checks the Wren semantic model, then queries the connected
-              Census dataset. It will say when a measure cannot be derived safely.
-            </p>
-            <QuickQuestions />
           </div>
+          <div className="status" title="Queries use the Wren semantic layer">
+            <span className="status-dot" /> Grounded data access
+          </div>
+        </header>
 
-          <div className="chat-frame">
-            <InternalToolActivity />
-            <CopilotChat agentId="default" className="copilot-chat" />
+        <section className="workspace" aria-label="Census analyst chat">
+          <aside className="question-rail">
+            <div>
+              <p className="rail-kicker">Start a query</p>
+              <h2>What would you like to learn?</h2>
+              <p className="rail-copy">
+                Ask about people, households, places, or changes across the 2019 Census dataset.
+              </p>
+            </div>
+            <QuickQuestions />
+            <p className="rail-note">
+              Answers are checked against the Census semantic model before data is returned.
+            </p>
+          </aside>
+
+          <div className="chat-stage">
+            <div className="chat-heading">
+              <div>
+                <p className="rail-kicker">Data conversation</p>
+                <h2>Census analyst</h2>
+              </div>
+              <span className="chat-heading-note">2019 Census data</span>
+            </div>
+            <div className="chat-frame">
+              <InternalToolActivity />
+              <CopilotChat agentId="default" className="copilot-chat" />
+            </div>
           </div>
         </section>
       </main>

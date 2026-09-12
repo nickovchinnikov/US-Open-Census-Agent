@@ -23,22 +23,17 @@ body {
 button, textarea, input { font: inherit; }
 
 .app-shell {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   height: 100dvh;
+  padding: 20px clamp(22px, 5vw, 88px) 22px;
   background:
     radial-gradient(circle at 7% 0%, rgba(201, 230, 216, .66), transparent 27rem),
     var(--paper);
 }
 
-.chat-panel {
-  display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
-  height: 100%;
-  min-width: 0;
-  padding: 20px clamp(22px, 6vw, 108px) 22px;
-}
-
 .topbar, .brand, .status, .suggestions { display: flex; align-items: center; }
-.topbar { justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+.topbar { justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding: 0 0 16px; }
 .brand { gap: 12px; }
 .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: var(--forest); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .06em; }
 .eyebrow { margin: 0 0 5px; color: var(--forest); font-size: 10px; font-weight: 800; letter-spacing: .13em; }
@@ -47,14 +42,22 @@ h1 { margin-bottom: 0; font-family: Georgia, "Times New Roman", serif; font-size
 .status { gap: 8px; color: var(--muted); font-size: 12px; white-space: nowrap; }
 .status-dot { width: 8px; height: 8px; border-radius: 999px; background: #35a772; box-shadow: 0 0 0 4px #d6f2e4; }
 
-.intro { max-width: 780px; padding: clamp(24px, 4vh, 42px) 0 18px; }
-.intro h2 { margin-bottom: 10px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(30px, 3.2vw, 46px); font-weight: 500; line-height: 1.03; letter-spacing: -.035em; }
-.intro > p { max-width: 650px; margin-bottom: 16px; color: var(--muted); font-size: 15px; line-height: 1.45; }
-.suggestions { flex-wrap: wrap; gap: 8px; }
-.suggestion { cursor: pointer; border: 1px solid #b9d5c9; border-radius: 999px; padding: 8px 12px; background: rgba(255,255,255,.72); color: #27534d; font-size: 13px; line-height: 1.25; transition: background .16s ease, border-color .16s ease, transform .16s ease; }
+.workspace { display: grid; grid-template-columns: minmax(220px, 270px) minmax(0, 1fr); gap: clamp(26px, 4vw, 64px); min-height: 0; padding-top: clamp(20px, 3.2vh, 38px); }
+.question-rail { display: flex; flex-direction: column; min-width: 0; padding: 8px 0 12px; }
+.rail-kicker { margin-bottom: 8px; color: var(--forest); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.question-rail h2, .chat-heading h2 { margin-bottom: 10px; font-family: Georgia, "Times New Roman", serif; font-size: 25px; font-weight: 500; line-height: 1.08; letter-spacing: -.025em; }
+.rail-copy { margin-bottom: 25px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.suggestions { align-items: stretch; flex-direction: column; gap: 9px; }
+.suggestion { width: 100%; cursor: pointer; border: 1px solid #c6ddd3; border-radius: 11px; padding: 12px; background: rgba(255,255,255,.74); color: #27534d; font-size: 13px; line-height: 1.35; text-align: left; transition: background .16s ease, border-color .16s ease, transform .16s ease; }
 .suggestion:hover:not(:disabled), .suggestion:focus-visible { border-color: var(--forest); background: #e5f2eb; outline: none; transform: translateY(-1px); }
 .suggestion:disabled { cursor: wait; opacity: .58; }
+.rail-note { margin: auto 0 0; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.45; }
 
+.chat-stage { display: grid; grid-template-rows: auto minmax(0, 1fr); min-width: 0; min-height: 0; }
+.chat-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 2px 14px; }
+.chat-heading .rail-kicker { margin-bottom: 4px; }
+.chat-heading h2 { margin-bottom: 0; font-size: 20px; }
+.chat-heading-note { color: var(--muted); font-size: 12px; }
 .chat-frame { min-height: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); box-shadow: 0 16px 40px rgba(24, 53, 48, .08); }
 .copilot-chat { height: 100%; }
 .tool-activity { display: flex; align-items: center; gap: 8px; width: min(100% - 32px, 680px); margin: 14px auto 0; padding: 10px 12px; border: 1px solid #d8e9e1; border-radius: 10px; background: #f5fbf7; color: #28574f; font-size: 13px; line-height: 1.25; }
@@ -68,14 +71,20 @@ h1 { margin-bottom: 0; font-family: Georgia, "Times New Roman", serif; font-size
 }
 
 @media (max-width: 900px) {
-  .chat-panel { padding-inline: clamp(18px, 4vw, 48px); }
+  .app-shell { padding-inline: clamp(18px, 4vw, 48px); }
+  .workspace { grid-template-columns: 210px minmax(0, 1fr); gap: 24px; }
 }
 
 @media (max-width: 580px) {
-  .app-shell { height: auto; min-height: 100dvh; }
-  .chat-panel { min-height: 100dvh; padding: 16px 14px; }
+  .app-shell { display: block; height: auto; min-height: 100dvh; padding: 16px 14px; }
   .status { display: none; }
-  .intro { padding-top: 28px; }
-  .intro h2 { font-size: 32px; }
-  .chat-frame { min-height: 500px; border-radius: 14px; }
+  .workspace { display: block; padding-top: 24px; }
+  .question-rail { padding: 0 0 22px; }
+  .question-rail h2 { font-size: 24px; }
+  .rail-copy { margin-bottom: 14px; }
+  .suggestions { display: grid; grid-template-columns: 1fr; }
+  .suggestion { padding: 10px 11px; }
+  .rail-note { display: none; }
+  .chat-heading { padding-bottom: 10px; }
+  .chat-frame { min-height: 520px; border-radius: 14px; }
 }
