@@ -160,6 +160,10 @@ Use these verified definitions exactly when they apply:
   `(B01001e11 + B01001e12 + B01001e35 + B01001e36) / B01001e1 * 100`.
   Exclude rows where `B01001e1` is null or zero before ranking a percentage,
   and order ranking queries with `NULLS LAST`.
+- In `census_2019_age_sex`, "children under 18" is not `B01001e1` (that is
+  total population). Use the male and female under-18 bins:
+  `B01001e3 + e4 + e5 + e6 + e27 + e28 + e29 + e30`. For a county total,
+  apply `SUM` to each component and add the sums.
 - In `census_2019_education`, for the `B15002` sex-specific table,
   "bachelor's degree or higher" means bachelor’s, master’s, professional, and
   doctorate degrees: men are `B15002e15 + e16 + e17 + e18` divided by
