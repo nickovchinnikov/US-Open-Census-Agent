@@ -21,6 +21,10 @@ A meaningful part of the work was integration and deployment: resolving MCP depe
 
 There was also a non-engineering blocker: an OpenAI API payment was still not credited after 10 hours, apparently due to a payment-system issue. Without API access the project could not run, so I had to find an alternative token.
 
+## Scope trade-offs
+
+I deliberately limited the implementation to the 2019 Census data. Multi-year support would require validating variable availability and semantics across years, handling schema differences, and defining which measures are meaningfully comparable over time. Given the 24-hour constraint, I prioritised correctness, provenance, and robust validation within one year over broader temporal coverage with weaker guarantees. Requests for unsupported years fail explicitly rather than falling back to a potentially misleading comparison.
+
 ## Testing
 
 I evaluate final results rather than generated SQL strings.
@@ -60,3 +64,17 @@ I added basic Agno guardrails, but did not attempt a complete security hardening
 ## Use of AI-assisted development
 
 I used AI-assisted coding tools to speed up implementation and help build the evaluation dataset. I remained responsible for the architecture, Census modelling and aggregation rules, evaluation design, debugging, and final verification.
+
+## Candidate experience feedback
+
+I also want to document one concern about the exercise itself.
+
+The assignment required a publicly deployed application and encouraged the use of AI development tools, but no development environment, infrastructure credits, API budget, or other resources were provided.
+
+In order to complete the assignment within the 24-hour window and meet the requested deployment and quality bar, I incurred approximately $20 in infrastructure/API costs and upgraded my AI development tooling for 99 PLN.
+
+The larger cost, however, was time: I worked on the exercise almost continuously for more than 18 hours, from approximately 10:00 AM until nearly 5:00 AM the following morning.
+
+I think the combination of a production-quality bar, public deployment, unfamiliar dataset exploration, testing, guardrails, infrastructure setup, and a strict 24-hour deadline makes this a very demanding take-home exercise. Completing it to the requested standard required both substantial unpaid time and personal out-of-pocket spending.
+
+*I would recommend either reducing the scope, extending the time window, or providing development/infrastructure credits for future candidates.*
