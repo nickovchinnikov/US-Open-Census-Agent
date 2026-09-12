@@ -11,6 +11,9 @@ WORKDIR /app
 ENV PYTHONUNBUFFERED=1 \
     UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
+    # Keep Hugging Face assets in an explicit image directory. This lets the
+    # Wren MCP subprocess share the model fetched at build time.
+    HF_HOME=/opt/huggingface \
     AGENT_PORT=7777 \
     NEXT_TELEMETRY_DISABLED=1
 
@@ -32,10 +35,19 @@ RUN uv sync --frozen --no-dev
 # this, a fresh --rm container downloads and installs Wren on its first boot,
 # which can exceed MCPTools' initialization timeout.
 RUN uvx --from "wrenai[main,mcp,snowflake,memory]==0.14.0" --with "mcp<2" wren --help
+# Wren's semantic-memory implementation embeds text with this public model.
+# Fetch it while building so a new container does not need Hugging Face access
+# on its first request. Do not bake credentials into the image: this model does
+# not require an HF token.
+RUN HF_HUB_OFFLINE=0 TRANSFORMERS_OFFLINE=0 uv run python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')"
 # The MCP server uses semantic schema retrieval. Build its derived local
 # LanceDB index into the image so a fresh container never falls back to a
 # full-schema response on the first question.
-RUN uv run wren memory index
+RUN HF_HUB_OFFLINE=0 TRANSFORMERS_OFFLINE=0 uv run wren memory index
+# The required model is now part of the image. Fail locally rather than make a
+# runtime network request if its cache is unexpectedly unavailable.
+ENV HF_HUB_OFFLINE=1 \
+    TRANSFORMERS_OFFLINE=1
 RUN npm run build --prefix frontend
 RUN chmod +x docker/entrypoint.sh
 
