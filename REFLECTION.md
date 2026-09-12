@@ -19,6 +19,8 @@ I chose a semantic layer instead of a fully deterministic SQL planner mainly bec
 
 A meaningful part of the work was integration and deployment: resolving MCP dependency conflicts, reducing cold-start overhead, and packaging the frontend and backend into a single container. I intentionally kept the UI simple and focused on a working end-to-end flow.
 
+There was also a non-engineering blocker: an OpenAI API payment was still not credited after 10 hours, apparently due to a payment-system issue. Without API access the project could not run, so I had to find an alternative token.
+
 ## Testing
 
 I evaluate final results rather than generated SQL strings.
